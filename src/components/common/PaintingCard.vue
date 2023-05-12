@@ -1,5 +1,6 @@
 <template>
-  <div class="painting-card">
+  <div class="painting-card"
+  @mouseover="colorizeTitle">
     <div class="painting-frame">
     <img :src="painting.source" :alt="painting.title"/>
     </div>
@@ -39,6 +40,23 @@ const props = defineProps({
     }
   }
 })
+
+// const hoverColors = ['blue', 'black', 'pink' ]
+
+// let colorizeTitle = () => {
+//   let card = document.querySelector('.painting-card')
+//   let title = card.getElementsByTagName("h3")
+//   console.log(title)
+//   title.style.color = randomColor(hoverColors)
+// }
+//
+// function randomColor(array) {
+//   let min = 0
+//   let max = array.length - 1
+//   let rand = min - 0.5 + Math.random() * (max - min + 1)
+//   console.log(Math.round(rand))
+//   console.log(array[Math.round(rand)])
+// }
 </script>
 <style scoped>
 .painting-card {
@@ -60,6 +78,7 @@ const props = defineProps({
 .painting-card:hover {
   cursor: pointer;
 }
+
 .painting-card:hover h3 {
   color: var(--text-hover)
 }

@@ -5,6 +5,7 @@ import Paintings from "@/pages/Paintings.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
 import mainLayout from "@/layouts/mainLayout.vue";
 import pagesLayout from "@/layouts/paintingsLayout.vue";
+import PaintingsCategories from "@/pages/PaintingsCategories.vue";
 
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
                 path: '/about',
                 name: 'About',
                 component: AboutArtist
+            },
+            {
+                path: '/categories',
+                name: 'Categories',
+                component: PaintingsCategories
             }
         ]
     },

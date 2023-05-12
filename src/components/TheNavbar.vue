@@ -2,7 +2,7 @@
   <div class="navbar">
   <h1 @click="router.push('/home')">Картины маслом | Киров</h1>
   <ul class="nav-menu">
-    <li @click="router.push('/paintings')">Картины</li>
+    <li @click="router.push('/categories')">Картины</li>
     <li @click="router.push('/contacts')">Контакты</li>
     <li @click="router.push('/about')">О художнике</li>
     <li>Войти</li>
