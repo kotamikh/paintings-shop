@@ -1,15 +1,11 @@
 <script setup>
-
-import HomePage from "./pages/HomePage.vue";
 </script>
 
 <template>
-  <home-page/>
+  <router-view></router-view>
 </template>
 
 <style scoped>
-* {
-  font-family: 'Roboto Condensed', sans-serif;
-}
+
 
 </style>

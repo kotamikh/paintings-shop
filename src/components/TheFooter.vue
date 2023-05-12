@@ -3,7 +3,7 @@
   <div class="telephone">Телефон: +7(922)-951-92-44</div>
   <div class="messengers">Написать:
     <a href="https://vk.com/m.kozlov73">Вконтакте</a>
-    <a href="/">Viber</a>
+    <a href="/home">Viber</a>
   </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ a {
 
 a:hover {
   cursor: pointer;
-  color: var(--text-hover);
+  color: var(--nav-hover);
   text-decoration: underline;
 }
 

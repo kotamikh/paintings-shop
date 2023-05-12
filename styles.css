@@ -1,4 +1,11 @@
 * {
     --seagreen: #6c8c79;
-    --text-hover: #7cbe99;
+    --text-hover: #ff5d00;
+    --nav-hover: #7cbe99;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+    padding: 20px;
+    margin: 0;
 }
