@@ -1,11 +1,9 @@
 <template>
-  <div class="content-box">
-    <main-poster/>
-  </div>
+  <main-poster/>
 </template>
 
 <script>
-import MainPoster from "../components/MainPoster.vue";
+import MainPoster from "@/components/MainPoster.vue";
 
 export default {
   name: "HomePage",
@@ -14,9 +12,4 @@ export default {
 </script>
 
 <style scoped>
-
-.content-box {
-  width: 100%;
-  margin: auto;
-}
 </style>

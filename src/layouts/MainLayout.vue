@@ -1,12 +1,12 @@
 <template>
   <div class="main-layout">
-  <the-navbar/>
+    <the-navbar/>
 
-  <the-wrapper>
-    <router-view></router-view>
-  </the-wrapper>
+    <div class="main-content">
+      <router-view></router-view>
+    </div>
 
-  <the-footer/>
+    <the-footer/>
   </div>
 </template>
 
@@ -18,11 +18,14 @@ export default {
 
 <script setup>
 import TheNavbar from "@/components/TheNavbar.vue";
-import TheWrapper from "@/components/TheWrapper.vue";
 import TheFooter from "@/components/TheFooter.vue";
 </script>
 
 <style scoped>
+
+.main-content {
+  height: 60vh;
+}
 
 .main-layout {
   width: 80%;

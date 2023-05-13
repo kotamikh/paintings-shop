@@ -4,7 +4,7 @@ import HomePage                           from "@/pages/HomePage.vue";
 import Paintings                          from "@/pages/Paintings.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
 import MainLayout          from "@/layouts/MainLayout.vue";
-import pagesLayout         from "@/layouts/PaintingsLayout.vue";
+import CatalogLayout       from "@/layouts/CatalogLayout.vue";
 import PaintingsCategories from "@/pages/PaintingsCategories.vue";
 import PaintingPage                       from "@/components/common/PaintingPage.vue";
 
@@ -36,15 +36,16 @@ const routes = [
                 component: PaintingsCategories
             },
             {
-                path: '/paintingpage',
-                name: 'Paintingpage',
+                path: '/painting-page',
+                name: 'PaintingPage',
                 component: PaintingPage
             }
 
         ]
     },
     {
-        component: pagesLayout,
+        path: '/catalog',
+        component: CatalogLayout,
         children: [
             {
                 path: '/paintings',

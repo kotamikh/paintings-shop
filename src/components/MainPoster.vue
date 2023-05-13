@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .wrapper {
   width: 100%;
-  height: 60vh;
+  height: 100%;
 
   display: flex;
   align-items: center;
