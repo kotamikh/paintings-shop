@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Contacts                           from "@/pages/Contacts.vue";
-import HomePage                           from "@/pages/HomePage.vue";
-import Paintings                          from "@/pages/Paintings.vue";
+import HomePage    from "@/pages/HomePage.vue";
+import Catalog     from "@/pages/Catalog.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
 import MainLayout          from "@/layouts/MainLayout.vue";
 import CatalogLayout       from "@/layouts/CatalogLayout.vue";
-import PaintingsCategories from "@/pages/PaintingsCategories.vue";
-import PaintingPage                       from "@/components/common/PaintingPage.vue";
+import PaintingsCategories from "@/pages/Categories.vue";
+import PaintingPage        from "@/components/painting/PaintingPage.vue";
 
 
 const routes = [
@@ -49,8 +49,8 @@ const routes = [
         children: [
             {
                 path: '/paintings',
-                name: 'Paintings',
-                component: Paintings
+                name: 'Catalog',
+                component: Catalog
             }
         ]
     }

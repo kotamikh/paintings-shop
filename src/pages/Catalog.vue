@@ -13,12 +13,12 @@
 
 <script>
 export default {
-  name: "Paintings"
+  name: "Catalog"
 }
 </script>
 
 <script setup>
-import PaintingCard from "@/components/common/PaintingCard.vue";
+import PaintingCard       from "@/components/painting/PaintingCard.vue";
 import { paintingsMocks } from "@/mocks/paintings.js";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
