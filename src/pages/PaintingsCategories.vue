@@ -91,22 +91,6 @@ h3 {
   color: white;
   font-size: 25px;
   font-weight: 300;
-  text-shadow:
-      -0 -1px 2px #505050,
-      0 -1px 2px #505050,
-      -0 1px 2px #505050,
-      0 1px 2px #505050,
-      -1px -0 2px #505050,
-      1px -0 2px #505050,
-      -1px 0 2px #505050,
-      1px 0 2px #505050,
-      -1px -1px 2px #505050,
-      1px -1px 2px #505050,
-      -1px 1px 2px #505050,
-      1px 1px 2px #505050,
-      -1px -1px 2px #505050,
-      1px -1px 2px #505050,
-      -1px 1px 2px #505050,
-      1px 1px 2px #505050;
+  text-shadow: 0 0 2px #000000;
 }
 </style>
