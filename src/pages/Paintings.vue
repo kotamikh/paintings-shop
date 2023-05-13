@@ -5,6 +5,7 @@
       v-for="(painting, index) in paintings"
       :key="index"
       :painting="painting"
+      @click="router.push('/paintingpage' + '/' + painting.title)"
   >
   </painting-card>
   </div>
@@ -20,9 +21,10 @@ export default {
 import PaintingCard from "@/components/common/PaintingCard.vue";
 import { paintingsMocks } from "@/mocks/paintings.js";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const paintings = ref(paintingsMocks);
-
 </script>
 
 <style scoped>
