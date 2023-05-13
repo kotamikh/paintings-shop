@@ -1,19 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Contacts from "@/pages/Contacts.vue";
-import HomePage from "@/pages/HomePage.vue";
-import Paintings from "@/pages/Paintings.vue";
+import Contacts                           from "@/pages/Contacts.vue";
+import HomePage                           from "@/pages/HomePage.vue";
+import Paintings                          from "@/pages/Paintings.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
-import mainLayout from "@/layouts/mainLayout.vue";
-import pagesLayout from "@/layouts/paintingsLayout.vue";
+import MainLayout          from "@/layouts/MainLayout.vue";
+import pagesLayout         from "@/layouts/PaintingsLayout.vue";
 import PaintingsCategories from "@/pages/PaintingsCategories.vue";
-import PaintingPage from "@/components/common/PaintingPage.vue";
+import PaintingPage                       from "@/components/common/PaintingPage.vue";
 
 
 const routes = [
     {
         path: '/',
-        component: mainLayout,
-        redirect: { name: 'Home' },
+        component: MainLayout,
+        redirect: '/home',
         children: [
             {
                 path: '/home',
@@ -44,8 +44,8 @@ const routes = [
         ]
     },
     {
-    component: pagesLayout,
-    children: [
+        component: pagesLayout,
+        children: [
             {
                 path: '/paintings',
                 name: 'Paintings',

@@ -1,6 +1,6 @@
 <template>
-  <div class="pages-layout">
-  <the-navbar class="pages-nav"/>
+  <div class="main-layout">
+  <the-navbar/>
 
   <the-wrapper>
     <router-view></router-view>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "pagesLayout"
+  name: "MainLayout"
 }
 </script>
 
@@ -23,16 +23,15 @@ import TheFooter from "@/components/TheFooter.vue";
 </script>
 
 <style scoped>
-.pages-layout {
+
+.main-layout {
   width: 80%;
   margin: auto;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.pages-nav {
-  border-bottom: 4px solid var(--seagreen);
-}
 </style>
