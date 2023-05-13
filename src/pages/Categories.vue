@@ -26,13 +26,15 @@ const router = useRouter();
 </script>
 
 <style scoped lang="sass">
+
 .categories
   display: flex
+  flex-wrap: wrap
   align-items: center
   justify-content: center
-  flex-wrap: wrap
+
   padding: 50px 0
-  border-top: 4px solid var(--seagreen)
+  //border-top: 4px solid var(--seagreen)
 
   div
     width: 300px
@@ -40,11 +42,20 @@ const router = useRouter();
     overflow: hidden
     margin-right: 30px
     border-radius: 10px
+
     cursor: pointer
     position: relative
+
     display: flex
     align-items: center
     justify-content: center
+
+    @media screen and (max-width: 1200px)
+      width: 250px
+      height: 250px
+
+    @media screen and (max-width: 800px)
+      margin-bottom: 30px
 
     &::before
       content: ''

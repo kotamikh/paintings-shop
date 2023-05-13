@@ -4,10 +4,11 @@
 
 <script>
 import MainPoster from "@/components/MainPoster.vue";
+import TheNavbar from "@/components/TheNavbar.vue";
 
 export default {
   name: "HomePage",
-  components: { MainPoster }
+  components: { TheNavbar, MainPoster }
 }
 </script>
 

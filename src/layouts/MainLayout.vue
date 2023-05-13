@@ -21,20 +21,24 @@ import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
 </script>
 
-<style scoped>
+<style scoped lang="sass">
 
-.main-content {
-  height: 60vh;
-}
+.main-content
+  height: 60vh
 
-.main-layout {
-  width: 80%;
-  margin: auto;
-  height: 100vh;
+  @media screen and (max-width: 800px)
+    height: 80vh
+    overflow-y: auto
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
+.main-layout
+  width: 80%
+  margin: auto
+  height: 100vh
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+
 
 </style>

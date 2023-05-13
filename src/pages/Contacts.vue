@@ -47,12 +47,15 @@ const data = reactive({
 </script>
 
 <style scoped lang="sass">
-h2
-  border-top: 4px solid var(--seagreen)
+//h2
+//  border-top: 4px solid var(--seagreen)
 
 .form
   width: 600px
   margin: auto
+
+  @media screen and (max-width: 550px)
+    width: 250px
 
   .row
     margin: 10px 0
