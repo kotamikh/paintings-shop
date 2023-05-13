@@ -4,7 +4,7 @@
     <figure>
       <img :src="Artist" alt="Художник">
       <figcaption>
-        <strong>Козлов М.А.</strong>
+        <strong>Баранов А.А.</strong>
       </figcaption>
     </figure>
     <div class="artist-text">
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <script setup>
-import Artist from '@/assets/художник.jpeg'
+import Artist from '@/assets/artist.jpeg'
 
 </script>
 

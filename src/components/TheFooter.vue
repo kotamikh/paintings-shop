@@ -2,8 +2,8 @@
   <div class="footer">
   <div class="telephone">Телефон: +7(922)-951-92-44</div>
   <div class="messengers">Написать:
-    <a href="https://vk.com/m.kozlov73">Вконтакте</a>
-    <a href="/home">Viber</a>
+    <a href="/">Вконтакте</a>
+    <a href="/">Viber</a>
   </div>
   </div>
 </template>
