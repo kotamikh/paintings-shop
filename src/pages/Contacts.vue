@@ -4,32 +4,20 @@
   <div class="form">
     <div class="row">
       <div class="col">
-        <div class="input-container">
-          <label>Как к вам обращаться</label>
-          <input type="text"/>
-        </div>
+        <the-input v-model="data.name" label="Как к вам обращаться"/>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <div class="input-container">
-          <label>Телефон</label>
-          <input type="text"/>
-        </div>
+        <the-input v-model="data.tel" label="Телефон"/>
       </div>
       <div class="col">
-        <div class="input-container">
-          <label>Email</label>
-          <input type="text"/>
-        </div>
+        <the-input v-model="data.email" label="Email"/>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <div class="input-container">
-          <label>Сообщение</label>
-          <textarea/>
-        </div>
+        <the-text-area v-model="data.message" label="Сообщение"/>
       </div>
     </div>
     <div class="row">
@@ -42,6 +30,20 @@
 export default {
   name: "Contacts"
 }
+</script>
+
+<script setup>
+import { reactive } from "vue";
+
+import TheInput     from "@/components/common/TheInput.vue";
+import TheTextArea  from "@/components/common/TheTextArea.vue";
+
+const data = reactive({
+  name: '',
+  tel: '',
+  email: '',
+  message: ''
+})
 </script>
 
 <style scoped lang="sass">
