@@ -2,10 +2,14 @@
     --seagreen: #6c8c79;
     --text-hover: #f8b230;
     --nav-hover: #7cbe99;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Underdog', cursive;
 }
 
 h2 {
     padding: 20px;
     margin: 0;
+}
+
+#app {
+    background-image: url("@/assets/canva.png");
 }
