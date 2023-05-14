@@ -47,7 +47,7 @@ const prev = () => {
   display: flex
   align-items: center
   justify-content: center
-  background-color: lightgray
+  background-color: var(--grey-background)
 
 figure
   margin: 0
@@ -69,9 +69,10 @@ figcaption
     height: 100%
     width: 100%
     object-fit: cover
+    border-radius: 5px
 
   .prev-button, .next-button
-    width: 100px
+    width: 80px
     height: 100%
 
     top: 0

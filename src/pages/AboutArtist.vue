@@ -51,6 +51,9 @@ h2
   align-items: center
   justify-content: center
 
+  @media screen and (max-width: 800px)
+    padding-top: 70px
+    flex-direction: column
   @media screen and (max-width: 550px)
     padding-top: 70px
     flex-direction: column

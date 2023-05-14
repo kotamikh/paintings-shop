@@ -56,11 +56,20 @@ const data = reactive({
 
   @media screen and (max-width: 550px)
     width: 250px
+  @media screen and (max-width: 800px)
+    width: 300px
 
   .row
     margin: 10px 0
     display: flex
     gap: 10px
+
+    &:nth-child(2)
+      @media screen and (max-width: 550px)
+        flex-direction: column
+
+      @media screen and (max-width: 800px)
+        flex-direction: column
 
     .col
       flex: 1
@@ -95,7 +104,7 @@ const data = reactive({
   color: white
   border: none
   border-radius: 10px
-  background-color: #6c8c79
+  background-color: var(--seagreen)
 
   cursor: pointer
 </style>

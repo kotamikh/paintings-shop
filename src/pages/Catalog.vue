@@ -36,23 +36,23 @@ export default {
   gap: 40px
   display: flex
   flex-direction: column
-  background-color: #F6F6F6
+  background-color: var(--grey-background)
 
-  @media screen and (max-width: 550px)
+  @media screen and (max-width: 800px)
     padding-bottom: 50px
 
   .paint-block
     padding: 50px 0
     display: flex
 
-    @media screen and (max-width: 550px)
+    @media screen and (max-width: 800px)
       flex-direction: column
       padding-bottom: 0
 
     &:nth-child(even)
       flex-direction: row-reverse
 
-      @media screen and (max-width: 550px)
+      @media screen and (max-width: 800px)
         flex-direction: column
 
       .paint-image-part
@@ -73,7 +73,7 @@ export default {
       flex-direction: column
       justify-content: center
 
-      @media screen and (max-width: 550px)
+      @media screen and (max-width: 800px)
         width: 100%
         margin-bottom: 20px
 
@@ -99,13 +99,14 @@ export default {
       align-items: center
       justify-content: center
 
-      @media screen and (max-width: 550px)
+      @media screen and (max-width: 800px)
         width: 100%
 
 
       .paint-image
-        height: 400px
-        width: auto
+        width: 400px
+        height: auto
+        box-sizing: border-box
         box-shadow: -10px 10px 0px 0px rgba(34, 60, 80, 0.2)
 
         transform: rotate(3deg)

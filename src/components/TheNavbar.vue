@@ -63,14 +63,20 @@ const switchNavMenu = () => {
     flex-direction: column;
     align-items: flex-start;
 
-    width: 30%;
+    top: 55%;
+    right: 0;
+    z-index: 2;
+    position: absolute;
+
+    width: 35%;
     padding: 0;
     font-weight: bold;
-    margin-right: 40px;
     background-color: #F6F6F6;
 
     border: 1px solid var(--seagreen);
     border-bottom: none;
+
+    transition: opacity 0.1s ease-in-out;
   }
   ul li {
     width: 100%;
@@ -79,7 +85,8 @@ const switchNavMenu = () => {
     border-bottom: 1px solid var(--seagreen);
   }
   ul.hidden-menu {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
   }
 }
 
