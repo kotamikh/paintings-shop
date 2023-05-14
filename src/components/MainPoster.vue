@@ -1,10 +1,13 @@
 <template>
   <div class="wrapper">
-    <figure>
-      <div class="picture-holder"></div>
-      <figcaption>Some picture description</figcaption>
-    </figure>
-    <h1 @click="router.push('/home')">Картины маслом | Киров</h1>
+    <div class="paint-in-frame">
+      <img :src="Frame" alt="painting">
+    </div>
+    <div class="main-text">
+      <h1>Картины маслом | Киров</h1>
+      <p>Сайт художника М. А. Козлова</p>
+      <button>Перейти к каталогу</button>
+    </div>
   </div>
 </template>
 
@@ -15,39 +18,51 @@ export default {
 </script>
 
 <script setup>
-
+import Frame from "@/assets/frame.png"
 </script>
 
 <style scoped>
 .wrapper {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: lightgray;
-}
-
-figure {
-  margin: 0;
   width: 90%;
-  height: 50vh;
-}
+  height: 100%;
+  margin: 0 auto;
 
-figcaption {
-  height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.picture-holder {
-  width: 100%;
-  height: 100%;
+.paint-in-frame {
+  display: flex;
+  justify-content: center;
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('@/assets/main-poster.jpg');
+  min-width: 50%;
+  min-height: 50%;
+  transform: rotate(-4deg);
 }
+
+.paint-in-frame img {
+  width: 70%;
+}
+
+.main-text {
+  display: flex;
+  margin: 0 20px;
+  align-self: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+button {
+  color: white;
+  background-color: var(--seagreen);
+
+  margin: 20px;
+  padding: 10px 30px;
+  align-self: center;
+
+  border: 0;
+  border-radius: 10px;
+}
+
 </style>
