@@ -28,13 +28,11 @@ import TheFooter from "@/components/TheFooter.vue";
 }
 
 .main-layout {
-  width: 80%;
-  margin: auto;
+  width: 100%;
   height: 100vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 </style>

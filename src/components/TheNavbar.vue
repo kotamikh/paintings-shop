@@ -1,11 +1,11 @@
 <template>
   <div class="navbar">
-  <h1 @click="router.push('/home')">Картины маслом | Киров</h1>
   <ul class="nav-menu">
+    <li @click="router.push('/home')">Главная</li>
     <li @click="router.push('/categories')">Картины</li>
     <li @click="router.push('/contacts')">Контакты</li>
-    <li @click="router.push('/about')">О художнике</li>
-    <li>Войти</li>
+    <li @click="router.push('/about')">Об авторе</li>
+    <li>Вход</li>
   </ul>
   </div>
 </template>
@@ -25,25 +25,24 @@ const router = useRouter();
 <style scoped>
 .navbar {
   width: 100%;
+  padding: 20px 0;
   user-select: none;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  border-bottom: 4px solid var(--seagreen);
+  background-color: var(--background-grey);
 }
 
-h1,
 ul {
   cursor: pointer;
 }
 
-h1:hover,
 li:hover {
   color: var(--nav-hover);
 }
 
 .nav-menu {
-  list-style: none;
-
   gap: 20px;
   display: flex;
   align-items: center;

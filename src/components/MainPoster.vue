@@ -4,6 +4,7 @@
       <div class="picture-holder"></div>
       <figcaption>Some picture description</figcaption>
     </figure>
+    <h1 @click="router.push('/home')">Картины маслом | Киров</h1>
   </div>
 </template>
 
