@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-  <h1 @click="router.push('/home')">Картины маслом | Киров</h1>
+  <h1 @click="router.push('/home')">Картины маслом | СПБ</h1>
   <button class="nav-burger"
           @click="switchNavMenu">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
