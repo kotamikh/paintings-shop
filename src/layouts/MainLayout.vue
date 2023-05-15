@@ -32,8 +32,9 @@ import TheFooter from "@/components/TheFooter.vue";
 
 .main-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+
   min-height: 75vh;
   height: fit-content;
 }

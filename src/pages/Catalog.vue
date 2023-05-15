@@ -1,24 +1,11 @@
 <template>
-  <h2>Все работы</h2>
   <div class="paint-container">
-    <div v-for="_ in 10" class="paint-block">
-      <div class="paint-info-part">
-        <div class="paint-name">
-          Кин дза дза
-        </div>
-        <div class="paint-description">
-          Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
-          несколько абзацев более менее осмысленного текста рыбы на русском языке,
-          а начинающему оратору отточить навык публичных выступлений в домашних условиях.
-        </div>
-        <div class="paint-price">
-          12 000 руб
-        </div>
-      </div>
-      <div class="paint-image-part">
-        <img class="paint-image" src="@/assets/test.jpeg" alt="kin-dza-dza"/>
-      </div>
-    </div>
+    <h2>Все работы</h2>
+    <painting-card
+        v-for="(painting, index) in paintings"
+        :key="index"
+        :painting="painting"
+    ></painting-card>
   </div>
 </template>
 
@@ -29,21 +16,27 @@ export default {
 </script>
 
 <script setup>
+import PaintingCard from "@/components/painting/PaintingCard.vue";
+import { paintingsMocks } from "@/mocks/paintings.js";
+import { ref } from "vue";
+
+const paintings = ref(paintingsMocks);
 </script>
 
-<style scoped lang="sass">
+<style lang="sass">
+
 .paint-container
-  gap: 40px
+  width: 80%
   display: flex
+  margin: 0 auto 100px
   flex-direction: column
-  background-color: #F6F6F6
 
-  .paint-block
-    padding: 50px 0
-    display: flex
+  h2
+    font-size: calc(18px + 12 * (100vw / 1280))
 
-    &:nth-child(even)
-      flex-direction: row-reverse
+    painting-card
+      &:nth-child(even)
+        flex-direction: row-reverse
 
       .paint-image-part
         .paint-image

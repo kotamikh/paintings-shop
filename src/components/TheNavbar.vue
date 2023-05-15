@@ -24,7 +24,6 @@ const router = useRouter();
 
 <style>
 .navbar {
-  /*width: 100%;*/
   padding: 20px;
   user-select: none;
 
