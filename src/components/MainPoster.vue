@@ -6,7 +6,7 @@
     <div class="main-text">
       <h1>Картины маслом | Киров</h1>
       <p>Сайт художника М. А. Козлова</p>
-      <button>Перейти к каталогу</button>
+      <button @click="router.push('/paintings')">Перейти к каталогу</button>
     </div>
   </div>
 </template>
@@ -19,6 +19,9 @@ export default {
 
 <script setup>
 import Frame from "@/assets/frame.png"
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 </script>
 
 <style scoped>

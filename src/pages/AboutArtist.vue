@@ -38,10 +38,6 @@ import Artist from '@/assets/художник.jpeg'
 
 <style scoped>
 
-h2 {
-  border-top: 4px solid var(--seagreen);
-}
-
 .picture-info {
   display: flex;
   align-items: center;

@@ -32,7 +32,6 @@ const router = useRouter();
   justify-content: center
   flex-wrap: wrap
   padding: 50px 0
-  border-top: 4px solid var(--seagreen)
 
   div
     width: 300px
