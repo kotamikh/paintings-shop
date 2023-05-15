@@ -27,20 +27,29 @@ const router = useRouter();
 
 <style scoped lang="sass">
 .categories
+  gap: 30px
   display: flex
   align-items: center
   justify-content: center
+
+  height: 100%
+  width: 100%
   flex-wrap: wrap
   padding: 50px 0
+  margin-bottom: 100px
+  box-sizing: border-box
 
   div
-    width: 300px
-    height: 300px
+    width: 25%
     overflow: hidden
-    margin-right: 30px
+    min-width: 270px
+    min-height: 270px
+    aspect-ratio: 1 / 1
     border-radius: 10px
+
     cursor: pointer
     position: relative
+
     display: flex
     align-items: center
     justify-content: center

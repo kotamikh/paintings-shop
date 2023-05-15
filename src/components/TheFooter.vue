@@ -22,10 +22,11 @@ export default {
   font-size: calc(12px + 4 * (100vw / 1280));
 
   bottom: 0;
+  z-index: 3;
   position: fixed;
 
   width: 100%;
-  padding: 20px;
+  padding: 20px 40px;
   border-top: 4px solid var(--seagreen);
   background-color: var(--background-grey);
 }

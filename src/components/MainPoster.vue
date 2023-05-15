@@ -28,7 +28,7 @@ const router = useRouter();
 .wrapper {
   min-width: 90%;
   height: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
 
   display: flex;
   user-select: none;

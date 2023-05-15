@@ -23,16 +23,18 @@ import TheFooter from "@/components/TheFooter.vue";
 
 <style scoped>
 
-.main-content {
-  height: 60vh;
-  margin: 40px 0;
-}
-
 .main-layout {
   width: 100%;
-  height: 100vh;
 
   display: flex;
   flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  height: fit-content;
 }
 </style>
