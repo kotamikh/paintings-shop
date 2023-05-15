@@ -1,6 +1,6 @@
 *,
 *::before,
-*::after {
+**::after {
     box-sizing: border-box;
 }
 
@@ -31,6 +31,10 @@ body {
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+}
+
+#app {
+    width: inherit;
 }
 
 ul[class],

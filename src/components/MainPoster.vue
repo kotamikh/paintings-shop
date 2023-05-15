@@ -26,13 +26,20 @@ const router = useRouter();
 
 <style scoped>
 .wrapper {
-  width: 90%;
+  min-width: 90%;
   height: 100%;
   margin: 0 auto;
 
   display: flex;
+  user-select: none;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 550px){
+  .wrapper {
+    flex-direction: column-reverse;
+  }
 }
 
 .paint-in-frame {
@@ -40,12 +47,14 @@ const router = useRouter();
   justify-content: center;
 
   min-width: 50%;
-  min-height: 50%;
   transform: rotate(-4deg);
 }
 
+
 .paint-in-frame img {
   width: 70%;
+  height: auto;
+  max-width: 890px;
 }
 
 .main-text {
@@ -56,16 +65,40 @@ const router = useRouter();
   flex-direction: column;
 }
 
-button {
-  color: white;
-  background-color: var(--seagreen);
-
-  margin: 20px;
-  padding: 10px 30px;
-  align-self: center;
-
-  border: 0;
-  border-radius: 10px;
+.main-text h1 {
+  font-size: calc(18px + 18 * (100vw / 1280));
 }
 
+.main-text p,
+button {
+  font-size: calc(12px + 6 * (100vw / 1280));
+}
+
+button {
+  color: white;
+  text-wrap: none;
+  background-color: var(--seagreen);
+  box-shadow: 0 0 10px 5px rgba(108, 140, 121, 0.5);
+
+  border: 0;
+  padding: 10px;
+  margin: 20px 0;
+  align-self: center;
+  border-radius: 10px;
+  width: 60%;
+  height: auto;
+  max-width: 350px;
+
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #4b6253;
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 10px 1px rgba(108, 140, 121, 0.5);
+}
 </style>

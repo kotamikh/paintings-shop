@@ -25,6 +25,7 @@ import TheFooter from "@/components/TheFooter.vue";
 
 .main-content {
   height: 60vh;
+  margin: 40px 0;
 }
 
 .main-layout {
@@ -34,5 +35,4 @@ import TheFooter from "@/components/TheFooter.vue";
   display: flex;
   flex-direction: column;
 }
-
 </style>

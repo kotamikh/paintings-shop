@@ -22,10 +22,10 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 </script>
 
-<style scoped>
+<style>
 .navbar {
-  width: 100%;
-  padding: 20px 0;
+  /*width: 100%;*/
+  padding: 20px;
   user-select: none;
 
   display: flex;
@@ -36,6 +36,10 @@ const router = useRouter();
 
 ul {
   cursor: pointer;
+}
+
+li {
+  font-size: calc(12px + 6 * (100vw / 1280));
 }
 
 li:hover {
