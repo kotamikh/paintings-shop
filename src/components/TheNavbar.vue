@@ -3,7 +3,7 @@
   <ul class="nav-menu">
     <li @click="router.push('/home')">Главная</li>
     <li @click="router.push('/categories')">Картины</li>
-    <li @click="router.push('/contacts')">Контакты</li>
+    <li @click="router.push('/contacts')">Заказать</li>
     <li @click="router.push('/about')">Об авторе</li>
     <li>Вход</li>
   </ul>

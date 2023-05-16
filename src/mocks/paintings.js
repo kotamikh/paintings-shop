@@ -2,7 +2,7 @@ import Altay from '@/assets/алтай.jpeg'
 import Bouquet from '@/assets/букет.jpeg'
 import Karelia from '@/assets/карелия.jpeg'
 import KinDzaDza    from '@/assets/кин-дза-дза.jpeg'
-import KinDzaDzaTwo from '@/assets/test.jpeg'
+import KinDzaDzaTwo from '@/assets/кин-дза-дза-2.jpeg'
 import Roses        from '@/assets/розы.jpeg'
 import Flowers from '@/assets/цветы.jpeg'
 

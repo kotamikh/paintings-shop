@@ -1,5 +1,5 @@
 <template>
-  <h2>Контакты</h2>
+  <h2>Контакты для обратной связи</h2>
 </template>
 
 <script>
@@ -9,8 +9,4 @@ export default {
 </script>
 
 <style scoped>
-
-h2 {
-  border-top: 4px solid var(--seagreen);
-}
 </style>

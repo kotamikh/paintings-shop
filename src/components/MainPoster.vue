@@ -50,7 +50,6 @@ const router = useRouter();
   transform: rotate(-4deg);
 }
 
-
 .paint-in-frame img {
   width: 70%;
   height: auto;
