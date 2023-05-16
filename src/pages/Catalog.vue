@@ -31,6 +31,9 @@ const paintings = ref(paintingsMocks);
   margin: 0 auto 100px
   flex-direction: column
 
+  @media screen and (max-width: 425px)
+    width: 100%
+
   h2
     font-size: calc(18px + 12 * (100vw / 1280))
 
@@ -48,10 +51,9 @@ const paintings = ref(paintingsMocks);
       padding: 0 10%
       box-sizing: border-box
 
-      text-align: center
-
       gap: 20px
       display: flex
+      text-align: center
       align-items: center
       flex-direction: column
       justify-content: center
@@ -81,7 +83,7 @@ const paintings = ref(paintingsMocks);
       .paint-image
         height: 400px
         width: auto
+        transform: rotate(3deg)
         box-shadow: -10px 10px 0px 0px rgba(34, 60, 80, 0.2)
 
-        transform: rotate(3deg)
 </style>

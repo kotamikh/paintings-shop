@@ -9,10 +9,10 @@ import Flowers from '@/assets/цветы.jpeg'
 export const paintingsMocks = [
     {
         id: 0,
-        title: 'Алтай',
-        price: 1000,
-        year: '2023',
-        source: Altay
+        title: 'Карелия',
+        price: 3000,
+        year: '2020',
+        source: Karelia
     },
     {
         id: 1,
@@ -23,11 +23,12 @@ export const paintingsMocks = [
     },
     {
         id: 2,
-        title: 'Карелия',
-        price: 3000,
-        year: '2020',
-        source: Karelia
+        title: 'Алтай',
+        price: 1000,
+        year: '2023',
+        source: Altay
     },
+
     {
         id: 3,
         title: 'Кин-Дза-Дза',
