@@ -52,9 +52,6 @@ import Artist from '@/assets/artist-frame.png'
     width: 100%
     padding: 0 30px
 
-  h2
-    font-size: calc(18px + 12 * (100vw / 1280))
-
   .picture-info
     @media screen and (max-width: 767px)
       display: flex
@@ -62,7 +59,7 @@ import Artist from '@/assets/artist-frame.png'
       flex-direction: column
 
     figure
-      width: 35%
+      width: 30%
       float: left
       padding: 0 20px 20px 0
 
@@ -70,6 +67,9 @@ import Artist from '@/assets/artist-frame.png'
         width: 80%
         padding: 0
         max-width: 350px
+
+      figcaption
+        font-size: calc(16px + 6 * (100vw / 1280))
 
       img
         width: 100%
@@ -79,6 +79,5 @@ import Artist from '@/assets/artist-frame.png'
   .artist-text
     p
       margin: 20px 0
-      font-size: calc(12px + 6 * (100vw / 1280))
 
 </style>

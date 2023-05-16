@@ -38,7 +38,7 @@ ul {
 }
 
 li {
-  font-size: calc(12px + 6 * (100vw / 1280));
+  font-size: calc(14px + 6 * (100vw / 1280));
 }
 
 li:hover {

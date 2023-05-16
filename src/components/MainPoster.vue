@@ -64,10 +64,6 @@ const router = useRouter();
   flex-direction: column;
 }
 
-.main-text h1 {
-  font-size: calc(18px + 18 * (100vw / 1280));
-}
-
 .main-text p,
 button {
   font-size: calc(12px + 6 * (100vw / 1280));

@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="paint-description">
-        Холст, масло. Размер картины: __/__
+        <p>Холст, масло. Размер картины: __/__</p>
       </div>
       <div class="price-and-year">
         <div class="price-year-text">
@@ -95,9 +95,6 @@ const props = defineProps({
   .painting-title
     display: flex
     align-items: center
-
-    h3
-      font-size: calc(16px + 10 * (100vw / 1280))
 
   .price-and-year
     height: auto

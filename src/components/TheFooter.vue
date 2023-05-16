@@ -1,9 +1,13 @@
 <template>
   <div class="footer">
-    <div class="telephone">Телефон: +7(922)-951-92-44</div>
-    <div class="messengers">Написать:
+    <div class="telephone">
+      <p>Телефон: +7(922)-951-92-44</p>
+    </div>
+    <div class="messengers">
+      <p>Написать:
       <a href="https://vk.com/m.kozlov73">Вконтакте</a>
       <a href="/home">Viber</a>
+      </p>
     </div>
   </div>
 </template>
@@ -19,7 +23,7 @@ export default {
   gap: 1vh;
   display: flex;
   flex-direction: column;
-  font-size: calc(12px + 4 * (100vw / 1280));
+  /*font-size: calc(12px + 4 * (100vw / 1280));*/
 
   bottom: 0;
   z-index: 3;
@@ -38,6 +42,7 @@ export default {
 
 a {
   text-decoration: none;
+  margin-right: 10px;
 }
 
 a:hover {

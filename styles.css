@@ -6,11 +6,24 @@
     font-family: 'Underdog', cursive;
 }
 
-h2 {
-    padding: 20px;
-    margin: 0;
-}
-
 body {
     background-image: url("@/assets/canva.png");
+}
+
+h1 {
+    font-size: calc(18px + 18 * (100vw / 1280));
+}
+
+h2 {
+    margin: 0;
+    padding: 20px;
+    font-size: calc(18px + 12 * (100vw / 1280));
+}
+
+h3 {
+    font-size: calc(16px + 8 * (100vw / 1280));
+}
+
+p {
+    font-size: calc(12px + 6 * (100vw / 1280))
 }

@@ -84,7 +84,6 @@ const router = useRouter();
 h3
   z-index: 2
   color: white
-  font-size: 25px
   font-weight: 300
   text-shadow: 0 0 2px #000000
 

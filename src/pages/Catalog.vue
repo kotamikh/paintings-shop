@@ -34,9 +34,6 @@ const paintings = ref(paintingsMocks);
   @media screen and (max-width: 425px)
     width: 100%
 
-  h2
-    font-size: calc(18px + 12 * (100vw / 1280))
-
     painting-card
       &:nth-child(even)
         flex-direction: row-reverse
