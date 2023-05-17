@@ -20,10 +20,8 @@ export default {
 
 <style scoped>
 .footer {
-  gap: 1vh;
+  gap: 3vw;
   display: flex;
-  flex-direction: column;
-  /*font-size: calc(12px + 4 * (100vw / 1280));*/
 
   bottom: 0;
   z-index: 3;
@@ -31,7 +29,7 @@ export default {
 
   width: 100%;
   padding: 20px 40px;
-  border-top: 4px solid var(--seagreen);
+  border-top: 2px solid var(--seagreen);
   background-color: var(--background-grey);
 }
 

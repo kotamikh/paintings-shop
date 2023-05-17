@@ -29,7 +29,7 @@ const router = useRouter();
 
   display: flex;
   justify-content: center;
-  border-bottom: 4px solid var(--seagreen);
+  border-bottom: 2px solid var(--seagreen);
   background-color: var(--background-grey);
 }
 
