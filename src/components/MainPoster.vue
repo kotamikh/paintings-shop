@@ -44,18 +44,41 @@ const router = useRouter();
 
 .paint-in-frame {
   display: flex;
-  justify-content: center;
-
   min-width: 50%;
-  transform: rotate(-4deg);
+  justify-content: center;
 }
 
 .paint-in-frame img {
   width: 70%;
   height: auto;
   max-width: 890px;
+  transform: rotate(0deg);
+  transform-origin: 48% 6%;
+
+  animation-delay: 5s;
+  animation-duration: 4s;
+  animation-name: paint-swing;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
+@keyframes paint-swing {
+  15% {
+   transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+}
 .main-text {
   display: flex;
   margin: 0 20px;
@@ -80,6 +103,7 @@ button {
   margin: 20px 0;
   align-self: center;
   border-radius: 10px;
+
   width: 60%;
   height: auto;
   max-width: 350px;
