@@ -1,12 +1,12 @@
 <template>
   <div class="navbar">
-  <ul class="nav-menu">
-    <li @click="router.push('/home')">Главная</li>
-    <li @click="router.push('/categories')">Картины</li>
-    <li @click="router.push('/contacts')">Заказать</li>
-    <li @click="router.push('/about')">Об авторе</li>
-    <li>Вход</li>
-  </ul>
+    <ul class="nav-menu">
+      <li v-for="(link, index) in links"
+          :class="{ current: isCurrent(index) }"
+          @click="onLinkClick(link, index)"
+      >{{ link.title }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,36 +18,70 @@ export default {
 
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 
 const router = useRouter();
+
+const currentIndex = ref(0)
+const isCurrent = (index) => {
+    return index === currentIndex.value
+}
+
+const links = [
+  {
+    title: 'Главная',
+    router: '/home'
+  },
+  {
+    title: 'Картины',
+    router: '/categories'
+  },
+  {
+    title: 'Заказать',
+    router: '/contacts'
+  },
+  {
+    title: 'Об авторе',
+    router: '/about'
+  },
+  {
+    title: 'Вход',
+    router: '/'
+  }
+]
+
+const onLinkClick = (link, index) => {
+  currentIndex.value = index
+  router.push(link.router)
+}
+
 </script>
 
 <style>
 .navbar {
-  padding: 20px;
-  user-select: none;
-
   display: flex;
+  user-select: none;
   justify-content: center;
-  border-bottom: 2px solid var(--seagreen);
-  background-color: var(--background-grey);
 }
 
-ul {
+.nav-menu {
+  display: flex;
   cursor: pointer;
+  align-items: center;
 }
 
 li {
+  padding: 10px;
   font-size: calc(14px + 6 * (100vw / 1280));
+  border-bottom: 2px solid rgba(108, 140, 121, 50%);
 }
 
 li:hover {
   color: var(--nav-hover);
 }
 
-.nav-menu {
-  gap: 20px;
-  display: flex;
-  align-items: center;
+li.current {
+  border-bottom: 2px solid var(--nav-hover);
 }
+
 </style>

@@ -22,15 +22,14 @@ export default {
 .footer {
   gap: 3vw;
   display: flex;
+  justify-content: center;
 
   bottom: 0;
   z-index: 3;
-  position: fixed;
+  position: absolute;
 
   width: 100%;
-  padding: 20px 40px;
-  border-top: 2px solid var(--seagreen);
-  background-color: var(--background-grey);
+  padding: 10px;
 }
 
 .messengers {
