@@ -40,7 +40,7 @@ const router = useRouter();
   box-sizing: border-box
 
   div
-    width: 25%
+    width: 20%
     overflow: hidden
     min-width: 270px
     min-height: 270px
