@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Contacts                           from "@/pages/Contacts.vue";
-import HomePage    from "@/pages/HomePage.vue";
-import Catalog     from "@/pages/Catalog.vue";
+import Contacts from "@/pages/Contacts.vue";
+import HomePage from "@/pages/HomePage.vue";
+import Catalog from "@/pages/Catalog.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
-import MainLayout          from "@/layouts/MainLayout.vue";
+import MainLayout from "@/layouts/MainLayout.vue";
 import PaintingsCategories from "@/pages/Categories.vue";
 
 const routes = [
@@ -37,7 +37,6 @@ const routes = [
                 name: 'Catalog',
                 component: Catalog
             }
-
         ]
     }
 ]

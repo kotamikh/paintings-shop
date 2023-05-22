@@ -35,6 +35,5 @@ import TheFooter from "@/components/TheFooter.vue";
   justify-content: center;
 
   min-height: 75vh;
-  height: fit-content;
 }
 </style>

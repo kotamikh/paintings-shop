@@ -2,7 +2,7 @@
   <div class="navbar">
     <ul class="nav-menu">
       <li v-for="(link, index) in links"
-          :class="{ current: isCurrent(index) }"
+          :class="{ current : isCurrent(index) }"
           @click="onLinkClick(link, index)"
       >{{ link.title }}
       </li>
@@ -37,12 +37,12 @@ const links = ref([
     route: '/categories'
   },
   {
-    title: 'Заказать',
-    route: '/contacts'
+    title: 'Автор',
+    route: '/about'
   },
   {
-    title: 'Об авторе',
-    route: '/about'
+    title: 'Связаться',
+    route: '/contacts'
   },
   {
     title: 'Вход',
@@ -76,11 +76,11 @@ onMounted(() => {
 .nav-menu {
   display: flex;
   cursor: pointer;
-  align-items: center;
 }
 
 li {
-  padding: 10px;
+  height: 50%;
+  padding: 15px 10px;
   font-size: calc(14px + 6 * (100vw / 1280));
   border-bottom: 2px solid rgba(108, 140, 121, 50%);
 }
@@ -90,6 +90,7 @@ li:hover {
 }
 
 li.current {
+  background-color: var(--background-grey);
   border-bottom: 2px solid var(--nav-hover);
 }
 

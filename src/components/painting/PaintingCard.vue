@@ -5,7 +5,9 @@
         <h3>{{ painting.title }}</h3>
         <button class="fav-button">
           <span class="hint-text">В избранное</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
+            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
+          </svg>
         </button>
       </div>
       <div class="paint-description">
@@ -152,9 +154,10 @@ const props = defineProps({
     transform: rotate(0)
 
 button
+  width: 40px
+  height: inherit
   display: flex
   align-items: center
-  flex-direction: row
   justify-content: center
 
   border: none
@@ -204,6 +207,6 @@ button
 
   &:hover
     svg
-      fill: red
-      stroke: red
+      fill: mistyrose
+      stroke: #f58b82
 </style>

@@ -28,7 +28,7 @@ const paintings = ref(paintingsMocks);
 .paint-container
   width: 100%
   display: flex
-  margin: 0 auto 100px
+  margin: 0 auto 80px
   flex-direction: column
 
   @media screen and (max-width: 425px)

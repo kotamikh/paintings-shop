@@ -36,7 +36,7 @@ const router = useRouter();
   width: 100%
   flex-wrap: wrap
   padding: 50px 0
-  margin-bottom: 100px
+  margin-bottom: 30px
   box-sizing: border-box
 
   div
