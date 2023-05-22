@@ -17,8 +17,8 @@ export default {
 </script>
 
 <script setup>
-import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { onMounted, ref } from "vue";
 
 const router = useRouter();
 
@@ -27,33 +27,42 @@ const isCurrent = (index) => {
     return index === currentIndex.value
 }
 
-const links = [
+const links = ref([
   {
     title: 'Главная',
-    router: '/home'
+    route: '/home'
   },
   {
     title: 'Картины',
-    router: '/categories'
+    route: '/categories'
   },
   {
     title: 'Заказать',
-    router: '/contacts'
+    route: '/contacts'
   },
   {
     title: 'Об авторе',
-    router: '/about'
+    route: '/about'
   },
   {
     title: 'Вход',
-    router: '/'
+    route: '/'
   }
-]
+])
 
 const onLinkClick = (link, index) => {
   currentIndex.value = index
-  router.push(link.router)
+  router.push(link.route)
 }
+
+onMounted(() => {
+  const currentRoute = useRoute().path
+  const index = links.value.findIndex(link => link.route === currentRoute);
+
+  if (index !== -1) {
+    currentIndex.value = index
+  }
+})
 
 </script>
 

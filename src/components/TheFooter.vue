@@ -29,12 +29,22 @@ export default {
   position: absolute;
 
   width: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer{
+    padding: 0 10px 20px;
+  }
+}
 .messengers {
   gap: 10px;
   display: flex;
+}
+
+.telephone p,
+.messengers p {
+  font-size: calc(10px + 6 * (100vw / 1280))
 }
 
 a {

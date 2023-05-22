@@ -136,14 +136,15 @@ const props = defineProps({
         box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
 
 .painting-holder
-  width: 45%
+  width: 40%
   overflow: hidden
   aspect-ratio: 3 / 2
   transform: rotate(4deg)
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.3)
 
   img
-    object-fit: cover
+    object-fit: contain
+
 
   @media screen and (max-width: 840px)
     width: 70%

@@ -41,16 +41,16 @@ import Artist from '@/assets/artist-frame.png'
 <style scoped lang="sass">
 
 .artist-container
-  width: 80%
+  width: 100%
+  padding: 0 30px
   margin: 0 auto  100px
 
   display: flex
   flex-direction: column
   box-sizing: border-box
 
-  @media screen and (max-width: 767px)
-    width: 100%
-    padding: 0 30px
+  figure
+    width: 25%
 
   .picture-info
     @media screen and (max-width: 767px)
@@ -72,9 +72,9 @@ import Artist from '@/assets/artist-frame.png'
         font-size: calc(16px + 6 * (100vw / 1280))
 
       img
-        width: 100%
+        max-width: 100%
         height: auto
-        max-width: 600px
+        //max-width: 600px
 
   .artist-text
     p

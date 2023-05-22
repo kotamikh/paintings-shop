@@ -26,13 +26,12 @@ const paintings = ref(paintingsMocks);
 <style lang="sass">
 
 .paint-container
-  width: 80%
+  width: 100%
   display: flex
   margin: 0 auto 100px
   flex-direction: column
 
   @media screen and (max-width: 425px)
-    width: 100%
 
     painting-card
       &:nth-child(even)

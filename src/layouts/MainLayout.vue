@@ -25,7 +25,6 @@ import TheFooter from "@/components/TheFooter.vue";
 
 .main-layout {
   width: 100%;
-
   display: flex;
   flex-direction: column;
 }

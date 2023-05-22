@@ -51,7 +51,7 @@ const router = useRouter();
 .paint-in-frame img {
   width: 70%;
   height: auto;
-  max-width: 890px;
+  max-width: 100%;
   transform: rotate(0deg);
   transform-origin: 48% 6%;
 

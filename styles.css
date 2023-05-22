@@ -17,8 +17,40 @@ h1 {
 
 h2 {
     margin: 0;
-    padding: 20px;
+    padding: 40px 0;
+    text-align: center;
+    justify-self: center;
     font-size: calc(18px + 12 * (100vw / 1280));
+}
+
+h2::before {
+    content: '';
+    background-image: url("@/assets/line.png");
+    transform: rotate(180deg);
+    width: 25%;
+    height: 8vh;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+
+}
+
+h2::after {
+    content: '';
+    background-image: url("@/assets/line.png");
+    width: 25%;
+    height: 8vh;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 424px){
+
 }
 
 h3 {
