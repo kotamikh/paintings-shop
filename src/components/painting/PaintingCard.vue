@@ -66,10 +66,10 @@ const props = defineProps({
   width: 100%
   padding: 10px 0
   aspect-ratio: 4 / 1.5
-  border-bottom: 3px dotted rgba(108, 140, 121, 0.5)
+  //border-bottom: 3px dashed rgba(108, 140, 121, 0.5)
 
   &:first-of-type
-    border-top: 3px dotted rgba(108, 140, 121, 0.5)
+    //border-top: 3px dashed rgba(108, 140, 121, 0.5)
 
   &:nth-child(odd)
     flex-direction: row-reverse

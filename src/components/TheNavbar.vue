@@ -18,11 +18,11 @@ export default {
 
 <script setup>
 import { useRoute, useRouter } from "vue-router";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 
 const router = useRouter();
-
 const currentIndex = ref(0)
+
 const isCurrent = (index) => {
   return index === currentIndex.value
 }
@@ -34,7 +34,7 @@ const links = ref([
   },
   {
     title: 'Картины',
-    route: ['/paintings/categories', '/paintings/catalog']
+    route: '/paintings'
   },
   {
     title: 'Автор',
@@ -46,7 +46,7 @@ const links = ref([
   },
   {
     title: 'Вход',
-    route: '/'
+    route: '*'
   }
 ])
 
@@ -56,12 +56,15 @@ const onLinkClick = (link, index) => {
 }
 
 onMounted(() => {
-  const currentRoute = useRoute().path
-  const index = links.value.findIndex(link => link.route.includes(currentRoute))
+  const route = useRoute();
 
-  if (index !== -1) {
-    currentIndex.value = index
-  }
+  watch(() => route.path, (path) => {
+    const index = links.value.findIndex(link => path.includes(link.route))
+
+    if (index !== -1) {
+      currentIndex.value = index
+    }
+  }, { immediate: true })
 })
 
 </script>
