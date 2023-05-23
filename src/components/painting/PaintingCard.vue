@@ -5,7 +5,7 @@
         <h3>{{ painting.title }}</h3>
         <button class="fav-button">
           <span class="hint-text">В избранное</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
             <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
           </svg>
         </button>
@@ -66,8 +66,10 @@ const props = defineProps({
   width: 100%
   padding: 10px 0
   aspect-ratio: 4 / 1.5
-  background-color: var(--background-grey)
-  border-bottom: 1px dotted rgba(108, 140, 121, 0.5)
+  border-bottom: 3px dotted rgba(108, 140, 121, 0.5)
+
+  &:first-of-type
+    border-top: 3px dotted rgba(108, 140, 121, 0.5)
 
   &:nth-child(odd)
     flex-direction: row-reverse
@@ -108,20 +110,22 @@ const props = defineProps({
 
     margin: 30px
     padding: 20px 0
-    background-color: white
+    background: white
+    background: linear-gradient(135deg, transparent 15px, white 0) top left, linear-gradient(-45deg, transparent 15px, white 0) bottom right
+    background-size: 50% 100%
     background-repeat: no-repeat
-    box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 30px 10px -30px rgba(0, 0, 0, 0.5)
 
     &::before
       content: ''
       width: 80px
       height: 20px
 
-      top: -10px
-      left: -42px
+      top: -3px
+      left: -40px
       position: absolute
       transform: rotate(-45deg)
-      background-color: var(--background-grey)
+      background-color: transparent
       box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
 
     .price-year-text
@@ -130,11 +134,11 @@ const props = defineProps({
         width: 80px
         height: 20px
 
-        right: -42px
-        bottom: -10px
+        right: -38px
+        bottom: -5px
         position: absolute
         transform: rotate(135deg)
-        background-color: var(--background-grey)
+        background-color: transparent
         box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
 
 .painting-holder
@@ -208,5 +212,5 @@ button
   &:hover
     svg
       fill: mistyrose
-      stroke: #f58b82
+      stroke: #fd554c
 </style>

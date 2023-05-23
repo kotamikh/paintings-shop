@@ -90,7 +90,6 @@ li:hover {
 }
 
 li.current {
-  background-color: var(--background-grey);
   border-bottom: 2px solid var(--nav-hover);
 }
 
