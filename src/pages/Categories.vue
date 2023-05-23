@@ -1,7 +1,7 @@
 <template>
   <div class="categories">
     <div class="on-sale"
-         @click="router.push('/paintings')"
+         @click="router.push({ name: 'Catalog' })"
     >
         <h3>В наличии</h3>
     </div>

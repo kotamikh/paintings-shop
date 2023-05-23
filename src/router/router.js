@@ -4,7 +4,8 @@ import HomePage from "@/pages/HomePage.vue";
 import Catalog from "@/pages/Catalog.vue";
 import AboutArtist from "@/pages/AboutArtist.vue";
 import MainLayout from "@/layouts/MainLayout.vue";
-import PaintingsCategories from "@/pages/Categories.vue";
+import Categories from "@/pages/Categories.vue";
+import ForwardView from "@/components/common/ForwardView.vue";
 
 const routes = [
     {
@@ -13,29 +14,38 @@ const routes = [
         redirect: '/home',
         children: [
             {
-                path: '/home',
+                path: 'home',
                 name: 'Home',
                 component: HomePage
             },
             {
-                path: '/contacts',
+                path: 'contacts',
                 name: 'Contacts',
                 component: Contacts
             },
             {
-                path: '/about',
+                path: 'about',
                 name: 'About',
                 component: AboutArtist
             },
             {
-                path: '/categories',
-                name: 'Categories',
-                component: PaintingsCategories
-            },
-            {
-                path: '/paintings',
-                name: 'Catalog',
-                component: Catalog
+                path: 'paintings',
+                redirect: {
+                    name: 'Categories'
+                },
+                component: ForwardView,
+                children: [
+                    {
+                        path: 'categories',
+                        name: 'Categories',
+                        component: Categories
+                    },
+                    {
+                        path: 'catalog',
+                        name: 'Catalog',
+                        component: Catalog
+                    }
+                ]
             }
         ]
     }

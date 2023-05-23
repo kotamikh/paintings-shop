@@ -34,7 +34,7 @@ const links = ref([
   },
   {
     title: 'Картины',
-    route: '/categories'
+    route: '/paintings/categories'
   },
   {
     title: 'Автор',
