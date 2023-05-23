@@ -24,7 +24,7 @@ const router = useRouter();
 
 const currentIndex = ref(0)
 const isCurrent = (index) => {
-    return index === currentIndex.value
+  return index === currentIndex.value
 }
 
 const links = ref([
@@ -34,7 +34,7 @@ const links = ref([
   },
   {
     title: 'Картины',
-    route: '/paintings/categories'
+    route: ['/paintings/categories', '/paintings/catalog']
   },
   {
     title: 'Автор',
@@ -52,12 +52,12 @@ const links = ref([
 
 const onLinkClick = (link, index) => {
   currentIndex.value = index
-  router.push(link.route)
+  typeof link.route === 'string' ? router.push(link.route) : router.push(link.route[0])
 }
 
 onMounted(() => {
   const currentRoute = useRoute().path
-  const index = links.value.findIndex(link => link.route === currentRoute);
+  const index = links.value.findIndex(link => link.route.includes(currentRoute))
 
   if (index !== -1) {
     currentIndex.value = index
