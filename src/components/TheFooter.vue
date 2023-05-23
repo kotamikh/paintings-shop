@@ -6,7 +6,7 @@
     <div class="messengers">
       <p>Написать:
       <a href="https://vk.com/m.kozlov73">Вконтакте</a>
-      <a href="/home">Viber</a>
+      <a href="https://wa.me/79229519244">WhatsApp</a>
       </p>
     </div>
   </div>
@@ -48,6 +48,7 @@ export default {
 }
 
 a {
+  color: var(--nav-hover);
   text-decoration: none;
   margin-right: 10px;
 }
