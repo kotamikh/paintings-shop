@@ -5,10 +5,6 @@
       <img :src="Artist" alt="Художник">
       <div class="artist-text">
         <h3>Козлов М.А.</h3>
-        <p>Повседневная практика показывает, что реализация намеченных плановых заданий
-          обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-          Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании
-          систем массового участия.</p>
         <p>Разнообразный и богатый опыт рамки и место обучения кадров требуют определения и уточнения форм
           развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей
           активности в значительной степени обуславливает создание систем массового участия.
@@ -40,32 +36,24 @@ import Artist from '@/assets/artist-frame.png'
   width: 100%
   padding: 0 30px
   margin: 0 auto 50px
-
-  display: flex
-  flex-direction: column
   box-sizing: border-box
 
   .picture-info
-    @media screen and (max-width: 767px)
-      display: flex
-      flex-direction: column
+    display: flex
+    align-items: center
+    flex-direction: column
 
     img
-      max-width: 30%
-      float: left
-      padding: 0 20px 20px 0
-
+      max-width: 45%
       @media screen and (max-width: 767px)
-        width: 80%
-        padding: 0
-        max-width: 350px
+        max-width: 60%
 
-      img
-        max-width: 100%
-        height: auto
+    .artist-text
+      width: 80%
 
-  .artist-text
-    p
-      margin: 20px 0
+      p
+        margin: 20px 0
+      @media screen and (max-width: 767px)
+        width: 100%
 
 </style>
