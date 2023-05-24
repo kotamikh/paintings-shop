@@ -5,8 +5,10 @@
         <h3>{{ painting.title }}</h3>
         <button class="fav-button">
           <span class="hint-text">В избранное</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
-            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="currentColor"
+               class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
+            <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
           </svg>
         </button>
       </div>
@@ -15,8 +17,8 @@
       </div>
       <div class="price-and-year">
         <div class="price-year-text">
-          <p class="painting-price">{{ 'Цена: ' + painting.price + ' руб.'}}</p>
-          <p class="painting-year">{{ painting.year + ' год'}}</p>
+          <p class="painting-price">{{ 'Цена: ' + painting.price + ' руб.' }}</p>
+          <p class="painting-year">{{ painting.year + ' год' }}</p>
         </div>
       </div>
     </div>
@@ -64,12 +66,36 @@ const props = defineProps({
   justify-content: space-evenly
 
   width: 100%
-  padding: 10px 0
+  padding-bottom: 12px
+  position: relative
   aspect-ratio: 4 / 1.5
-  //border-bottom: 3px dashed rgba(108, 140, 121, 0.5)
 
-  &:first-of-type
-    //border-top: 3px dashed rgba(108, 140, 121, 0.5)
+  &::after
+    content: ''
+    width: 100%
+    height: 10%
+    bottom: -12px
+    position: absolute
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url("@/assets/painting-bottom.png")
+
+    @media screen and (max-width: 840px)
+      height: 8%
+
+  &:last-of-type
+    margin-bottom: 2%
+    &::after
+      content: ''
+      width: 50%
+      height: 15%
+      bottom: -12%
+      position: absolute
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      background-image: url("@/assets/end-line.png")
 
   &:nth-child(odd)
     flex-direction: row-reverse
