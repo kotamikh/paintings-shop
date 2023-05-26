@@ -69,31 +69,24 @@ onMounted(() => {
 
 </script>
 
-<style>
-.navbar {
-  display: flex;
-  user-select: none;
-  justify-content: center;
-}
+<style lang="sass">
+.navbar
+  display: flex
+  user-select: none
+  justify-content: center
 
-.nav-menu {
-  display: flex;
-  cursor: pointer;
-}
+  .nav-menu
+    display: flex
+    cursor: pointer
 
-li {
-  height: 50%;
-  padding: 15px 10px;
-  font-size: calc(14px + 6 * (100vw / 1280));
-  border-bottom: 2px solid rgba(108, 140, 121, 50%);
-}
+  li
+    height: 50%
+    padding: 15px 10px
+    font-size: calc(14px + 6 * (100vw / 1280))
+    border-bottom: 2px solid rgba(108, 140, 121, 50%)
+    &:hover
+      color: var(--nav-hover)
 
-li:hover {
-  color: var(--nav-hover);
-}
-
-li.current {
-  border-bottom: 2px solid var(--nav-hover);
-}
-
+    &.current
+      border-bottom: 2px solid var(--nav-hover)
 </style>

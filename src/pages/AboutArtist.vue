@@ -31,7 +31,6 @@ import Artist from '@/assets/artist-frame.png'
 </script>
 
 <style scoped lang="sass">
-
 .artist-container
   width: 100%
   padding: 0 30px
@@ -45,15 +44,16 @@ import Artist from '@/assets/artist-frame.png'
 
     img
       max-width: 45%
-      @media screen and (max-width: 767px)
-        max-width: 60%
 
     .artist-text
       width: 80%
 
       p
         margin: 20px 0
-      @media screen and (max-width: 767px)
-        width: 100%
 
+    @media screen and (max-width: 767px)
+      img
+        max-width: 60%
+      .artist-text
+        width: 100%
 </style>

@@ -59,15 +59,14 @@ const props = defineProps({
 
 </script>
 <style scoped lang="sass">
-
 .painting-card
   display: flex
   align-items: center
   justify-content: space-evenly
 
   width: 100%
-  padding-bottom: 12px
   position: relative
+  padding-bottom: 12px
   aspect-ratio: 4 / 1.5
 
   &::after
@@ -112,7 +111,6 @@ const props = defineProps({
 
   @media screen and (max-width: 840px)
     flex-direction: column
-
 
 .painting-info
   display: flex
@@ -177,7 +175,6 @@ const props = defineProps({
   img
     object-fit: contain
 
-
   @media screen and (max-width: 840px)
     width: 70%
     margin: 10px 0
@@ -186,6 +183,7 @@ const props = defineProps({
 button
   width: 40px
   height: inherit
+
   display: flex
   align-items: center
   justify-content: center
@@ -194,7 +192,6 @@ button
   cursor: pointer
   position: relative
   background-color: transparent
-
 
   .hint-text
     width: 120px

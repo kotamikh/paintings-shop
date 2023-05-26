@@ -24,100 +24,83 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 </script>
 
-<style scoped>
-.wrapper {
-  min-width: 90%;
-  height: 100%;
-  margin: 30px auto;
+<style scoped lang="sass">
+.wrapper
+  height: 100%
+  min-width: 90%
+  margin: 30px auto
 
-  display: flex;
-  user-select: none;
-  align-items: center;
-  justify-content: center;
-}
+  display: flex
+  user-select: none
+  align-items: center
+  justify-content: center
 
-@media screen and (max-width: 550px){
-  .wrapper {
-    flex-direction: column-reverse;
-  }
-}
+  @media screen and (max-width: 550px)
+    flex-direction: column-reverse
 
-.paint-in-frame {
-  display: flex;
-  min-width: 50%;
-  justify-content: center;
-}
+  .paint-in-frame
+    display: flex
+    min-width: 50%
+    justify-content: center
 
-.paint-in-frame img {
-  width: 70%;
-  height: auto;
-  max-width: 100%;
-  transform: rotate(0deg);
-  transform-origin: 48% 6%;
+    img
+      width: 70%
+      height: auto
+      max-width: 100%
+      transform: rotate(0deg)
+      transform-origin: 48% 6%
 
-  animation-delay: 5s;
-  animation-duration: 4s;
-  animation-name: paint-swing;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
+      animation-delay: 5s
+      animation-duration: 4s
+      animation-name: paint-swing
+      animation-iteration-count: infinite
+      animation-timing-function: ease-in-out
 
-@keyframes paint-swing {
-  15% {
-   transform: rotate(5deg);
-  }
-  30% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-  70% {
-    transform: rotate(-2deg);
-  }
-  90% {
-    transform: rotate(0deg);
-  }
-}
-.main-text {
-  display: flex;
-  margin: 0 20px;
-  align-self: center;
-  align-items: start;
-  flex-direction: column;
-}
+  @keyframes paint-swing
+    15%
+      transform: rotate(5deg)
+    30%
+      transform: rotate(-4deg)
+    50%
+      transform: rotate(3deg)
+    70%
+      transform: rotate(-2deg)
+    90%
+      transform: rotate(0deg)
 
-.main-text p,
-button {
-  font-size: calc(12px + 6 * (100vw / 1280));
-}
+  .main-text
+    display: flex
+    margin: 0 20px
+    align-self: center
+    align-items: start
+    flex-direction: column
 
-button {
-  color: white;
-  text-wrap: none;
-  background-color: var(--seagreen);
-  box-shadow: 0 0 10px 5px rgba(108, 140, 121, 0.5);
+    p
+      font-size: calc(12px + 6 * (100vw / 1280))
 
-  border: 0;
-  padding: 10px;
-  margin: 20px 0;
-  align-self: center;
-  border-radius: 10px;
+    button
+      font-size: calc(12px + 6 * (100vw / 1280))
 
-  width: 60%;
-  height: auto;
-  max-width: 350px;
+      color: white
+      cursor: pointer
+      text-wrap: none
+      transition: all 0.1s ease-in-out
+      background-color: var(--seagreen)
+      box-shadow: 0 0 10px 5px rgba(108, 140, 121, 0.5)
 
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
+      border: 0
+      padding: 10px
+      margin: 20px 0
+      align-self: center
+      border-radius: 10px
 
-button:hover {
-  background-color: #4b6253;
-}
+      width: 60%
+      height: auto
+      max-width: 350px
 
-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 0 10px 1px rgba(108, 140, 121, 0.5);
-}
+      &:hover
+        background-color: #4b6253
+      &:active
+        transform: translateY(3px)
+        box-shadow: 0 0 10px 1px rgba(108, 140, 121, 0.5)
 </style>

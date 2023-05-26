@@ -18,48 +18,37 @@ export default {
 }
 </script>
 
-<style scoped>
-.footer {
-  gap: 3vw;
-  display: flex;
-  justify-content: center;
+<style scoped lang="sass">
+.footer
+  gap: 3vw
+  display: flex
+  justify-content: center
 
-  bottom: 0;
-  z-index: 3;
-  position: absolute;
+  bottom: 0
+  z-index: 3
+  position: absolute
 
-  width: 100%;
-  padding: 20px;
-}
+  width: 100%
+  padding: 20px
 
-@media screen and (max-width: 767px) {
-  .footer{
-    padding: 0 10px 20px;
-  }
-}
-.messengers {
-  gap: 10px;
-  display: flex;
-}
+  @media screen and (max-width: 767px)
+    padding: 0 10px 20px
 
-.telephone p,
-.messengers p {
-  font-size: calc(10px + 6 * (100vw / 1280))
-}
+  .messengers
+    gap: 10px
+    display: flex
 
-a {
-  color: var(--nav-hover);
-  text-decoration: none;
-  margin-right: 10px;
-}
+    a
+      color: var(--nav-hover)
+      text-decoration: none
+      margin-right: 10px
+      &:hover
+        cursor: pointer
+        color: var(--nav-hover)
+        text-decoration: underline
+      &:visited
+        color: var(--seagreen)
 
-a:hover {
-  cursor: pointer;
-  color: var(--nav-hover);
-  text-decoration: underline;
-}
-
-a:visited {
-  color: var(--seagreen);
-}
+  p
+    font-size: calc(10px + 6 * (100vw / 1280))
 </style>

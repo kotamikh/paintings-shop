@@ -21,19 +21,15 @@ import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
 </script>
 
-<style scoped>
+<style scoped lang="sass">
+.main-layout
+  width: 100%
+  display: flex
+  flex-direction: column
 
-.main-layout {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  min-height: 75vh;
-}
+  .main-content
+    display: flex
+    min-height: 75vh
+    flex-direction: column
+    justify-content: center
 </style>

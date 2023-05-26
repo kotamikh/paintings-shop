@@ -16,15 +16,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="sass">
+.contacts-container
+  width: 100%
 
-.contacts-container {
-  width: 100%;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .inputs
+    display: flex
+    align-items: center
+    flex-direction: column
 </style>

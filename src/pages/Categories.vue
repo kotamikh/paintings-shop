@@ -32,8 +32,8 @@ const router = useRouter();
   align-items: center
   justify-content: center
 
-  height: 100%
   width: 100%
+  height: 100%
   flex-wrap: wrap
   padding: 50px 0
   margin-bottom: 30px
@@ -69,22 +69,21 @@ const router = useRouter();
     &:hover::before
       opacity: 0
 
-.on-sale, .on-order, .sold
-  background-size: cover
+  .on-sale, .on-order, .sold
+    background-size: cover
 
-.on-sale
-  background-image: url("@/assets/meadow.jpg")
+  .on-sale
+    background-image: url("@/assets/meadow.jpg")
 
-.on-order
-  background-image: url("@/assets/seedlings.jpg")
+  .on-order
+    background-image: url("@/assets/seedlings.jpg")
 
-.sold
-  background-image: url("@/assets/mountains.jpg")
+  .sold
+    background-image: url("@/assets/mountains.jpg")
 
-h3
-  z-index: 2
-  color: white
-  font-weight: 300
-  text-shadow: 0 0 2px #000000
-
+  h3
+    z-index: 2
+    color: white
+    font-weight: 300
+    text-shadow: 0 0 2px #000000
 </style>
