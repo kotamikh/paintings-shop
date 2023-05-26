@@ -71,7 +71,7 @@ const props = defineProps({
 
   &::after
     content: ''
-    width: 100%
+    width: 70%
     height: 10%
     bottom: -12px
     position: absolute
@@ -82,12 +82,13 @@ const props = defineProps({
 
     @media screen and (max-width: 840px)
       height: 8%
+      width: 100%
 
   &:last-of-type
     margin-bottom: 2%
     &::after
       content: ''
-      width: 50%
+      width: 35%
       height: 15%
       bottom: -12%
       position: absolute
@@ -95,6 +96,9 @@ const props = defineProps({
       background-position: center
       background-repeat: no-repeat
       background-image: url("@/assets/end-line.png")
+
+      @media screen and (max-width: 767px)
+        width: 50%
 
   &:nth-child(odd)
     flex-direction: row-reverse
