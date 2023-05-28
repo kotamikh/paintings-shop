@@ -46,6 +46,7 @@ const showButton = () => {
   position: relative
   margin: 0 auto 100px
   flex-direction: column
+  scroll-behavior: smooth
 
   .show
     opacity: 100%
