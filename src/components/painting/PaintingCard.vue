@@ -198,8 +198,9 @@ button
   background-color: transparent
 
   .hint-text
+    padding: 1%
     width: 120px
-    padding: 5px 0
+    max-width: 30vw
     text-align: center
     border-radius: 6px
 

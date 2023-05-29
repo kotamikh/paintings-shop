@@ -57,6 +57,7 @@ h3 {
     font-size: calc(16px + 8 * (100vw / 1280));
 }
 
-p {
+p,
+span {
     font-size: calc(12px + 6 * (100vw / 1280))
 }

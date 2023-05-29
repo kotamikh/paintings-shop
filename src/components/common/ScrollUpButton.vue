@@ -1,5 +1,6 @@
 <template>
   <button @click="toUp">
+    <span class="hint-text">Наверх</span>
     <img :src="Arrow" alt="up-button"/>
   </button>
 </template>
@@ -31,17 +32,14 @@ button
   transition: opacity 0.1s ease-in-out
   &:hover
     cursor: pointer
-    animation: button-up 2s ease-in-out infinite
-  @keyframes button-up
-    25%
-      transform: translateY(-15px)
-    50%
-      transform: translateY(0)
-    75%
-      transform: translateY(-15px)
-    100%
-      transform: translateY(0)
+    .hint-text
+      opacity: 1
+      visibility: visible
 
+  .hint-text
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s
 
   @media screen and (max-width: 550px)
     right: 2%
