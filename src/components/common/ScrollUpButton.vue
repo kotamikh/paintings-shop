@@ -38,6 +38,9 @@ button
 
   .hint-text
     opacity: 0
+    position: absolute
+    top: -50%
+    right: 50%
     visibility: hidden
     transition: opacity 0.3s
 

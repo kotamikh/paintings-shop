@@ -185,7 +185,7 @@ const props = defineProps({
     transform: rotate(0)
 
 button
-  width: 40px
+  width: 13%
   height: inherit
 
   display: flex
@@ -206,7 +206,6 @@ button
 
     bottom: 0
     left: 100%
-    z-index: 1
     position: absolute
 
     opacity: 0
