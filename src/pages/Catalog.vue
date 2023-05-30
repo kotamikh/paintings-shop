@@ -37,6 +37,7 @@ window.addEventListener('scroll', function() {
 const showButton = () => {
   isShown.value = true
 }
+
 </script>
 
 <style scoped lang="sass">
@@ -45,6 +46,7 @@ const showButton = () => {
   display: flex
   position: relative
   margin: 0 auto 100px
+  padding-top: 50px
   flex-direction: column
   scroll-behavior: smooth
 

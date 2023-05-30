@@ -14,14 +14,14 @@ export default {
 import Arrow from "@/assets/arrow-up.png"
 
 const toUp = function () {
-  window.scroll(0, 0)
+  window.scrollTo(0, 0)
 }
 </script>
 
 <style scoped lang="sass">
 button
-  right: 4%
-  width: 10%
+  right: 10px
+  width: 8%
   bottom: 60px
   border: none
   position: fixed
@@ -39,17 +39,15 @@ button
   .hint-text
     opacity: 0
     position: absolute
-    top: -50%
-    right: 50%
+    top: 10%
+    right: 100%
     visibility: hidden
     transition: opacity 0.3s
 
-  @media screen and (max-width: 550px)
-    right: 2%
-    width: 15vw
+  @media screen and (max-width: 650px)
+    width: 12%
 
   @media screen and (min-width: 840px)
-    right: 5%
-    width: 6%
+    width: 5%
 
 </style>

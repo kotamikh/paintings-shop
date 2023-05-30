@@ -33,7 +33,7 @@ import Artist from '@/assets/artist-frame.png'
 <style scoped lang="sass">
 .artist-container
   width: 100%
-  padding: 0 30px
+  padding: 50px 30px 0
   margin: 0 auto 50px
   box-sizing: border-box
 

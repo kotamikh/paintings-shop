@@ -35,7 +35,7 @@ const router = useRouter();
   width: 100%
   height: 100%
   flex-wrap: wrap
-  padding: 50px 0
+  padding: 60px 0
   margin-bottom: 30px
   box-sizing: border-box
 
