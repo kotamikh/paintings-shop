@@ -1,7 +1,7 @@
 <template>
-  <button @click="toUp">
-    <span class="hint-text">Наверх</span>
+  <button class="up-btn" @click="toUp">
     <img :src="Arrow" alt="up-button"/>
+    <span class="up-text">Наверх</span>
   </button>
 </template>
 
@@ -19,35 +19,30 @@ const toUp = function () {
 </script>
 
 <style scoped lang="sass">
-button
-  right: 10px
+button.up-btn
   width: 8%
+  right: 24px
   bottom: 60px
+
   border: none
   position: fixed
   background-color: transparent
 
-  opacity: 0
+  display: flex
+  align-items: center
+  flex-direction: column
 
+  opacity: 0
   transition: opacity 0.1s ease-in-out
+
   &:hover
     cursor: pointer
-    .hint-text
-      opacity: 1
-      visibility: visible
-
-  .hint-text
-    opacity: 0
-    position: absolute
-    top: 10%
-    right: 100%
-    visibility: hidden
-    transition: opacity 0.3s
 
   @media screen and (max-width: 650px)
-    width: 12%
+    width: 10%
+    right: 16px
 
   @media screen and (min-width: 840px)
     width: 5%
-
+    right: 36px
 </style>

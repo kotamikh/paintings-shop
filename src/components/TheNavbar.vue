@@ -97,6 +97,7 @@ const showMenu = () => {
 .navbar
   z-index: 3
   display: flex
+  max-width: 100%
   user-select: none
   position: relative
   justify-content: center
@@ -123,8 +124,8 @@ const showMenu = () => {
 
   @media screen and (max-width: 374px)
     button
-      top: 0
-      right: 2px
+      top: 7px
+      right: 7px
       z-index: 3
       position: absolute
       visibility: visible
