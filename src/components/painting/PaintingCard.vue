@@ -3,14 +3,6 @@
     <div class="painting-info">
       <div class="painting-title">
         <h3>{{ painting.title }}</h3>
-        <button class="fav-button">
-          <span class="hint-text">В избранное</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="currentColor"
-               class="bi bi-suit-heart-fill" viewBox="0 0 18 18">
-            <path
-                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
-          </svg>
-        </button>
       </div>
       <div class="paint-description">
         <p>Холст, масло. Размер картины: __/__</p>
@@ -22,8 +14,23 @@
         </div>
       </div>
     </div>
-    <div class="painting-holder">
-      <img :src="painting.source" :alt="painting.title"/>
+    <div class="painting-holder"
+         @mouseover="isHidden = false"
+         @mouseleave="isHidden = true"
+    >
+      <div v-if="!isHidden" class="favourite">
+        <img v-if="!isHovered && !isFavourite" class="fav-icon" src="@/assets/heart-icon.svg"
+             @mouseover="isHovered = true"
+             alt="в избранное"
+        >
+        <img v-if="isHovered || isFavourite" class="fav-icon" src="@/assets/red-heart-icon.svg"
+             @mouseover="isFavourite ? isHovered = false : isHovered"
+             @mouseleave="isHovered = false"
+             @click="isFavourite = !isFavourite"
+             alt="из избранного"
+        >
+      </div>
+      <img :src="painting.source" :alt="painting.title" />
     </div>
   </div>
 </template>
@@ -35,7 +42,7 @@ export default {
 </script>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, ref } from 'vue'
 
 const props = defineProps({
   painting: {
@@ -57,6 +64,9 @@ const props = defineProps({
   }
 })
 
+const isHidden = ref(true)
+const isHovered = ref(false)
+const isFavourite = ref(false)
 </script>
 <style scoped lang="sass">
 .painting-card
@@ -138,10 +148,11 @@ const props = defineProps({
 
     margin: 30px
     padding: 20px 0
-    background: white
-    background: linear-gradient(135deg, transparent 15px, white 0) top left, linear-gradient(-45deg, transparent 15px, white 0) bottom right
+    background: #ff3333
+    background: linear-gradient(135deg, transparent 15px, white 0), linear-gradient(-45deg, transparent 15px, white 0) bottom right
     background-size: 50% 100%
     background-repeat: no-repeat
+
     box-shadow: 0 30px 10px -30px rgba(0, 0, 0, 0.5)
 
     &::before
@@ -171,6 +182,7 @@ const props = defineProps({
 
 .painting-holder
   width: 40%
+
   overflow: hidden
   aspect-ratio: 3 / 2
   transform: rotate(4deg)
@@ -184,60 +196,15 @@ const props = defineProps({
     margin: 10px 0
     transform: rotate(0)
 
-button
-  width: 13%
-  height: inherit
-
+.favourite
+  width: 100%
+  height: 100%
   display: flex
   align-items: center
   justify-content: center
+  position: absolute
+  background-color: rgba(128, 128, 128, 0.5)
 
-  border: none
-  cursor: pointer
-  position: relative
-  background-color: transparent
-
-  .hint-text
-    padding: 1%
-    width: 120px
-    max-width: 30vw
-    text-align: center
-    border-radius: 6px
-
-    bottom: 0
-    left: 100%
-    position: absolute
-
-    opacity: 0
-    color: white
-    visibility: hidden
-    background-color: #555
-    transition: opacity 0.3s
-
-    &::after
-      content: ""
-
-      top: 50%
-      left: 0
-      position: absolute
-
-      margin-left: -5px
-      border-width: 5px
-      border-style: solid
-      border-color: #555 transparent transparent transparent
-
-  &:hover
-    .hint-text
-      opacity: 1
-      visibility: visible
-
-.fav-button
-  svg
-    fill: white
-    stroke: black
-
-  &:hover
-    svg
-      fill: mistyrose
-      stroke: #fd554c
+  .fav-icon
+    width: 25%
 </style>

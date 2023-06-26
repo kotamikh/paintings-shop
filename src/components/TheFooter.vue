@@ -5,7 +5,7 @@
     </div>
     <div class="messengers">
       <p>Написать:
-      <a href="https://vk.com/m.kozlov73">Вконтакте</a>
+      <a href="https://m.vk.com/m.kozlov73">Вконтакте</a>
       <a href="https://wa.me/79229519244">WhatsApp</a>
       </p>
     </div>

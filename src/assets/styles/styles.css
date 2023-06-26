@@ -49,10 +49,6 @@ h2::after {
     vertical-align: middle;
 }
 
-@media screen and (max-width: 424px){
-
-}
-
 h3 {
     font-size: calc(16px + 8 * (100vw / 1280));
 }
