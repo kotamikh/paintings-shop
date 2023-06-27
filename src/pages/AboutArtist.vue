@@ -33,9 +33,12 @@ import Artist from '@/assets/artist-frame.png'
 <style scoped lang="sass">
 .artist-container
   width: 100%
-  padding: 50px 30px 0
+  padding: 0 30px 0
   margin: 0 auto 50px
   box-sizing: border-box
+
+  @media screen and (max-width: 374px)
+    padding: 50px 30px 0
 
   .picture-info
     display: flex

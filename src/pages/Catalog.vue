@@ -46,9 +46,11 @@ const showButton = () => {
   display: flex
   position: relative
   margin: 0 auto 100px
-  padding-top: 50px
   flex-direction: column
   scroll-behavior: smooth
+
+  @media screen and (max-width: 374px)
+    padding-top: 50px
 
   .show
     opacity: 100%
