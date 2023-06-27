@@ -25,9 +25,8 @@ const router = useRouter();
 
 <style scoped lang="sass">
 .wrapper
-  height: 100%
   min-width: 90%
-  margin: 30px auto
+  margin: auto
 
   display: flex
   user-select: none
@@ -36,6 +35,9 @@ const router = useRouter();
 
   @media screen and (max-width: 550px)
     flex-direction: column-reverse
+
+  @media screen and (max-width: 374px)
+    height: 90vh
 
   .paint-in-frame
     display: flex
@@ -73,6 +75,9 @@ const router = useRouter();
     align-self: center
     align-items: start
     flex-direction: column
+
+    @media screen and (max-width: 550px)
+      margin-bottom: 20px
 
     p
       font-size: calc(12px + 6 * (100vw / 1280))
