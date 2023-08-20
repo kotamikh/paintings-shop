@@ -1,6 +1,6 @@
 <template>
   <div class="paint-container">
-    <h2>Все работы</h2>
+    <h2> Все работы </h2>
     <painting-card
         v-for="(painting, index) in paintings"
         :key="index"
@@ -37,7 +37,6 @@ window.addEventListener('scroll', function() {
 const showButton = () => {
   isShown.value = true
 }
-
 </script>
 
 <style scoped lang="sass">

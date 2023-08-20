@@ -19,6 +19,7 @@ export default {
 <script setup>
 import Frame from "@/assets/frame.png"
 import { useRouter } from "vue-router";
+import SpinningLoader from "@/components/common/SpinningLoader.vue";
 
 const router = useRouter();
 </script>

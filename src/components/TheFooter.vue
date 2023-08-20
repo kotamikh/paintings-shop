@@ -4,10 +4,17 @@
       <p>Телефон: +7(922)-951-92-44</p>
     </div>
     <div class="messengers">
-      <p>Написать:
-      <a href="https://m.vk.com/m.kozlov73">Вконтакте</a>
-      <a href="https://wa.me/79229519244">WhatsApp</a>
-      </p>
+      <p>Написать:</p>
+      <div class="links">
+        <a class="link" href="https://m.vk.com/m.kozlov73">
+          <img src="@/assets/icons/icon-vk.png" alt="vk"/>
+          <p>Вконтакте</p>
+        </a>
+        <a class="link" href="https://wa.me/79229519244">
+          <img src="@/assets/icons/icon-whatsapp.png" alt="whatsapp"/>
+          <p>WhatsApp</p>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -37,17 +44,18 @@ export default {
   .messengers
     gap: 10px
     display: flex
-
-    a
-      color: var(--nav-hover)
-      text-decoration: none
+    .link
+      gap: 10px
+      color: black
+      display: flex
       margin-right: 10px
+      text-decoration: none
+      font-size: calc(10px + 6 * (100vw / 1280))
       &:hover
-        cursor: pointer
-        color: var(--nav-hover)
-        text-decoration: underline
-      &:visited
-        color: var(--seagreen)
+        &:first-child
+          color: rgb(30, 136, 229)
+        &:nth-child(2)
+          color: rgb(57, 174, 65)
 
   p
     font-size: calc(10px + 6 * (100vw / 1280))

@@ -1,6 +1,6 @@
 <template>
   <div class="artist-container">
-    <h2>Автор картин</h2>
+    <h2> Автор картин </h2>
     <div class="picture-info">
       <img :src="Artist" alt="Художник">
       <div class="artist-text">
