@@ -8,13 +8,13 @@
         <div class="buttons">
           <button>
             <a href="https://m.vk.com/m.kozlov73">
-              <img src="@/assets/icons/icon-vk.png" alt="vk"/>
+              <img src="../src/assets/icons/icon-vk.png" alt="vk"/>
               Вконтакте
             </a>
           </button>
           <button>
             <a href="https://wa.me/79229519244">
-              <img src="@/assets/icons/icon-whatsapp.png" alt="whatsapp"/>
+              <img src="../src/assets/icons/icon-whatsapp.png" alt="whatsapp"/>
               WhatsApp
             </a>
           </button>

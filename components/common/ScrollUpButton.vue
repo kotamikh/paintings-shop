@@ -20,8 +20,8 @@ const toUp = function () {
 
 <style scoped lang="sass">
 button.up-btn
-  width: 8%
-  right: 24px
+  width: 12%
+  right: 5px
   bottom: 60px
 
   border: none
@@ -29,6 +29,7 @@ button.up-btn
   background-color: transparent
 
   display: flex
+  user-select: none
   align-items: center
   flex-direction: column
 
@@ -38,11 +39,19 @@ button.up-btn
   &:hover
     cursor: pointer
 
-  @media screen and (max-width: 650px)
+  @media screen and (min-width: 480px)
     width: 10%
-    right: 16px
+    right: 10px
+
+  @media screen and (min-width: 700px)
+    width: 8%
+    right: 12px
 
   @media screen and (min-width: 840px)
+    width: 6%
+    right: 14px
+
+  @media screen and (min-width: 1050px)
     width: 5%
-    right: 36px
+    right: 30px
 </style>

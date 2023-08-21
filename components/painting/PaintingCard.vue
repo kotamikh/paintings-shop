@@ -19,11 +19,11 @@
          @mouseleave="isHidden = true"
     >
       <div v-if="!isHidden" class="favourite">
-        <img v-if="!isHovered && !isFavourite" class="fav-icon" src="@/assets/heart-icon.svg"
+        <img v-if="!isHovered && !isFavourite" class="fav-icon" src="../../src/assets/heart-icon.svg"
              @mouseover="isHovered = true"
              alt="в избранное"
         >
-        <img v-if="isHovered || isFavourite" class="fav-icon" src="@/assets/red-heart-icon.svg"
+        <img v-if="isHovered || isFavourite" class="fav-icon" src="../../src/assets/red-heart-icon.svg"
              @mouseover="isFavourite ? isHovered = false : isHovered"
              @mouseleave="isHovered = false"
              @click="isFavourite = !isFavourite"

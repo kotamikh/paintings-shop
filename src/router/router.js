@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Contacts from "@/pages/Contacts.vue";
-import HomePage from "@/pages/HomePage.vue";
-import Catalog from "@/pages/Catalog.vue";
-import AboutArtist from "@/pages/AboutArtist.vue";
-import MainLayout from "@/layouts/MainLayout.vue";
-import Categories from "@/pages/Categories.vue";
-import ForwardView from "@/components/common/ForwardView.vue";
+import Contacts from "../../pages/Contacts.vue";
+import HomePage from "../../pages/HomePage.vue";
+import Catalog from "../../pages/Catalog.vue";
+import AboutArtist from "../../pages/AboutArtist.vue";
+import MainLayout from "../../layouts/MainLayout.vue";
+import Categories from "../../pages/Categories.vue";
+import ForwardView from "../../components/common/ForwardView.vue";
 
 const routes = [
     {

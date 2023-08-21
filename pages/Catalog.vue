@@ -17,10 +17,10 @@ export default {
 </script>
 
 <script setup>
-import PaintingCard from "@/components/painting/PaintingCard.vue";
+import PaintingCard from "../components/painting/PaintingCard.vue";
 import { paintingsMocks } from "@/mocks/paintings.js";
 import { ref } from "vue";
-import ScrollUpButton from "@/components/common/ScrollUpButton.vue";
+import ScrollUpButton from "../components/common/ScrollUpButton.vue";
 
 const paintings = ref(paintingsMocks);
 const isShown = ref(false);
