@@ -20,7 +20,6 @@ h2 {
     padding: 2% 0;
     text-align: center;
     justify-self: center;
-    white-space: pre-wrap;
     font-size: calc(16px + 12 * (100vw / 1280));
 }
 
@@ -28,26 +27,25 @@ h2::before {
     content: '';
     background-image: url("@/assets/line.png");
     transform: rotate(180deg);
-    width: 8rem;
+    width: 6rem;
     height: 8vh;
-    white-space: nowrap;
     display: inline-block;
     vertical-align: middle;
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 h2::after {
     content: '';
     background-image: url("@/assets/line.png");
-    width: 8rem;
+    width: 6rem;
     height: 8vh;
     display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     vertical-align: middle;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h3 {

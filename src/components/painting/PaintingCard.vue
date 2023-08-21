@@ -98,7 +98,7 @@ const isFavourite = ref(false)
     margin-bottom: 2%
     &::after
       content: ''
-      width: 35%
+      width: 30%
       height: 15%
       bottom: -12%
       position: absolute
@@ -109,6 +109,7 @@ const isFavourite = ref(false)
 
       @media screen and (max-width: 767px)
         width: 50%
+        height: 10%
 
   &:nth-child(odd)
     flex-direction: row-reverse
