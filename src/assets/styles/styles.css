@@ -59,6 +59,8 @@ h3 {
 
 p,
 span,
-a {
+a,
+input[type~="text"],
+input[type="tel"] {
     font-size: calc(14px + 4 * (100vw / 1280))
 }

@@ -80,12 +80,7 @@ const router = useRouter();
     @media screen and (max-width: 550px)
       margin-bottom: 20px
 
-    p
-      font-size: calc(12px + 6 * (100vw / 1280))
-
     button
-      font-size: calc(12px + 6 * (100vw / 1280))
-
       color: white
       cursor: pointer
       text-wrap: none
@@ -94,15 +89,14 @@ const router = useRouter();
       box-shadow: 0 0 10px 5px rgba(108, 140, 121, 0.5)
 
       border: 0
-      padding: 10px
       margin: 20px 0
       align-self: center
-      border-radius: 10px
+      padding: 10px 20px
+      border-radius: 5px
 
-      width: 60%
       height: auto
       max-width: 350px
-
+      width: fit-content
       &:hover
         background-color: #4b6253
       &:active

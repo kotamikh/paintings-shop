@@ -98,22 +98,42 @@ export default {
     input
       border: 0
       width: 100%
-      padding: 10px
-      border-radius: 10px
-      background-color: rgba(108, 140, 121, 0.5)
+      padding: 10px 0
+      background-color: transparent
+      border-bottom: 2px solid rgba(128, 128, 128, 0.5)
+
+      &:focus,
+      &:hover
+        outline: none
+        border-bottom: 2px solid var(--nav-hover)
 
       @media screen and (max-width: 620px)
         width: 100%
 
     button
-      padding: 0 10px
+      color: white
       cursor: pointer
-      width: fit-content
+      text-wrap: none
+      background-color: grey
+      transition: all 0.1s ease-in-out
+      box-shadow: 0 0 10px 5px rgba(119, 119, 119, 0.5)
+
+      border: 0
+      padding: 5px 10px
       border-radius: 5px
-      border: 1px solid var(--seagreen)
-      font-size: calc(14px + 4 * (100vw / 1280))
+
+      height: auto
+      max-width: 350px
+      width: fit-content
+
+      @media screen and (max-width: 620px)
+        align-self: center
+
       &:hover
-        box-shadow: 0 0 25px 5px rgba(34, 60, 80, 0.2)
+        background-color: var(--seagreen)
+      &:active
+        transform: translateY(3px)
+        box-shadow: 0 0 10px 1px rgba(119, 119, 119, 0.5)
 
   @media screen and (max-width: 850px)
     width: 100%
