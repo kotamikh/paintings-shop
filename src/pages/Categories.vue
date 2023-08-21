@@ -8,8 +8,8 @@
     <div class="on-order">
       <h3>Под заказ</h3>
     </div>
-    <div class="sold">
-      <h3>Распроданы</h3>
+    <div class="canvas">
+      <h3>Размеры холстов</h3>
     </div>
   </div>
 </template>
@@ -36,7 +36,6 @@ const router = useRouter();
   flex-wrap: wrap
   padding: 60px 0
   margin: auto
-  margin-bottom: 30px
   box-sizing: border-box
 
   div
@@ -62,24 +61,25 @@ const router = useRouter();
       width: 100%
       height: 100%
       position: absolute
-      background: rgba(128, 128, 128, 0.5)
+      background: rgba(119, 119, 119, 0.6)
       opacity: 100%
       transition: opacity 0.2s ease-in-out
 
     &:hover::before
       opacity: 0
 
-  .on-sale, .on-order, .sold
+  .on-sale, .on-order, .canvas
     background-size: cover
+    background-position: center
 
   .on-sale
-    background-image: url("@/assets/meadow.jpg")
+    background-image: url("@/assets/карелия.jpeg")
 
   .on-order
-    background-image: url("@/assets/seedlings.jpg")
+    background-image: url("@/assets/цветы.jpeg")
 
-  .sold
-    background-image: url("@/assets/mountains.jpg")
+  .canvas
+    background-image: url("@/assets/мастерская.jpeg")
 
   h3
     z-index: 2
