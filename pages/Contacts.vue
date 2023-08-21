@@ -80,10 +80,12 @@ export default {
 
         &:hover
           &:first-child
-            background-color: rgba(30, 136, 199, 0.4)
+            a
+              color: rgb(30, 136, 299)
 
           &:nth-child(2)
-            background-color: rgba(57, 174, 35, 0.4)
+            a
+              color: rgb(57, 174, 65)
 
       a
         gap: 10px
