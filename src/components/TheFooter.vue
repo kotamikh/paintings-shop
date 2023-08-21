@@ -54,7 +54,8 @@ export default {
       align-items: center
       margin-right: 10px
       text-decoration: none
-      font-size: calc(10px + 6 * (100vw / 1280))
+      font-size: calc(12px + 6 * (100vw / 1280))
+
       &:hover
         &:first-of-type
           color: rgb(30, 136, 229)
@@ -68,5 +69,5 @@ export default {
           width: 20px
 
   p
-    font-size: calc(10px + 6 * (100vw / 1280))
+    font-size: calc(12px + 6 * (100vw / 1280))
 </style>

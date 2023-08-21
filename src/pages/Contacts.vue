@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="application">
-      <h3>Обратная связь</h3>
+      <h3>Получить обратную связь</h3>
       <div class="form-item">
         <p>Ваше имя:</p>
         <input type="text">
@@ -45,8 +45,9 @@ export default {
 <style scoped lang="sass">
 .contacts-container
   width: 80%
-  display: flex
   margin: auto
+  display: flex
+  padding-top: 60px
   justify-content: space-evenly
 
   .contacts,
@@ -65,9 +66,9 @@ export default {
       flex-direction: column
 
       button
-        height: max-content
         border: none
         border-radius: 5px
+        height: fit-content
         background-color: transparent
 
         &:hover
@@ -79,10 +80,37 @@ export default {
 
       a
         gap: 10px
-        display: flex
         color: black
+        display: flex
         text-decoration: none
 
         img
           margin: auto
+
+  .application
+    input
+      border: 0
+      width: 100%
+      padding: 10px
+      border-radius: 10px
+      background-color: rgba(108, 140, 121, 0.5)
+
+      @media screen and (max-width: 620px)
+        width: 70%
+
+    button
+      cursor: pointer
+      width: fit-content
+      border-radius: 10px
+      border: 1px dashed var(--seagreen)
+      &:hover
+        box-shadow: 0 0 25px 5px rgba(34, 60, 80, 0.2)
+
+  @media screen and (max-width: 850px)
+    width: 100%
+
+  @media screen and (max-width: 620px)
+    gap: 30px
+    width: 80%
+    flex-direction: column
 </style>
