@@ -1,8 +1,9 @@
 * {
-    --seagreen: #6c8c79;
-    --text-hover: #f8b230;
-    --nav-hover: #63987a;
     --grey: #777777;
+    --seagreen: #6c8c79;
+    --nav-hover: #63987a;
+    --text-hover: #f8b230;
+    --header-grey: #525252;
     font-family: 'Underdog', cursive;
 }
 
@@ -12,6 +13,7 @@ body {
 }
 
 h1 {
+    color: var(--header-grey);
     font-size: calc(18px + 18 * (100vw / 1280));
 }
 
@@ -20,6 +22,7 @@ h2 {
     padding: 2% 0;
     text-align: center;
     justify-self: center;
+    color: var(--header-grey);
     font-size: calc(16px + 12 * (100vw / 1280));
 }
 

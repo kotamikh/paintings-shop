@@ -1,6 +1,6 @@
 <template>
   <div class="paint-container">
-    <h2> Все работы </h2>
+    <h2> Картины в наличии </h2>
     <painting-card
         v-for="(painting, index) in paintings"
         :key="index"

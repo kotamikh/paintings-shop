@@ -61,6 +61,7 @@ export default {
 
     h3
       align-self: flex-start
+      color: var(--header-grey)
 
   .social-networks
     gap: 10px
