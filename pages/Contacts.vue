@@ -47,7 +47,6 @@ export default {
   width: 80%
   margin: auto
   display: flex
-  padding-top: 60px
   justify-content: space-evenly
 
   .contacts,
@@ -110,7 +109,7 @@ export default {
         border-bottom: 2px solid var(--nav-hover)
 
       @media screen and (max-width: 620px)
-        width: 100%
+        min-width: 200px
 
     button
       color: white
@@ -121,6 +120,7 @@ export default {
       box-shadow: 0 0 10px 5px rgba(119, 119, 119, 0.5)
 
       border: 0
+      margin-top: 10px
       padding: 5px 10px
       border-radius: 5px
 
@@ -131,17 +131,21 @@ export default {
       @media screen and (max-width: 620px)
         align-self: center
 
+      @media screen and (max-width: 374px)
+        margin-top: 0
+
       &:hover
         background-color: var(--seagreen)
       &:active
         transform: translateY(3px)
         box-shadow: 0 0 10px 1px rgba(119, 119, 119, 0.5)
 
-  @media screen and (max-width: 850px)
-    width: 100%
-
   @media screen and (max-width: 620px)
     gap: 30px
     width: 80%
+    padding-top: 30px
     flex-direction: column
+
+  @media screen and (max-width: 374px)
+    padding-top: 60px
 </style>
