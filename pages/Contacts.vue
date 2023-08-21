@@ -56,8 +56,14 @@ export default {
     display: flex
     flex-direction: column
 
+    @media screen and (max-width: 620px)
+      align-items: center
+
+    h3
+      align-self: flex-start
+
   .social-networks
-    gap: 20px
+    gap: 10px
     display: flex
 
     .buttons
@@ -96,13 +102,15 @@ export default {
       background-color: rgba(108, 140, 121, 0.5)
 
       @media screen and (max-width: 620px)
-        width: 70%
+        width: 100%
 
     button
+      padding: 0 10px
       cursor: pointer
       width: fit-content
-      border-radius: 10px
-      border: 1px dashed var(--seagreen)
+      border-radius: 5px
+      border: 1px solid var(--seagreen)
+      font-size: calc(14px + 4 * (100vw / 1280))
       &:hover
         box-shadow: 0 0 25px 5px rgba(34, 60, 80, 0.2)
 

@@ -101,6 +101,7 @@ const isFavourite = ref(false)
       width: 30%
       height: 15%
       bottom: -12%
+      opacity: 0.5
       position: absolute
       background-size: contain
       background-position: center

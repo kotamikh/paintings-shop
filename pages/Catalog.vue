@@ -52,5 +52,5 @@ const showButton = () => {
     padding-top: 50px
 
   .show
-    opacity: 100%
+    opacity: 70%
 </style>

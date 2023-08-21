@@ -59,7 +59,7 @@ const links = ref([
   },
   {
     title: 'Вход',
-    route: '*'
+    route: '/home'
   }
 ])
 
