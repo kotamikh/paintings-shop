@@ -27,10 +27,12 @@ dd {
     margin: 0;
 }
 
-body {
-    width: 100%;
+body,
+html {
+    width: 100vw;
     min-height: 100vh;
     line-height: 1.5;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
 }
