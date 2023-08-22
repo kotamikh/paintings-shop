@@ -24,18 +24,17 @@
     </div>
     <div class="application">
       <h3>Получить обратную связь</h3>
-        <p>Ваше имя:</p>
-          <form-input
-                      :validate="nameValidation"
-                      type="text"
-                      placeholder="Имя"
-                      v-model="applicationData.nameValue"
-          />
-          <form-input
-                      :validate="telValidation"
-                      type="tel"
-                      placeholder="+71234567890"
-                      v-model="applicationData.telValue"/>
+      <form-input
+          :validate="nameValidation"
+          type="text"
+          placeholder="Имя"
+          v-model="applicationData.nameValue"
+      />
+      <form-input
+          :validate="telValidation"
+          type="tel"
+          placeholder="+71234567890"
+          v-model="applicationData.telValue"/>
       <button @click="formValidation">Написать сообщение</button>
     </div>
   </div>

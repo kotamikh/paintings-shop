@@ -36,7 +36,9 @@ watch(value, () => {
 
 <style scoped lang="sass">
 .input-field
+  width: 100%
   display: flex
+
   input
     border: 0
     width: 90%
@@ -49,6 +51,6 @@ watch(value, () => {
       outline: none
       border-bottom: 2px solid var(--nav-hover)
 
-    @media screen and (max-width: 620px)
-      min-width: 200px
+  @media screen and (max-width: 620px)
+     max-width: 200px
 </style>
