@@ -24,36 +24,48 @@
     </div>
     <div class="application">
       <h3>Получить обратную связь</h3>
-      <div class="form-item">
         <p>Ваше имя:</p>
-        <input type="text" placeholder="Имя" v-model="applicationData.nameValue">
-      </div>
-      <div class="form-item">
-        <p>Номер телефона:</p>
-        <input type="tel" placeholder="+7(000)-000-00-00" v-model="applicationData.telValue">
-      </div>
+          <form-input
+                      :validate="nameValidation"
+                      type="text"
+                      placeholder="Имя"
+                      v-model="applicationData.nameValue"
+          />
+          <form-input
+                      :validate="telValidation"
+                      type="tel"
+                      placeholder="+71234567890"
+                      v-model="applicationData.telValue"/>
       <button @click="formValidation">Написать сообщение</button>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
+import FormInput from "../components/common/FormInput.vue";
 
 const applicationData = ref({
   nameValue: '',
   telValue: null
 })
 
-const regularName = /^\p{L}+$/gu
+const regularName = /^\p{L}+$/u
 const regularTel = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
 
+// const wrongName = ref(false)
+const wrongTel = ref(false)
+
+const nameValidation = (val) => {
+  return regularName.test(val)
+}
+
+const telValidation = (val) => {
+  return regularTel.test(val)
+}
+
 const formValidation = () => {
-  if (!regularName.test(applicationData.value.nameValue)) {
-    alert('Введите имя состоящее из букв')
-  } else if (!regularTel.test(applicationData.value.telValue)) {
-    alert('Введите номер телефона в формате примера')
-  } else if (applicationData.value.nameValue && applicationData.value.telValue) {
+  if (applicationData.value.nameValue && applicationData.value.telValue) {
     sendApplication(applicationData.value.nameValue, applicationData.value.telValue)
   }
 }
@@ -119,21 +131,6 @@ const sendApplication = (name, tel) => {
           margin: auto
 
   .application
-    input
-      border: 0
-      width: 100%
-      padding: 10px 0
-      background-color: transparent
-      border-bottom: 2px solid rgba(128, 128, 128, 0.5)
-
-      &:focus,
-      &:hover
-        outline: none
-        border-bottom: 2px solid var(--nav-hover)
-
-      @media screen and (max-width: 620px)
-        min-width: 200px
-
     button
       color: white
       cursor: pointer
@@ -158,6 +155,7 @@ const sendApplication = (name, tel) => {
 
       &:hover
         background-color: var(--seagreen)
+
       &:active
         transform: translateY(3px)
 
