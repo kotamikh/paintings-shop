@@ -86,7 +86,6 @@ const router = useRouter();
       text-wrap: none
       transition: all 0.1s ease-in-out
       background-color: var(--seagreen)
-      box-shadow: 0 0 10px 5px rgba(108, 140, 121, 0.5)
 
       border: 0
       margin: 20px 0
@@ -101,5 +100,4 @@ const router = useRouter();
         background-color: #4b6253
       &:active
         transform: translateY(3px)
-        box-shadow: 0 0 10px 1px rgba(108, 140, 121, 0.5)
 </style>

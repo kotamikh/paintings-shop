@@ -6,11 +6,11 @@
     <div class="messengers">
       <p>Написать:</p>
       <a class="link" href="https://m.vk.com/m.kozlov73">
-        <img src="../src/assets/icons/icon-vk.png" alt="vk"/>
+        <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
         <p>Вконтакте</p>
       </a>
       <a class="link" href="https://wa.me/79229519244">
-        <img src="../src/assets/icons/icon-whatsapp.png" alt="whatsapp"/>
+        <img src="../src/assets/icons/whatsapp.svg" style="width: 23px" alt="whatsapp"/>
         <p>WhatsApp</p>
       </a>
     </div>
@@ -48,11 +48,11 @@ export default {
       gap: 5px
 
     .link
-      gap: 10px
+      gap: 8px
       color: black
       display: flex
-      align-items: center
       margin-right: 10px
+      align-items: center
       text-decoration: none
       font-size: calc(12px + 6 * (100vw / 1280))
 

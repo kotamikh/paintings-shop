@@ -8,13 +8,14 @@
         <div class="buttons">
           <button>
             <a href="https://m.vk.com/m.kozlov73">
-              <img src="../src/assets/icons/icon-vk.png" alt="vk"/>
+
+              <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
               Вконтакте
             </a>
           </button>
           <button>
             <a href="https://wa.me/79229519244">
-              <img src="../src/assets/icons/icon-whatsapp.png" alt="whatsapp"/>
+              <img src="../src/assets/icons/whatsapp.svg" style="width: 24px" alt="whatsapp"/>
               WhatsApp
             </a>
           </button>
@@ -25,21 +26,42 @@
       <h3>Получить обратную связь</h3>
       <div class="form-item">
         <p>Ваше имя:</p>
-        <input type="text">
+        <input type="text" placeholder="Имя" v-model="applicationData.nameValue">
       </div>
       <div class="form-item">
         <p>Номер телефона:</p>
-        <input type="tel">
+        <input type="tel" placeholder="+7(000)-000-00-00" v-model="applicationData.telValue">
       </div>
-      <button>Написать сообщение</button>
+      <button @click="formValidation">Написать сообщение</button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Contacts"
+<script setup lang="ts">
+import { ref } from "vue";
+
+const applicationData = ref({
+  nameValue: '',
+  telValue: null
+})
+
+const regularName = /^\p{L}+$/gu
+const regularTel = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
+
+const formValidation = () => {
+  if (!regularName.test(applicationData.value.nameValue)) {
+    alert('Введите имя состоящее из букв')
+  } else if (!regularTel.test(applicationData.value.telValue)) {
+    alert('Введите номер телефона в формате примера')
+  } else if (applicationData.value.nameValue && applicationData.value.telValue) {
+    sendApplication(applicationData.value.nameValue, applicationData.value.telValue)
+  }
 }
+
+const sendApplication = (name, tel) => {
+  console.log('Application send! ', 'Имя: ' + name + ', ' + 'Телефон:' + tel)
+}
+
 </script>
 
 <style scoped lang="sass">
@@ -87,9 +109,10 @@ export default {
               color: rgb(57, 174, 65)
 
       a
-        gap: 10px
+        gap: 5px
         color: black
         display: flex
+        align-items: center
         text-decoration: none
 
         img
@@ -117,7 +140,6 @@ export default {
       text-wrap: none
       background-color: grey
       transition: all 0.1s ease-in-out
-      box-shadow: 0 0 10px 5px rgba(119, 119, 119, 0.5)
 
       border: 0
       margin-top: 10px
@@ -138,7 +160,6 @@ export default {
         background-color: var(--seagreen)
       &:active
         transform: translateY(3px)
-        box-shadow: 0 0 10px 1px rgba(119, 119, 119, 0.5)
 
   @media screen and (max-width: 620px)
     gap: 30px
