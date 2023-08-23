@@ -18,31 +18,22 @@
          @mouseover="isHidden = false"
          @mouseleave="isHidden = true"
     >
-      <div v-if="!isHidden" class="favourite">
-        <img v-if="!isHovered && !isFavourite" class="fav-icon" src="../../src/assets/heart-icon.svg"
-             @mouseover="isHovered = true"
-             alt="в избранное"
-        >
-        <img v-if="isHovered || isFavourite" class="fav-icon" src="../../src/assets/red-heart-icon.svg"
-             @mouseover="isFavourite ? isHovered = false : isHovered"
-             @mouseleave="isHovered = false"
-             @click="isFavourite = !isFavourite"
-             alt="из избранного"
-        >
+      <div v-if="!isHidden" class="expand" @click="enlargeImage">
+        <img src="@/assets/icons/expand.svg" style="width: 12%" alt="увеличить"/>
       </div>
       <img :src="painting.source" :alt="painting.title" />
     </div>
+    <enlarged-image v-model:show="enlarged"
+                    :source="painting.source"
+                    :title="painting.title"
+                    @close="enlarged = false"
+    />
   </div>
 </template>
 
-<script>
-export default {
-  name: "PaintingCard"
-}
-</script>
-
 <script setup>
 import { defineProps, ref } from 'vue'
+import EnlargedImage from "./EnlargedImage.vue";
 
 const props = defineProps({
   painting: {
@@ -65,9 +56,13 @@ const props = defineProps({
 })
 
 const isHidden = ref(true)
-const isHovered = ref(false)
-const isFavourite = ref(false)
+const enlarged = ref(false)
+
+const enlargeImage = () => {
+  enlarged.value = true
+}
 </script>
+
 <style scoped lang="sass">
 .painting-card
   display: flex
@@ -78,6 +73,9 @@ const isFavourite = ref(false)
   position: relative
   padding-bottom: 12px
   aspect-ratio: 4 / 1.5
+
+  @media screen and (max-width: 840px)
+    flex-direction: column
 
   &::after
     content: ''
@@ -125,9 +123,6 @@ const isFavourite = ref(false)
       @media screen and (max-width: 840px)
         transform: rotate(0)
 
-  @media screen and (max-width: 840px)
-    flex-direction: column
-
 .painting-info
   display: flex
   max-width: 50%
@@ -150,7 +145,7 @@ const isFavourite = ref(false)
 
     margin: 30px
     padding: 20px 0
-    background: #ff3333
+    background: #ffffff
     background: linear-gradient(135deg, transparent 15px, white 0), linear-gradient(-45deg, transparent 15px, white 0) bottom right
     background-size: 50% 100%
     background-repeat: no-repeat
@@ -184,7 +179,6 @@ const isFavourite = ref(false)
 
 .painting-holder
   width: 40%
-
   overflow: hidden
   aspect-ratio: 3 / 2
   transform: rotate(4deg)
@@ -198,7 +192,7 @@ const isFavourite = ref(false)
     margin: 10px 0
     transform: rotate(0)
 
-.favourite
+.expand
   width: 100%
   height: 100%
   display: flex
@@ -207,6 +201,4 @@ const isFavourite = ref(false)
   position: absolute
   background-color: rgba(128, 128, 128, 0.5)
 
-  .fav-icon
-    width: 25%
 </style>

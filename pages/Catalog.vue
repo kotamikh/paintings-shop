@@ -5,7 +5,8 @@
         v-for="(painting, index) in paintings"
         :key="index"
         :painting="painting"
-    ></painting-card>
+    >
+    </painting-card>
     <ScrollUpButton :class="{ show : isShown }"/>
   </div>
 </template>
@@ -43,7 +44,6 @@ const showButton = () => {
 .paint-container
   width: 100%
   display: flex
-  position: relative
   margin: 0 auto 100px
   flex-direction: column
   scroll-behavior: smooth

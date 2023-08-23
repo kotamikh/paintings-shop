@@ -52,9 +52,6 @@ const applicationData = ref({
 const regularName = /^\p{L}+$/u
 const regularTel = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
 
-// const wrongName = ref(false)
-const wrongTel = ref(false)
-
 const nameValidation = (val) => {
   return regularName.test(val)
 }

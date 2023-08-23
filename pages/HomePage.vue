@@ -52,22 +52,22 @@ const router = useRouter();
       transform: rotate(0deg)
       transform-origin: 48% 6%
 
-      animation-delay: 5s
+      animation-delay: 4s
       animation-duration: 4s
       animation-name: paint-swing
       animation-iteration-count: infinite
       animation-timing-function: ease-in-out
 
   @keyframes paint-swing
-    15%
+    10%
       transform: rotate(5deg)
-    30%
+    25%
       transform: rotate(-4deg)
-    50%
+    40%
       transform: rotate(3deg)
-    70%
+    60%
       transform: rotate(-2deg)
-    90%
+    80%
       transform: rotate(0deg)
 
   .main-text
