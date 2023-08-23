@@ -1,16 +1,8 @@
 <template>
   <div :class="[ {show : isBurgerShown }, 'navbar' ]">
     <button @click="showMenu">
-      <svg v-if="isBurgerShown" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--grey)"
-           class="bi bi-x" viewBox="0 0 16 16">
-        <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-      </svg>
-      <svg v-else xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--grey)" class="bi bi-list"
-           viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
+      <img v-if="isBurgerShown" src="@/assets/icons/cross.svg" alt="закрыть"/>
+      <img v-else src="@/assets/icons/burger.svg" alt="меню"/>
     </button>
     <ul class="nav-menu hidden">
       <li v-for="(link, index) in links"
@@ -150,6 +142,8 @@ const showMenu = () => {
       li
         text-align: center
         border-bottom: 1px solid var(--grey)
+        &.current
+          color: var(--nav-hover)
 
     .nav-menu.hidden
       display: none
