@@ -18,7 +18,7 @@
          @mouseover="isHidden = false"
          @mouseleave="isHidden = true"
     >
-      <div v-if="!isHidden" class="expand" @click="enlargeImage">
+      <div class="enlarge-icon" @click="enlargeImage">
         <img src="@/assets/icons/expand.svg" style="width: 12%" alt="увеличить"/>
       </div>
       <img :src="painting.source" :alt="painting.title" />
@@ -192,13 +192,19 @@ const enlargeImage = () => {
     margin: 10px 0
     transform: rotate(0)
 
-.expand
+  &:hover
+    .enlarge-icon
+      opacity: 100%
+
+.enlarge-icon
+  opacity: 0
   width: 100%
   height: 100%
   display: flex
+  cursor: pointer
+  position: absolute
   align-items: center
   justify-content: center
-  position: absolute
+  transition: opacity 0.2s ease
   background-color: rgba(128, 128, 128, 0.5)
-
 </style>
