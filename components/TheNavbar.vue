@@ -122,29 +122,63 @@ const showMenu = () => {
       position: absolute
       visibility: visible
 
-      width: 40px
-      height: 40px
+      width: 45px
+      height: 45px
       display: flex
       align-items: center
       justify-content: center
 
-      border-radius: 5%
-      border: 1px solid var(--grey)
-      background-color: rgba(255, 255, 255, 0.3)
+      border: none
+      background-color: transparent
 
     .nav-menu
       left: 0
       width: 100%
+      height: 100vh
+      opacity: 100%
+      padding-top: 90px
       position: absolute
       flex-direction: column
       background-color: white
+      align-items: center
+      transition: opacity 0.2s ease
 
       li
+        width: 70%
+        position: relative
         text-align: center
+        height: max-content
         border-bottom: 1px solid var(--grey)
         &.current
           color: var(--nav-hover)
+        &:first-of-type
+          &::before
+            content: ''
+            left: 0
+            top: -50%
+            width: 100%
+            height: 100%
+            opacity: 0.5
+            position: absolute
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url("@/assets/end-line.png")
+        &:last-of-type
+          border: none
+          &::after
+            content: ''
+            left: 0
+            width: 100%
+            height: 100%
+            bottom: -50%
+            opacity: 0.5
+            position: absolute
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url("@/assets/end-line.png")
 
     .nav-menu.hidden
-      display: none
+      opacity: 0
 </style>
