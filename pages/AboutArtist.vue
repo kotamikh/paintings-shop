@@ -60,8 +60,15 @@ import Artist from '@/assets/artist-frame.png'
   .artist-text
     margin: 20px 0
     .header
-      color: var(--header-grey)
       text-align: center
+      text-wrap: none
+      color: var(--header-grey)
+
+      @media screen and (max-width: 900px)
+        &::before,
+        &::after
+          width: 5rem
+          height: 8vh
 
       @media screen and (max-width: 830px)
         &::before,
