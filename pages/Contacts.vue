@@ -24,17 +24,23 @@
     </div>
     <div class="application">
       <h3>Получить обратную связь</h3>
-      <form-input
-          :validate="nameValidation"
-          type="text"
-          placeholder="Имя"
-          v-model="applicationData.nameValue"
-      />
-      <form-input
-          :validate="telValidation"
-          type="tel"
-          placeholder="+71234567890"
-          v-model="applicationData.telValue"/>
+      <div class="input-item">
+        <p>Ваше имя:</p>
+        <form-input
+            :validate="nameValidation"
+            type="text"
+            placeholder="Имя"
+            v-model="applicationData.nameValue"
+        />
+      </div>
+      <div class="input-item">
+        <p>Мобильный номер:</p>
+        <form-input
+            :validate="telValidation"
+            type="tel"
+            placeholder="+71234567890"
+            v-model="applicationData.telValue"/>
+      </div>
       <button @click="formValidation">Написать сообщение</button>
     </div>
   </div>
@@ -78,6 +84,9 @@ const sendApplication = (name, tel) => {
   margin: auto
   display: flex
   justify-content: space-evenly
+
+  @media screen and (max-width: 770px)
+    justify-content: space-between
 
   .contacts,
   .application

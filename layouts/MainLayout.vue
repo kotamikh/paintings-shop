@@ -31,5 +31,4 @@ import TheFooter from "../components/TheFooter.vue";
     display: flex
     min-height: 75vh
     flex-direction: column
-    //justify-content: center
 </style>
