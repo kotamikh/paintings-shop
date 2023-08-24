@@ -117,13 +117,8 @@ const sendApplication = (name, tel) => {
         background-color: transparent
 
         &:hover
-          &:first-child
             a
-              color: rgb(30, 136, 299)
-
-          &:nth-child(2)
-            a
-              color: rgb(57, 174, 65)
+              color: var(--seagreen)
 
       a
         gap: 5px

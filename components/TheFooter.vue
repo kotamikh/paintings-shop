@@ -57,10 +57,7 @@ export default {
       font-size: calc(12px + 6 * (100vw / 1280))
 
       &:hover
-        &:first-of-type
-          color: rgb(30, 136, 229)
-        &:last-of-type
-          color: rgb(57, 174, 65)
+        color: var(--seagreen)
 
       @media screen and (max-width: 767px)
         p
