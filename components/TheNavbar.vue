@@ -138,10 +138,11 @@ const showMenu = () => {
       opacity: 100%
       padding-top: 90px
       position: absolute
+      visibility: visible
       flex-direction: column
       background-color: white
       align-items: center
-      transition: opacity 0.2s ease
+      transition: all 0.2s ease
 
       li
         width: 70%
@@ -181,4 +182,5 @@ const showMenu = () => {
 
     .nav-menu.hidden
       opacity: 0
+      visibility: hidden
 </style>

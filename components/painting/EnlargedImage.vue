@@ -40,14 +40,11 @@ const emit = defineEmits(['close'])
   background-color: rgba(128, 128, 128, 0.8)
 
   img
-    width: 70%
+    height: 80%
     margin: auto
     object-fit: contain
-    aspect-ratio: 3 / 2
-
-    @media screen and (max-width: 1000px)
-      width: 80%
 
     @media screen and (max-width: 839px)
-      width: 90%
+      width: 80%
+      height: auto
 </style>
