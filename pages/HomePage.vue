@@ -5,7 +5,7 @@
   </head>
   <div class="wrapper">
     <div class="paint-in-frame">
-      <img :src="Frame" alt="painting">
+      <img :src="Frame" alt="Картина маслом"/>
     </div>
     <div class="main-text">
       <h1>Картины маслом | Киров</h1>

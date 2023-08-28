@@ -12,7 +12,6 @@
         <div class="buttons">
           <button>
             <a href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener">
-
               <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
               Вконтакте
             </a>
@@ -121,8 +120,8 @@ const sendApplication = (name, tel) => {
         background-color: transparent
 
         &:hover
-            a
-              color: var(--seagreen)
+          a
+            color: var(--seagreen)
 
       a
         gap: 5px

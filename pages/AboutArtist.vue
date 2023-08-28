@@ -4,7 +4,7 @@
     <meta name="description" content="Кировский художник Козлов М. А. Картины на заказ Киров."/>
   </head>
   <div class="artist-container">
-    <img :src="Artist" alt="Художник">
+    <img :src="Artist" alt="Художник Козлов М. А."/>
     <div class="artist-text">
       <h3 class="header">Автор картин - Козлов М.А.</h3>
       <p>Разнообразный и богатый опыт рамки и место обучения кадров требуют определения и уточнения форм
@@ -63,6 +63,7 @@ import Artist from '@/assets/artist-frame.png'
 
   .artist-text
     margin: 20px 0
+
     .header
       text-align: center
       text-wrap: none
@@ -78,6 +79,7 @@ import Artist from '@/assets/artist-frame.png'
         &::before,
         &::after
           display: none
+
     p
       margin-top: 20px
 </style>
