@@ -9,21 +9,13 @@
       <h2>Контакты</h2>
       <a href='tel:+79229519244'>Телефон: +7(922)-951-92-44</a>
       <div class="social-networks">
-        <p>Соцсети:</p>
-        <div class="buttons">
-          <button>
-            <a href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener">
-              <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
-              Вконтакте
-            </a>
-          </button>
+        <p>Написать:</p>
           <button>
             <a href="https://wa.me/79229519244" target="_blank" rel="noopener">
               <img src="../src/assets/icons/whatsapp.svg" style="width: 24px" alt="whatsapp"/>
               WhatsApp
             </a>
           </button>
-        </div>
       </div>
     </div>
     <div class="application">
@@ -108,20 +100,15 @@ const sendApplication = (name, tel) => {
     gap: 10px
     display: flex
 
-    .buttons
-      gap: 10px
-      display: flex
-      flex-direction: column
+    button
+      border: none
+      border-radius: 5px
+      height: fit-content
+      background-color: transparent
 
-      button
-        border: none
-        border-radius: 5px
-        height: fit-content
-        background-color: transparent
-
-        &:hover
-          a
-            color: var(--seagreen)
+      &:hover
+        a
+          color: var(--seagreen)
 
       a
         gap: 5px

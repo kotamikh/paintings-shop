@@ -1,8 +1,8 @@
 <template>
   <div class="main-layout">
-    <the-navbar/>
+    <the-navbar @nav-menu-opened="isOverflowHidden = true"/>
 
-    <div class="main-content">
+    <div class="main-content" >
       <router-view></router-view>
     </div>
 
@@ -10,21 +10,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "MainLayout"
-}
-</script>
-
 <script setup>
 import TheNavbar from "../components/TheNavbar.vue";
 import TheFooter from "../components/TheFooter.vue";
+import { ref } from "vue";
+
+const isOverflowHidden = ref(false)
 </script>
 
 <style scoped lang="sass">
 .main-layout
   width: 100%
   display: flex
+  overflow-y: hidden
   flex-direction: column
 
   .main-content

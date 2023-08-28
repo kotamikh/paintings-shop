@@ -1,14 +1,11 @@
 <template>
   <div class="footer">
     <div class="telephone">
-      <a href='tel:+79229519244'>Телефон: +7(922)-951-92-44</a>
+      <p>Телефон:</p>
+      <a href='tel:+79229519244'>+7(922)-951-92-44</a>
     </div>
     <div class="messengers">
       <p>Написать:</p>
-      <a class="link" href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener, nofollow">
-        <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
-        <p>Вконтакте</p>
-      </a>
       <a class="link" href="https://wa.me/79229519244" target="_blank" rel="noopener, nofollow">
         <img src="../src/assets/icons/whatsapp.svg" style="width: 23px" alt="whatsapp"/>
         <p>WhatsApp</p>
@@ -32,31 +29,27 @@
   padding: 20px
 
   @media screen and (max-width: 767px)
-    padding: 0 10px 20px
+    padding: 20px 0
 
-  .messengers
-    gap: 10px
+  .messengers,
+  .telephone
+    gap: 15px
     display: flex
     align-items: center
     @media screen and (max-width: 767px)
-      gap: 5px
+      gap: 10px
+    a
+      &:hover
+        color: var(--seagreen)
 
     .link
       gap: 8px
       display: flex
-      margin-right: 10px
       align-items: center
-      font-size: calc(12px + 6 * (100vw / 1280))
 
-      &:hover
-        color: var(--seagreen)
-
-      @media screen and (max-width: 767px)
+      @media screen and (max-width: 550px)
         p
           display: none
         img
           width: 20px
-
-  p
-    font-size: calc(12px + 6 * (100vw / 1280))
 </style>

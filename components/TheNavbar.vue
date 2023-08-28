@@ -1,10 +1,10 @@
 <template>
-  <div :class="[ {show : isBurgerShown }, 'navbar' ]">
+  <div class="navbar">
     <button @click="showMenu">
       <img v-if="isBurgerShown" src="@/assets/icons/cross.svg" alt="закрыть"/>
       <img v-else src="@/assets/icons/burger.svg" alt="меню"/>
     </button>
-    <ul class="nav-menu hidden">
+    <ul class="nav-menu hidden" ref="menu">
       <li v-for="(link, index) in links"
           :class="{ current : isCurrent(index) }"
           @click="onLinkClick(link, index)"
@@ -21,6 +21,7 @@ import { onMounted, ref, watch } from "vue";
 const router = useRouter();
 const currentIndex = ref(0)
 const isBurgerShown = ref(false)
+const menu = ref(null)
 
 const isCurrent = (index) => {
   return index === currentIndex.value
@@ -67,13 +68,10 @@ onMounted(() => {
 })
 
 const showMenu = () => {
-  const navbar = document.querySelector('.navbar')
-  const menu = navbar.querySelector('ul')
-
   isBurgerShown.value ? isBurgerShown.value = false : isBurgerShown.value = true
-  menu.classList.toggle('hidden')
-  menu.addEventListener('click', () => {
-    menu.classList.add('hidden')
+  menu.value.classList.toggle('hidden')
+  menu.value.addEventListener('click', () => {
+    menu.value.classList.add('hidden')
     isBurgerShown.value = false
   })
 }
@@ -130,12 +128,12 @@ const showMenu = () => {
       width: 100%
       height: 100vh
       opacity: 100%
+      position: fixed
       padding-top: 90px
-      position: absolute
+      align-items: center
       visibility: visible
       flex-direction: column
       background-color: white
-      align-items: center
       transition: all 0.2s ease
 
       li

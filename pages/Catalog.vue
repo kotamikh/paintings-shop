@@ -46,11 +46,13 @@ const showButton = () => {
   flex-direction: column
   scroll-behavior: smooth
 
-  @media screen and (max-width: 400px)
+  h1
     padding-top: 20px
 
-    h2
+    @media screen and (max-width: 840px)
       margin-bottom: 20px
+
+    @media screen and (max-width: 400px)
       &::before,
       &::after
         display: none
