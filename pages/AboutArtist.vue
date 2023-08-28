@@ -1,4 +1,8 @@
 <template>
+  <head>
+    <title>Автор картин | Киров картины маслом</title>
+    <meta name="description" content="Кировский художник Козлов М. А. Картины на заказ Киров."/>
+  </head>
   <div class="artist-container">
     <img :src="Artist" alt="Художник">
     <div class="artist-text">

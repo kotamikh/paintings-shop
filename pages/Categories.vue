@@ -1,4 +1,8 @@
 <template>
+  <head>
+    <title>Все картины | Киров картины маслом</title>
+    <meta name="description" content="Где купить картины Киров. Заказать картину Киров. Картина маслом на холсте Киров."/>
+  </head>
   <div class="categories">
     <div class="on-sale"
          @click="router.push({ name: 'Catalog' })"

@@ -1,4 +1,8 @@
 <template>
+  <head>
+    <title>Картины маслом в Кирове</title>
+    <meta name="description" content="Купить картину в Кирове. Картины маслом под заказ. Художник Киров."/>
+  </head>
   <div class="wrapper">
     <div class="paint-in-frame">
       <img :src="Frame" alt="painting">
@@ -19,7 +23,6 @@ export default {
 <script setup>
 import Frame from "@/assets/frame.png"
 import { useRouter } from "vue-router";
-import SpinningLoader from "../components/common/SpinningLoader.vue";
 
 const router = useRouter();
 </script>
