@@ -5,11 +5,11 @@
     </div>
     <div class="messengers">
       <p>Написать:</p>
-      <a class="link" href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener">
+      <a class="link" href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener, nofollow">
         <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
         <p>Вконтакте</p>
       </a>
-      <a class="link" href="https://wa.me/79229519244" target="_blank" rel="noopener">
+      <a class="link" href="https://wa.me/79229519244" target="_blank" rel="noopener, nofollow">
         <img src="../src/assets/icons/whatsapp.svg" style="width: 23px" alt="whatsapp"/>
         <p>WhatsApp</p>
       </a>

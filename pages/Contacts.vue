@@ -2,6 +2,7 @@
   <head>
     <title>Связаться | Киров картины маслом</title>
     <meta name="description" content="Картины на заказ Киров. Картины Киров недорого. Купить картину в Кирове"/>
+    <meta name="robots" content="noindex, nofollow"/>
   </head>
   <div class="contacts-container">
     <div class="contacts">
