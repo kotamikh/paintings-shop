@@ -83,6 +83,15 @@ const sendApplication = (name, tel) => {
   @media screen and (max-width: 770px)
     justify-content: space-between
 
+  @media screen and (max-width: 620px)
+    gap: 30px
+    width: 80%
+    padding-top: 30px
+    flex-direction: column
+
+  @media screen and (max-width: 374px)
+    padding-top: 60px
+
   .contacts,
   .application
     gap: 20px
@@ -146,13 +155,4 @@ const sendApplication = (name, tel) => {
 
       &:active
         transform: translateY(3px)
-
-  @media screen and (max-width: 620px)
-    gap: 30px
-    width: 80%
-    padding-top: 30px
-    flex-direction: column
-
-  @media screen and (max-width: 374px)
-    padding-top: 60px
 </style>
