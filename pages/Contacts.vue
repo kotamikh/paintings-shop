@@ -11,14 +11,14 @@
         <p>Соцсети:</p>
         <div class="buttons">
           <button>
-            <a href="https://m.vk.com/m.kozlov73" target="_blank">
+            <a href="https://m.vk.com/m.kozlov73" target="_blank" rel="noopener">
 
               <img src="../src/assets/icons/vk.svg" style="width: 25px" alt="vk"/>
               Вконтакте
             </a>
           </button>
           <button>
-            <a href="https://wa.me/79229519244" target="_blank">
+            <a href="https://wa.me/79229519244" target="_blank" rel="noopener">
               <img src="../src/assets/icons/whatsapp.svg" style="width: 24px" alt="whatsapp"/>
               WhatsApp
             </a>
