@@ -5,7 +5,7 @@
   </head>
   <div class="contacts-container">
     <div class="contacts">
-      <h3>Контакты</h3>
+      <h2>Контакты</h2>
       <p class="telephone">Телефон: +7(922)-951-92-44</p>
       <div class="social-networks">
         <p>Соцсети:</p>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="application">
-      <h3>Получить обратную связь</h3>
+      <h2>Получить обратную связь</h2>
       <div class="input-item">
         <p>Ваше имя:</p>
         <form-input
@@ -99,7 +99,7 @@ const sendApplication = (name, tel) => {
     @media screen and (max-width: 620px)
       align-items: center
 
-    h3
+    h2
       align-self: flex-start
       color: var(--header-grey)
 

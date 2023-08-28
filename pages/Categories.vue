@@ -8,13 +8,13 @@
     <div class="on-sale"
          @click="router.push({ name: 'Catalog' })"
     >
-      <h3>В наличии</h3>
+      <h2>В наличии</h2>
     </div>
     <div class="on-order">
-      <h3>Под заказ</h3>
+      <h2>Под заказ</h2>
     </div>
     <div class="canvas">
-      <h3>Размеры холстов</h3>
+      <h2>Размеры холстов</h2>
     </div>
   </div>
 </template>
@@ -81,7 +81,7 @@ const router = useRouter();
   .canvas
     background-image: url("@/assets/мастерская.jpeg")
 
-  h3
+  h2
     z-index: 2
     color: white
     font-weight: 300
