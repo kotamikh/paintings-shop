@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="telephone">
-      <p>Телефон: +7(922)-951-92-44</p>
+      <a href='tel:+79229519244'>Телефон: +7(922)-951-92-44</a>
     </div>
     <div class="messengers">
       <p>Написать:</p>
@@ -43,11 +43,9 @@
 
     .link
       gap: 8px
-      color: black
       display: flex
       margin-right: 10px
       align-items: center
-      text-decoration: none
       font-size: calc(12px + 6 * (100vw / 1280))
 
       &:hover

@@ -7,7 +7,7 @@
   <div class="contacts-container">
     <div class="contacts">
       <h2>Контакты</h2>
-      <p class="telephone">Телефон: +7(922)-951-92-44</p>
+      <a href='tel:+79229519244'>Телефон: +7(922)-951-92-44</a>
       <div class="social-networks">
         <p>Соцсети:</p>
         <div class="buttons">
@@ -125,10 +125,8 @@ const sendApplication = (name, tel) => {
 
       a
         gap: 5px
-        color: black
         display: flex
         align-items: center
-        text-decoration: none
 
         img
           margin: auto
