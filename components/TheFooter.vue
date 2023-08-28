@@ -17,12 +17,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "TheFooter"
-}
-</script>
-
 <style scoped lang="sass">
 .footer
   gap: 3vw

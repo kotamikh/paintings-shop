@@ -11,15 +11,9 @@
         :painting="painting"
     >
     </painting-card>
-    <ScrollUpButton :class="{ show : isShown }"/>
+    <ScrollUpButton :class="{ show : isShown }" />
   </div>
 </template>
-
-<script>
-export default {
-  name: "Catalog"
-}
-</script>
 
 <script setup>
 import PaintingCard from "../components/painting/PaintingCard.vue";
@@ -66,4 +60,5 @@ const showButton = () => {
 
   .show
     opacity: 70%
+    visibility: visible
 </style>

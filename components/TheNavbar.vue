@@ -14,12 +14,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "TheNavbar"
-}
-</script>
-
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref, watch } from "vue";

@@ -19,12 +19,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "PaintingsCategories"
-}
-</script>
-
 <script setup>
 import { useRouter } from "vue-router";
 
@@ -66,9 +60,9 @@ const router = useRouter();
       left: 0
       width: 100%
       height: 100%
+      opacity: 100%
       position: absolute
       background: rgba(119, 119, 119, 0.6)
-      opacity: 100%
       transition: opacity 0.2s ease-in-out
 
     &:hover::before

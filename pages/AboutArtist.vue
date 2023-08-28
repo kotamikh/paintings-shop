@@ -17,15 +17,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "AboutArtist"
-}
-</script>
-
 <script setup>
 import Artist from '@/assets/artist-frame.png'
-
 </script>
 
 <style scoped lang="sass">
@@ -65,8 +58,8 @@ import Artist from '@/assets/artist-frame.png'
     margin: 20px 0
 
     .header
-      text-align: center
       text-wrap: none
+      text-align: center
       color: var(--header-grey)
 
       @media screen and (max-width: 900px)

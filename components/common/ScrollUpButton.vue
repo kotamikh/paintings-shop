@@ -5,11 +5,6 @@
   </button>
 </template>
 
-<script>
-export default {
-  name: "ScrollUpButton"
-}
-</script>
 <script setup>
 import Arrow from "@/assets/arrow-up.png"
 
@@ -34,7 +29,8 @@ button.up-btn
   flex-direction: column
 
   opacity: 0
-  transition: opacity 0.1s ease-in-out
+  visibility: hidden
+  transition: all 0.1s ease-in-out
 
   &:hover
     cursor: pointer

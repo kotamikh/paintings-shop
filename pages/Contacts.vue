@@ -78,7 +78,6 @@ const formValidation = () => {
 const sendApplication = (name, tel) => {
   console.log('Application send! ', 'Имя: ' + name + ', ' + 'Телефон:' + tel)
 }
-
 </script>
 
 <style scoped lang="sass">

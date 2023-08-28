@@ -15,11 +15,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomePage"
-}
-</script>
 <script setup>
 import Frame from "@/assets/frame.png"
 import { useRouter } from "vue-router";

@@ -23,7 +23,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close'])
-
 </script>
 
 <style scoped lang="sass">
