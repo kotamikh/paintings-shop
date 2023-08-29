@@ -1,10 +1,10 @@
 <template>
   <head>
-    <title>Картины в наличии | Киров картины маслом</title>
+    <title>Все картины | Киров картины маслом</title>
     <meta name="description" content="Картины Киров. Купить картину маслом в Кирове. Каталог картин в наличии. Картины на холсте."/>
   </head>
   <div class="paint-container">
-    <h1> Картины в наличии </h1>
+    <h1> Все картины </h1>
     <painting-card
         v-for="(painting, index) in paintings"
         :key="index"

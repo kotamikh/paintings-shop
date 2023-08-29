@@ -4,8 +4,6 @@ import HomePage from "../../pages/HomePage.vue";
 import Catalog from "../../pages/Catalog.vue";
 import AboutArtist from "../../pages/AboutArtist.vue";
 import MainLayout from "../../layouts/MainLayout.vue";
-import Categories from "../../pages/Categories.vue";
-import ForwardView from "../../components/common/ForwardView.vue";
 
 const routes = [
     {
@@ -30,26 +28,13 @@ const routes = [
             },
             {
                 path: 'paintings',
-                redirect: {
-                    name: 'Categories'
-                },
-                component: ForwardView,
-                children: [
-                    {
-                        path: 'categories',
-                        name: 'Categories',
-                        component: Categories
-                    },
-                    {
-                        path: 'catalog',
-                        name: 'Catalog',
-                        component: Catalog
-                    }
-                ]
+                name: 'Catalog',
+                component: Catalog
             }
         ]
     }
 ]
+
 
 const router = createRouter({
     routes,
