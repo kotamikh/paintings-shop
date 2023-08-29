@@ -79,7 +79,11 @@ const enlargeImage = () => {
   aspect-ratio: 4 / 1.5
 
   @media screen and (max-width: 840px)
+    margin-top: 15px
     flex-direction: column
+
+    &:first-of-type
+      margin-top: 0
 
   &::after
     content: ''
@@ -205,7 +209,7 @@ const enlargeImage = () => {
 
   @media screen and (max-width: 840px)
     width: 70%
-    margin: 10px 0
+    margin-bottom: 15px
     transform: rotate(0)
 
   &:hover

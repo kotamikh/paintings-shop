@@ -109,7 +109,7 @@ const showMenu = () => {
   @media screen and (max-width: 374px)
     button
       top: 7px
-      right: 7px
+      right: 3px
       z-index: 3
       position: fixed
       visibility: visible
