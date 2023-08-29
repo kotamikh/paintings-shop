@@ -111,7 +111,7 @@ const showMenu = () => {
       top: 7px
       right: 7px
       z-index: 3
-      position: absolute
+      position: fixed
       visibility: visible
 
       width: 45px
