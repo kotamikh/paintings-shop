@@ -12,6 +12,7 @@ export const paintingsMocks = [
         title: 'Карелия',
         price: 3000,
         year: '2020',
+        stock: 1,
         source: Karelia
     },
     {
@@ -19,6 +20,7 @@ export const paintingsMocks = [
         title: 'Букет',
         price: 2000,
         year: '2022',
+        stock: 1,
         source: Bouquet
     },
     {
@@ -26,6 +28,7 @@ export const paintingsMocks = [
         title: 'Алтай',
         price: 1000,
         year: '2023',
+        stock: 1,
         source: Altay
     },
 
@@ -34,6 +37,7 @@ export const paintingsMocks = [
         title: 'Кин-Дза-Дза',
         price: 4000,
         year: '2023',
+        stock: 1,
         source: KinDzaDza
     },
     {
@@ -41,6 +45,7 @@ export const paintingsMocks = [
         title: 'Кин-Дза-Дза-2',
         price: 4500,
         year: '2021',
+        stock: 0,
         source: KinDzaDzaTwo
     },
     {
@@ -48,6 +53,7 @@ export const paintingsMocks = [
         title: 'Розы',
         price: 5000,
         year: '2023',
+        stock: 0,
         source: Roses
     },
     {
@@ -55,6 +61,7 @@ export const paintingsMocks = [
         title: 'Цветы',
         price: 3300,
         year: '2019',
+        stock: 0,
         source: Flowers
     }
 ]

@@ -3,6 +3,7 @@
     <div class="painting-info">
       <div class="painting-title">
         <h3>{{ painting.title }}</h3>
+        <span :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.stock === 1 ? 'В наличии' : 'Под заказ' }}</span>
       </div>
       <div class="paint-description">
         <p>Холст, масло. Размер картины: __/__</p>
@@ -47,6 +48,9 @@ const props = defineProps({
       type: Number
     },
     year: {
+      type: Number
+    },
+    stock: {
       type: Number
     },
     source: {
@@ -132,8 +136,20 @@ const enlargeImage = () => {
     max-width: 80%
 
   .painting-title
+    gap: 15px
     display: flex
     align-items: center
+
+    span
+      color: white
+      padding: 0 8px
+      border-radius: 5px
+      font-size: calc(12px + 2 * (100vw / 1280))
+      &.in-stock
+        background-color: rgba(108, 140, 121, 0.9)
+
+      &.on-order
+        background-color: rgba(119, 119, 119, 0.9)
 
   .price-and-year
     height: auto

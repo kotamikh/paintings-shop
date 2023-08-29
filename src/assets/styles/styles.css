@@ -1,6 +1,6 @@
 * {
     --grey: #777777;
-    --seagreen: #6c8c79;
+    --seagreen: rgb(108, 140, 121);
     --nav-hover: #63987a;
     --text-hover: #f8b230;
     --header-grey: #525252;
@@ -53,7 +53,8 @@ h1:not(.homepage-header)::after {
     background-repeat: no-repeat;
 }
 
-h2 {
+h2,
+h3 {
     font-size: calc(16px + 8 * (100vw / 1280));
 }
 
