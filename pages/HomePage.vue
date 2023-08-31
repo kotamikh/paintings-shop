@@ -89,13 +89,13 @@ const router = useRouter();
       margin: 20px 0
       align-self: center
       padding: 10px 20px
-      border-radius: 5px
+      border-radius: 7px
 
       height: auto
       max-width: 350px
       width: fit-content
       &:hover
-        background-color: #4b6253
+        background-color: rgb(103, 121, 108)
       &:active
         transform: translateY(3px)
 </style>

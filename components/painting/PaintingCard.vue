@@ -19,7 +19,7 @@
          @mouseover="isHidden = false"
          @mouseleave="isHidden = true"
     >
-      <div class="enlarge-icon" @click="enlargeImage">
+      <div class="enlarge-icon" @click="enlarged = true">
         <img src="@/assets/icons/expand.svg" style="width: 12%" alt="увеличить"/>
       </div>
       <img :src="painting.source" :alt="painting.title" />
@@ -61,10 +61,6 @@ const props = defineProps({
 
 const isHidden = ref(true)
 const enlarged = ref(false)
-
-const enlargeImage = () => {
-  enlarged.value = true
-}
 </script>
 
 <style scoped lang="sass">

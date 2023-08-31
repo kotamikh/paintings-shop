@@ -10,6 +10,11 @@
           @click="onLinkClick(link, index)"
       >{{ link.title }}
       </li>
+      <li @click="authorizationOpened = true"
+      >Войти
+      </li>
+      <authorization-page v-model:open="authorizationOpened"
+                          @close="authorizationOpened = false"/>
     </ul>
   </div>
 </template>
@@ -17,16 +22,16 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref, watch } from "vue";
+import AuthorizationPage from "./AuthorizationPage.vue";
 
-const router = useRouter();
+const authorizationOpened = ref(false)
+
 const currentIndex = ref(0)
-const isBurgerShown = ref(false)
-const menu = ref(null)
-
 const isCurrent = (index) => {
   return index === currentIndex.value
 }
 
+const router = useRouter();
 const links = ref([
   {
     title: 'Главная',
@@ -43,10 +48,6 @@ const links = ref([
   {
     title: 'Связаться',
     route: '/contacts'
-  },
-  {
-    title: 'Вход',
-    route: '/home'
   }
 ])
 
@@ -67,6 +68,8 @@ onMounted(() => {
   }, { immediate: true })
 })
 
+const isBurgerShown = ref(false)
+const menu = ref(null)
 const showMenu = () => {
   isBurgerShown.value ? isBurgerShown.value = false : isBurgerShown.value = true
   menu.value.classList.toggle('hidden')
@@ -142,8 +145,10 @@ const showMenu = () => {
         text-align: center
         height: max-content
         border-bottom: 1px solid var(--grey)
+
         &.current
           color: var(--nav-hover)
+
         &:first-of-type
           &::before
             content: ''
@@ -153,12 +158,15 @@ const showMenu = () => {
             height: 100%
             opacity: 0.5
             position: absolute
+            pointer-events: none
             background-size: contain
             background-position: center
             background-repeat: no-repeat
             background-image: url("@/assets/end-line.png")
+
         &:last-of-type
           border: none
+
           &::after
             content: ''
             left: 0
@@ -167,6 +175,7 @@ const showMenu = () => {
             bottom: -50%
             opacity: 0.5
             position: absolute
+            pointer-events: none
             background-size: contain
             background-position: center
             background-repeat: no-repeat

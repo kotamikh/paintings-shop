@@ -39,15 +39,12 @@ watch(value, () => {
   width: 100%
   position: relative
 
-  @media screen and (max-width: 620px)
-    max-width: 200px
-
   input
     border: 0
     width: 100%
     padding: 10px 0
     background-color: transparent
-    border-bottom: 2px solid rgba(128, 128, 128, 0.5)
+    border-bottom: 2px solid rgba(108, 140, 121, 50%)
 
     &:focus,
     &:hover

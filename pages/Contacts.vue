@@ -132,8 +132,8 @@ const sendApplication = (name, tel) => {
       color: white
       cursor: pointer
       text-wrap: none
-      background-color: grey
       transition: all 0.1s ease-in-out
+      background-color: rgba(119, 119, 119, 0.8)
 
       border: 0
       margin-top: 10px
@@ -144,15 +144,16 @@ const sendApplication = (name, tel) => {
       max-width: 350px
       width: fit-content
 
-      @media screen and (max-width: 620px)
-        align-self: center
-
       @media screen and (max-width: 374px)
         margin-top: 0
 
       &:hover
-        background-color: var(--seagreen)
+        background-color: rgba(108, 140, 121, 0.8)
 
       &:active
         transform: translateY(3px)
+
+    .input-item
+      @media screen and (max-width: 620px)
+        min-width: 220px
 </style>

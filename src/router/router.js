@@ -4,6 +4,7 @@ import HomePage from "../../pages/HomePage.vue";
 import Catalog from "../../pages/Catalog.vue";
 import AboutArtist from "../../pages/AboutArtist.vue";
 import MainLayout from "../../layouts/MainLayout.vue";
+import AuthorizationPage from "../../components/AuthorizationPage.vue";
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
                 path: 'paintings',
                 name: 'Catalog',
                 component: Catalog
+            },
+            {
+                path: 'authorization',
+                name: 'Authorization',
+                component: AuthorizationPage
             }
         ]
     }
