@@ -10,11 +10,6 @@
           @click="onLinkClick(link, index)"
       >{{ link.title }}
       </li>
-      <li @click="authorizationOpened = true"
-      >Войти
-      </li>
-      <authorization-page v-model:open="authorizationOpened"
-                          @close="authorizationOpened = false"/>
     </ul>
   </div>
 </template>
@@ -22,9 +17,6 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref, watch } from "vue";
-import AuthorizationPage from "./AuthorizationPage.vue";
-
-const authorizationOpened = ref(false)
 
 const currentIndex = ref(0)
 const isCurrent = (index) => {
@@ -99,8 +91,8 @@ const showMenu = () => {
 
   li
     height: 50%
-    padding: 15px 10px
-    font-size: calc(14px + 6 * (100vw / 1280))
+    padding: 15px
+    font-size: calc(15px + 6 * (100vw / 1280))
     border-bottom: 2px solid rgba(108, 140, 121, 50%)
 
     &:hover
