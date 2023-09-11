@@ -6,7 +6,8 @@
         <span :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.stock === 1 ? 'В наличии' : 'Под заказ' }}</span>
       </div>
       <div class="paint-description">
-        <p>Холст, масло. Размер картины: __/__</p>
+        <p>{{ painting.materials}}</p>
+          <p>Размер картины: {{ painting.width }} / {{ painting.height }} см.</p>
       </div>
       <div class="price-and-year">
         <div class="price-year-text">
@@ -55,6 +56,15 @@ const props = defineProps({
     },
     source: {
       type: Object
+    },
+    materials: {
+      type: String
+    },
+    width: {
+      type: Number
+    },
+    height: {
+      type: Number
     }
   }
 })

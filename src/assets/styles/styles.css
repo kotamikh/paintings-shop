@@ -22,7 +22,6 @@ h1:not(.homepage-header) {
     padding: 0;
     text-align: center;
     justify-self: center;
-    color: var(--header-grey);
     font-size: calc(16px + 12 * (100vw / 1280));
 }
 
