@@ -16,7 +16,8 @@
         </div>
       </div>
     </div>
-    <div class="painting-holder"
+    <div :class="[painting.width < painting.height ? 'vertical' : '']"
+         class="painting-holder"
          @mouseover="isHidden = false"
          @mouseleave="isHidden = true"
     >
@@ -204,14 +205,13 @@ const enlarged = ref(false)
         box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
 
 .painting-holder
-  width: 40%
+  display: flex
+  max-width: 40%
+  max-height: 80%
   overflow: hidden
-  aspect-ratio: 3 / 2
+  align-items: center
   transform: rotate(4deg)
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.3)
-
-  img
-    object-fit: contain
 
   @media screen and (max-width: 840px)
     width: 70%
@@ -221,6 +221,10 @@ const enlarged = ref(false)
   &:hover
     .enlarge-icon
       opacity: 100%
+
+.painting-holder.vertical
+    width: 30%
+    overflow: hidden
 
 .enlarge-icon
   opacity: 0
