@@ -1,17 +1,19 @@
 <template>
-  <div class="navbar">
+  <header>
     <button @click="showMenu">
       <img v-if="isBurgerShown" src="@/assets/icons/cross.svg" alt="закрыть"/>
       <img v-else src="@/assets/icons/burger.svg" alt="меню"/>
     </button>
-    <ul class="nav-menu hidden" ref="menu">
-      <li v-for="(link, index) in links"
-          :class="{ current : isCurrent(index) }"
-          @click="onLinkClick(link, index)"
-      >{{ link.title }}
-      </li>
-    </ul>
-  </div>
+    <nav>
+      <ul class="nav-menu hidden" ref="menu">
+        <li v-for="(link, index) in links"
+            :class="{ current : isCurrent(index) }"
+            @click="onLinkClick(link, index)"
+        >{{ link.title }}
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script setup>
@@ -73,7 +75,7 @@ const showMenu = () => {
 </script>
 
 <style lang="sass">
-.navbar
+header
   z-index: 3
   display: flex
   max-width: 100%
@@ -89,17 +91,17 @@ const showMenu = () => {
     display: flex
     cursor: pointer
 
-  li
-    height: 50%
-    padding: 15px
-    font-size: calc(15px + 6 * (100vw / 1280))
-    border-bottom: 2px solid rgba(108, 140, 121, 50%)
+    li
+      height: 50%
+      padding: 15px
+      font-size: calc(15px + 6 * (100vw / 1280))
+      border-bottom: 2px solid rgba(108, 140, 121, 50%)
 
-    &:hover
-      color: var(--nav-hover)
+      &:hover
+        color: var(--nav-hover)
 
-    &.current
-      border-bottom: 2px solid var(--nav-hover)
+      &.current
+        border-bottom: 2px solid var(--nav-hover)
 
   @media screen and (max-width: 374px)
     button
@@ -118,60 +120,64 @@ const showMenu = () => {
       border: none
       background-color: transparent
 
-    .nav-menu
-      left: 0
-      width: 100%
-      height: 100vh
-      opacity: 100%
-      position: fixed
-      padding-top: 90px
-      align-items: center
-      visibility: visible
-      flex-direction: column
-      background-color: white
-      transition: all 0.2s ease
+    nav
+      height: inherit
 
-      li
-        width: 70%
-        position: relative
-        text-align: center
-        height: max-content
-        border-bottom: 1px solid var(--grey)
+      .nav-menu
+        left: 0
+        width: 100%
+        height: 100vh
+        opacity: 100%
+        position: fixed
+        padding-top: 90px
+        align-items: center
+        visibility: visible
+        flex-direction: column
+        background-color: white
+        transition: all 0.2s ease
 
-        &.current
-          color: var(--nav-hover)
+        li
+          width: 70%
+          position: relative
+          text-align: center
+          height: max-content
+          border-bottom: 1px solid var(--grey)
 
-        &:first-of-type
-          &::before
-            content: ''
-            left: 0
-            top: -50%
-            width: 100%
-            height: 100%
-            opacity: 0.5
-            position: absolute
-            pointer-events: none
-            background-size: contain
-            background-position: center
-            background-repeat: no-repeat
-            background-image: url("@/assets/end-line.png")
+          &.current
+            color: var(--nav-hover)
+            border-bottom: 1px solid var(--grey)
 
-        &:last-of-type
-          border: none
+          &:first-of-type
+            &::before
+              content: ''
+              left: 0
+              top: -50%
+              width: 100%
+              height: 100%
+              opacity: 0.5
+              position: absolute
+              pointer-events: none
+              background-size: contain
+              background-position: center
+              background-repeat: no-repeat
+              background-image: url("@/assets/end-line.png")
 
-          &::after
-            content: ''
-            left: 0
-            width: 100%
-            height: 100%
-            bottom: -50%
-            opacity: 0.5
-            position: absolute
-            pointer-events: none
-            background-size: contain
-            background-position: center
-            background-repeat: no-repeat
-            background-image: url("@/assets/end-line.png")
+          &:last-of-type
+            border: none
+
+            &::after
+              content: ''
+              left: 0
+              width: 100%
+              height: 100%
+              bottom: -50%
+              opacity: 0.5
+              position: absolute
+              pointer-events: none
+              background-size: contain
+              background-position: center
+              background-repeat: no-repeat
+              background-image: url("@/assets/end-line.png")
 
     .nav-menu.hidden
       opacity: 0
