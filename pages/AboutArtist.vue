@@ -3,7 +3,7 @@
     <title>Автор картин | Киров картины маслом</title>
     <meta name="description" content="Кировский художник Козлов М. А. Картины на заказ Киров."/>
   </head>
-  <div class="artist-container">
+  <section>
     <img :src="Artist" alt="Художник Козлов М. А."/>
     <div class="artist-text">
       <h1 class="header">Автор картин - Козлов М.А.</h1>
@@ -14,7 +14,7 @@
         за собой процесс внедрения и модернизации направлений прогрессивного развития.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -22,7 +22,7 @@ import Artist from '@/assets/artist-frame.png'
 </script>
 
 <style scoped lang="sass">
-.artist-container
+section
   gap: 30px
   width: 80%
   margin: auto
