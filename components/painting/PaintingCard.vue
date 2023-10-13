@@ -22,9 +22,9 @@
          @mouseleave="isHidden = true"
     >
       <div class="enlarge-icon" @click="enlarged = true">
-        <img src="@/assets/icons/expand.svg" style="width: 12%" alt="увеличить"/>
+        <img src="../../src/assets/icons/enlarge.svg" alt="увеличить"/>
       </div>
-      <img :src="painting.source" :alt="painting.title" />
+      <img  class="paint-img" :src="painting.source" :alt="painting.title"/>
     </div>
     <enlarged-image v-model:show="enlarged"
                     :source="painting.source"
@@ -81,16 +81,19 @@ const enlarged = ref(false)
   justify-content: space-evenly
 
   width: 100%
+  padding: 12px 0
   position: relative
-  padding-bottom: 12px
   aspect-ratio: 4 / 1.5
 
-  @media screen and (max-width: 840px)
-    margin-top: 15px
+  @media screen and (max-width: 800px)
+    padding: 20px 0
+
+  @media screen and (max-width: 600px)
+    padding: 15px 0
     flex-direction: column
 
     &:first-of-type
-      margin-top: 0
+      padding-top: 0
 
   &::after
     content: ''
@@ -103,7 +106,7 @@ const enlarged = ref(false)
     background-repeat: no-repeat
     background-image: url("@/assets/painting-bottom.png")
 
-    @media screen and (max-width: 840px)
+    @media screen and (max-width: 600px)
       height: 8%
       width: 100%
 
@@ -122,32 +125,32 @@ const enlarged = ref(false)
       background-image: url("@/assets/end-line.png")
 
       @media screen and (max-width: 767px)
-        width: 50%
-        height: 10%
+        width: 70%
+        height: 15%
 
   &:nth-child(odd)
     flex-direction: row-reverse
 
-    @media screen and (max-width: 840px)
+    @media screen and (max-width: 600px)
       flex-direction: column
 
     .painting-holder
       transform: rotate(-4deg)
       box-shadow: -4px -4px 10px 0 rgba(0, 0, 0, 0.3)
 
-      @media screen and (max-width: 840px)
+      @media screen and (max-width: 800px)
         transform: rotate(0)
 
 .painting-info
   display: flex
-  max-width: 50%
+  width: fit-content
   flex-direction: column
 
-  @media screen and (max-width: 840px)
-    max-width: 80%
+  @media screen and (max-width: 600px)
+    max-width: fit-content
 
   .painting-title
-    gap: 15px
+    gap: 10px
     display: flex
     align-items: center
 
@@ -158,25 +161,22 @@ const enlarged = ref(false)
       font-size: calc(12px + 2 * (100vw / 1280))
       &.in-stock
         background-color: rgba(108, 140, 121, 0.9)
-
       &.on-order
         background-color: rgba(119, 119, 119, 0.9)
 
   .price-and-year
-    height: auto
-    max-width: 90%
-    position: relative
-
     display: flex
+    position: relative
+    max-width: fit-content
     justify-content: center
 
     margin: 30px
-    padding: 20px 0
+    padding: 20px 30px
     background: #ffffff
+    box-sizing: border-box
     background: linear-gradient(135deg, transparent 15px, white 0), linear-gradient(-45deg, transparent 15px, white 0) bottom right
     background-size: 50% 100%
     background-repeat: no-repeat
-
     box-shadow: 0 30px 10px -30px rgba(0, 0, 0, 0.5)
 
     &::before
@@ -196,7 +196,6 @@ const enlarged = ref(false)
         content: ''
         width: 80px
         height: 20px
-
         right: -38px
         bottom: -5px
         position: absolute
@@ -207,24 +206,24 @@ const enlarged = ref(false)
 .painting-holder
   display: flex
   max-width: 40%
-  max-height: 80%
+  max-height: 85%
   overflow: hidden
   align-items: center
   transform: rotate(4deg)
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.3)
 
-  @media screen and (max-width: 840px)
+  @media screen and (max-width: 800px)
     width: 70%
-    margin-bottom: 15px
     transform: rotate(0)
+  @media screen and (max-width: 600px)
+    max-width: 100%
+    margin-bottom: 3%
+    .paint-img
+      max-width: 100%
 
   &:hover
     .enlarge-icon
       opacity: 100%
-
-.painting-holder.vertical
-    width: 30%
-    overflow: hidden
 
 .enlarge-icon
   opacity: 0
@@ -237,4 +236,6 @@ const enlarged = ref(false)
   justify-content: center
   transition: opacity 0.2s ease
   background-color: rgba(128, 128, 128, 0.5)
+  img
+    width: 18%
 </style>
