@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <footer>
     <div class="telephone">
       <p>Телефон:</p>
       <a href='tel:+79229519244'>+7(922)-951-92-44</a>
@@ -11,11 +11,11 @@
         <p>WhatsApp</p>
       </a>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped lang="sass">
-.footer
+footer
   gap: 3vw
   display: flex
   align-items: center

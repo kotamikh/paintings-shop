@@ -2,9 +2,9 @@
   <div class="main-layout">
     <the-navbar @nav-menu-opened="isOverflowHidden = true"/>
 
-    <div class="main-content" >
+    <main>
       <router-view></router-view>
-    </div>
+    </main>
 
     <the-footer/>
   </div>
@@ -25,7 +25,7 @@ const isOverflowHidden = ref(false)
   overflow-y: hidden
   flex-direction: column
 
-  .main-content
+  main
     display: flex
     min-height: 75vh
     flex-direction: column
