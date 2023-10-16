@@ -5,7 +5,7 @@
          @click.self="emit('close')">
       <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')">
         <img :src="props.source" :alt="props.title"/>
-        <button class="cross-btn" @click="emit('close')"><img src="@/assets/icons/cross.svg" style="width: 28px; height: 28px" alt="закрыть"></button>
+        <button class="cross-btn" @click="emit('close')">&#215;</button>
       </div>
     </div>
   </teleport>
@@ -100,16 +100,15 @@ const emit = defineEmits([ 'close' ])
   display: flex
   align-items: center
   justify-content: center
-
+  color: rgba(255, 255, 255, 0.8)
+  font-size: calc(50px + 5 * (100vw / 1280))
   position: absolute
-  color: var(--header-grey)
   transition: scale 0.2s ease
-  background-color: rgba(255, 255, 255, 0.8)
+  background-color: transparent
 
   &:hover,
   &:active
-    background-color: white
-    border: 2px solid var(--seagreen)
+    color: white
   &:active
     transform: scale(0.95)
 
