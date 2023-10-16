@@ -3,9 +3,9 @@
     <div v-if="props.show"
          class="img-dialog"
          @click.self="emit('close')">
-      <div :class="[props.width < props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')">
+      <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')">
         <img :src="props.source" :alt="props.title"/>
-        <button class="cross-btn" @click="emit('close')">Вернуться &#10148;</button>
+        <button class="cross-btn" @click="emit('close')"><img src="@/assets/icons/cross.svg" style="width: 28px; height: 28px" alt="закрыть"></button>
       </div>
     </div>
   </teleport>
@@ -50,25 +50,18 @@ const emit = defineEmits([ 'close' ])
     top: 50%
     left: 50%
     width: 50%
-    transform: translate(-50%, -50%)
     position: absolute
+    transform: translate(-50%, -50%)
 
     @media screen and (max-width: 839px)
       width: 80%
 
     @media screen and (max-width: 600px)
-      width: 100%
+      width: 90%
       height: auto
 
     .cross-btn
       top: 0
-      right: 0
-      border: none
-      padding: 5px 10px
-      position: absolute
-      color: var(--header-grey)
-      font-size: calc(14px + 4 * (100vw / 1280))
-      background-color: rgba(255, 255, 255, 0.8)
 
   .vertical
     height: 100%
@@ -78,20 +71,50 @@ const emit = defineEmits([ 'close' ])
 
     .cross-btn
       top: 5%
-      right: 0
-      border: none
-      padding: 5px 10px
-      position: absolute
-      color: var(--header-grey)
-      font-size: calc(14px + 4 * (100vw / 1280))
-      background-color: rgba(255, 255, 255, 0.8)
 
-      @media screen and (max-width: 429px)
-        top: 10%
+      @media screen and (max-width: 704px)
+        top: 12.5%
+      @media screen and (max-width: 504px)
+        top: 17.5%
+      @media screen and (max-width: 459px)
+        top: 25%
 
     img
       height: 90%
       width: auto
       margin: auto
       object-fit: contain
+
+      @media screen and (max-width: 704px)
+        height: 75%
+      @media screen and (max-width: 504px)
+        height: 65%
+      @media screen and (max-width: 459px)
+        height: 50%
+
+.cross-btn
+  right: 0
+  width: 40px
+  height: 40px
+  border: none
+  display: flex
+  align-items: center
+  justify-content: center
+
+  position: absolute
+  color: var(--header-grey)
+  transition: scale 0.2s ease
+  background-color: rgba(255, 255, 255, 0.8)
+
+  &:hover,
+  &:active
+    background-color: white
+    border: 2px solid var(--seagreen)
+  &:active
+    transform: scale(0.95)
+
+  @media screen and (max-width: 704px)
+    height: 30px
+    width: 30px
+    padding: 0
 </style>
