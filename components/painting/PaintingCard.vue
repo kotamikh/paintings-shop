@@ -29,6 +29,8 @@
     <enlarged-image v-model:show="enlarged"
                     :source="painting.source"
                     :title="painting.title"
+                    :width="painting.width"
+                    :height="painting.height"
                     @close="enlarged = false"
     />
   </div>
@@ -224,6 +226,16 @@ const enlarged = ref(false)
   &:hover
     .enlarge-icon
       opacity: 100%
+
+.vertical
+  max-width: 30%
+  max-height: 95%
+
+  @media screen and (max-width: 600px)
+    max-width: 50%
+
+  @media screen and (max-width: 400px)
+    max-width: 60%
 
 .enlarge-icon
   opacity: 0
