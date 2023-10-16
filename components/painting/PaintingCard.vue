@@ -7,7 +7,7 @@
       </div>
       <div class="paint-description">
         <p>{{ painting.materials}}</p>
-          <p>Размер картины: {{ painting.width }} / {{ painting.height }} см.</p>
+          <p>Размер картины: {{ painting.height }} / {{ painting.width }} см.</p>
       </div>
       <div class="price-and-year">
         <div class="price-year-text">
