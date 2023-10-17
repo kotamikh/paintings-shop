@@ -3,7 +3,7 @@
     <div v-if="props.show"
          class="img-dialog"
          @click.self="emit('close')">
-      <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')">
+      <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')" >
         <img :src="props.source" :alt="props.title"/>
         <button class="cross-btn" @click="emit('close')">&#215;</button>
       </div>
@@ -17,7 +17,7 @@ const props = defineProps({
     type: Boolean
   },
   source: {
-    type: Object
+    type: String
   },
   title: {
     type: String
@@ -38,7 +38,7 @@ const emit = defineEmits([ 'close' ])
   width: 100vw
   height: 100vh
   display: flex
-  justify-content: center
+  align-items: center
 
   top: 0
   left: 0
@@ -47,11 +47,10 @@ const emit = defineEmits([ 'close' ])
   background-color: rgba(128, 128, 128, 0.8)
 
   .img-wrapper
-    top: 50%
-    left: 50%
     width: 50%
-    position: absolute
-    transform: translate(-50%, -50%)
+    margin: auto
+    position: relative
+    display: inline-block
 
     @media screen and (max-width: 839px)
       width: 80%
@@ -60,39 +59,27 @@ const emit = defineEmits([ 'close' ])
       width: 90%
       height: auto
 
-    .cross-btn
-      top: 0
-
   .vertical
-    height: 100%
-    display: flex
-    position: absolute
-    align-items: center
+    margin: auto
+    height: 85%
+    width: auto
+    position: relative
+    display: inline-flex
 
-    .cross-btn
-      top: 5%
-
-      @media screen and (max-width: 704px)
-        top: 12.5%
-      @media screen and (max-width: 504px)
-        top: 17.5%
-      @media screen and (max-width: 459px)
-        top: 25%
+    @media screen and (max-width: 1359px)
+      height: 75%
+    @media screen and (max-width: 1119px)
+      height: 60%
+    @media screen and (max-width: 874px)
+      height: 50%
+    @media screen and (max-width: 624px)
+      height: 45%
 
     img
-      height: 90%
-      width: auto
-      margin: auto
       object-fit: contain
 
-      @media screen and (max-width: 704px)
-        height: 75%
-      @media screen and (max-width: 504px)
-        height: 65%
-      @media screen and (max-width: 459px)
-        height: 50%
-
 .cross-btn
+  top: 0
   right: 0
   width: 40px
   height: 40px
@@ -100,17 +87,19 @@ const emit = defineEmits([ 'close' ])
   display: flex
   align-items: center
   justify-content: center
-  color: rgba(255, 255, 255, 0.8)
-  font-size: calc(50px + 5 * (100vw / 1280))
+
   position: absolute
   transition: scale 0.2s ease
   background-color: transparent
+  color: rgba(255, 255, 255, 0.8)
+  font-size: calc(50px + 5 * (100vw / 1280))
 
   &:hover,
   &:active
     color: white
+    transform: scale(1.1)
   &:active
-    transform: scale(0.95)
+    transform: scale(1)
 
   @media screen and (max-width: 704px)
     height: 30px

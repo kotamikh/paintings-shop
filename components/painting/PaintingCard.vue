@@ -58,7 +58,7 @@ const props = defineProps({
       type: Number
     },
     source: {
-      type: Object
+      type: String
     },
     materials: {
       type: String
