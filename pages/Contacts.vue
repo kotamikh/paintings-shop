@@ -7,15 +7,18 @@
   <div class="contacts-container">
     <div class="contacts">
       <h2>Контакты</h2>
-      <a href='tel:+79229519244'>Телефон: +7(922)-951-92-44</a>
+      <div class="tel">
+        <p>Телефон:</p>
+        <a href='tel:+79229519244'> +7(922)-951-92-44</a>
+      </div>
       <div class="social-networks">
         <p>Написать:</p>
-          <button>
-            <a href="https://wa.me/79229519244" target="_blank" rel="noopener">
-              <img src="../src/assets/icons/whatsapp.svg" style="width: 24px" alt="whatsapp"/>
-              WhatsApp
-            </a>
-          </button>
+        <button>
+          <a href="https://wa.me/79229519244" target="_blank" rel="noopener">
+            <img src="../src/assets/icons/whatsapp.svg" style="width: 24px" alt="whatsapp"/>
+            WhatsApp
+          </a>
+        </button>
       </div>
     </div>
     <form class="application" action="#" method="get" enctype="text/plain">
@@ -107,27 +110,28 @@ const sendApplication = (name, tel) => {
       align-self: flex-start
       color: var(--header-grey)
 
-  .social-networks
-    gap: 10px
-    display: flex
-
-    button
-      border: none
-      border-radius: 5px
-      height: fit-content
-      background-color: transparent
-
-      &:hover
-        a
-          color: var(--seagreen)
+    .social-networks,
+    .tel
+      gap: 10px
+      display: flex
 
       a
-        gap: 5px
-        display: flex
-        align-items: center
+        &:hover
+          color: var(--seagreen)
 
-        img
-          margin: auto
+      button
+        border: none
+        border-radius: 5px
+        height: fit-content
+        background-color: transparent
+
+        a
+          gap: 5px
+          display: flex
+          align-items: center
+
+          img
+            margin: auto
 
   .application
     button
