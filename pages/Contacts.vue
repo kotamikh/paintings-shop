@@ -26,19 +26,23 @@
       <div class="input-item">
         <p>Ваше имя:</p>
         <form-input
-            :validate="nameValidation"
             type="text"
+            maxlength="20"
             placeholder="Имя"
+            :validate="nameValidation"
             v-model="applicationData.nameValue"
+            onkeyup="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/gi, '')"
         />
       </div>
       <div class="input-item">
         <p>Мобильный номер:</p>
         <form-input
-            :validate="telValidation"
             type="tel"
+            maxlength="12"
+            :validate="telValidation"
             placeholder="+71234567890"
-            v-model="applicationData.telValue"/>
+            v-model="applicationData.telValue"
+            onkeyup="this.value = this.value.replace(/[A-Za-zА-Яа-яЁё]/,'');"/>
       </div>
       <button type="submit" @click="formValidation">Написать сообщение</button>
     </form>
