@@ -18,7 +18,7 @@
           </button>
       </div>
     </div>
-    <div class="application">
+    <form class="application" action="#" method="get" enctype="text/plain">
       <h2>Получить обратную связь</h2>
       <div class="input-item">
         <p>Ваше имя:</p>
@@ -37,16 +37,16 @@
             placeholder="+71234567890"
             v-model="applicationData.telValue"/>
       </div>
-      <button @click="formValidation">Написать сообщение</button>
-    </div>
+      <button type="submit" @click="formValidation">Написать сообщение</button>
+    </form>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { reactive } from "vue";
 import FormInput from "../components/common/FormInput.vue";
 
-const applicationData = ref({
+const applicationData = reactive({
   nameValue: '',
   telValue: null
 })
@@ -63,8 +63,10 @@ const telValidation = (val) => {
 }
 
 const formValidation = () => {
-  if (applicationData.value.nameValue && applicationData.value.telValue) {
-    sendApplication(applicationData.value.nameValue, applicationData.value.telValue)
+  console.log(applicationData.nameValue, applicationData.telValue)
+  if (applicationData.nameValue && applicationData.telValue) {
+    console.log(true)
+    sendApplication(applicationData.nameValue, applicationData.telValue)
   }
 }
 

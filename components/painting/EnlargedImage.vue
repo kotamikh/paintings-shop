@@ -88,6 +88,7 @@ const emit = defineEmits([ 'close' ])
   align-items: center
   justify-content: center
 
+  cursor: pointer
   position: absolute
   transition: scale 0.2s ease
   background-color: transparent
