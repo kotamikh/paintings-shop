@@ -90,10 +90,11 @@ const emit = defineEmits([ 'close' ])
 
   cursor: pointer
   position: absolute
-  transition: scale 0.2s ease
+  transition: all 0.2s ease
   background-color: transparent
   color: rgba(255, 255, 255, 0.8)
   font-size: calc(50px + 5 * (100vw / 1280))
+  text-shadow: 2px 4px 2px rgba(105,105,105,0.8)
 
   &:hover,
   &:active
