@@ -1,11 +1,12 @@
 <template>
   <div class="contacts-container">
-    <div class="contacts">
+    <div class="contacts-delivery">
       <h2>Контакты</h2>
       <div class="tel">
         <p>Телефон:</p>
         <a href='tel:+79229519244'> +7(922)-951-92-44</a>
       </div>
+
       <div class="social-networks">
         <p>Написать:</p>
         <button>
@@ -15,6 +16,8 @@
           </a>
         </button>
       </div>
+      <h2>Доставка в другой город</h2>
+      <p>Почта России, СДЭК, БайкалСервис</p>
     </div>
     <form class="application" action="#" method="get" enctype="text/plain">
       <h2>Получить обратную связь</h2>
@@ -106,12 +109,13 @@ const sendApplication = (name, tel) => {
     gap: 30px
     width: 80%
     padding-top: 30px
+    margin-bottom: 60px
     flex-direction: column
 
   @media screen and (max-width: 374px)
     padding-top: 60px
 
-  .contacts,
+  .contacts-delivery,
   .application
     gap: 20px
     display: flex
