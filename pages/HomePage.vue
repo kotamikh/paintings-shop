@@ -88,7 +88,6 @@ useHead({
     button
       color: white
       cursor: pointer
-      text-wrap: none
       transition: all 0.1s ease-in-out
       background-color: var(--seagreen)
 

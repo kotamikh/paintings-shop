@@ -64,7 +64,6 @@ section
     margin: 20px 0
 
     .header
-      text-wrap: none
       text-align: center
       color: var(--header-grey)
 
