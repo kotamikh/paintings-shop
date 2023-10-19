@@ -3,7 +3,7 @@
     <div v-if="props.show"
          class="img-dialog"
          @click.self="emit('close')">
-      <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')" >
+      <div :class="[props.width <= props.height ? 'vertical' : 'img-wrapper']" @click.self="emit('close')">
         <img :src="props.source" :alt="props.title"/>
         <button class="cross-btn" @click="emit('close')">&#215;</button>
       </div>
@@ -47,7 +47,7 @@ const emit = defineEmits([ 'close' ])
   background-color: rgba(128, 128, 128, 0.8)
 
   .img-wrapper
-    width: 50%
+    width: 60%
     margin: auto
     position: relative
     display: inline-block
@@ -61,19 +61,22 @@ const emit = defineEmits([ 'close' ])
 
   .vertical
     margin: auto
-    height: 85%
+    height: 90%
     width: auto
     position: relative
     display: inline-flex
 
     @media screen and (max-width: 1359px)
-      height: 75%
+      height: 85%
     @media screen and (max-width: 1119px)
-      height: 60%
+      height: 75%
     @media screen and (max-width: 874px)
-      height: 50%
+      height: 65%
     @media screen and (max-width: 624px)
-      height: 45%
+      height: 60%
+    @media screen and (max-width: 499px)
+      width: 100%
+      height: auto
 
     img
       object-fit: contain
