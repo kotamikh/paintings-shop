@@ -5,7 +5,9 @@ import { createPinia } from 'pinia'
 
 import '@/assets/styles/styles.css'
 import '@/assets/styles/reset.css'
+import { createHead } from "@vueuse/head";
 
-const pinia = createPinia();
+const pinia = createPinia()
+const head = createHead()
 
-createApp(App).use(router).use(pinia).mount('#app')
+createApp(App).use(router).use(pinia).use(head).mount('#app')

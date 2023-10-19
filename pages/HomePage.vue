@@ -1,8 +1,4 @@
 <template>
-  <head>
-    <title>Картины маслом в Кирове</title>
-    <meta name="description" content="Купить картину в Кирове. Картины маслом под заказ. Художник Киров."/>
-  </head>
   <div class="wrapper">
     <div class="paint-in-frame">
       <img :src="Frame" alt="Картина маслом"/>
@@ -18,8 +14,19 @@
 <script setup>
 import Frame from "@/assets/frame.png"
 import { useRouter } from "vue-router";
+import { useHead } from "@vueuse/head";
 
 const router = useRouter();
+
+useHead({
+  title: "Картины маслом в Кирове",
+  meta: [
+    {
+      name: "description",
+      content: "Купить картину в Кирове. Картины маслом под заказ. Художник М.А.Козлов Киров."
+    }
+  ]
+})
 </script>
 
 <style scoped lang="sass">

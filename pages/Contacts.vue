@@ -1,9 +1,4 @@
 <template>
-  <head>
-    <title>Связаться | Киров картины маслом</title>
-    <meta name="description" content="Картины на заказ Киров. Картины Киров недорого. Купить картину в Кирове"/>
-    <meta name="robots" content="noindex, nofollow"/>
-  </head>
   <div class="contacts-container">
     <div class="contacts">
       <h2>Контакты</h2>
@@ -52,6 +47,21 @@
 <script setup>
 import { reactive } from "vue";
 import FormInput from "../components/common/FormInput.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Обратная связь | Картины маслом Киров",
+  meta: [
+    {
+      name: "description",
+      content: "Картины на заказ Киров. Картины Киров недорого. Купить картину в Кирове."
+    },
+    {
+      name: "robots",
+      content: "noindex, nofollow"
+    }
+  ]
+})
 
 const applicationData = reactive({
   nameValue: '',

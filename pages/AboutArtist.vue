@@ -1,8 +1,4 @@
 <template>
-  <head>
-    <title>Автор картин | Киров картины маслом</title>
-    <meta name="description" content="Кировский художник Козлов М. А. Картины на заказ Киров."/>
-  </head>
   <section>
     <img :src="Artist" alt="Художник Козлов М. А."/>
     <div class="artist-text">
@@ -16,6 +12,17 @@
 
 <script setup>
 import Artist from '@/assets/artist-frame.png'
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Автор картин | Картины маслом Киров",
+  meta: [
+    {
+      name: "description",
+      content: "Кировский художник Козлов М. А. Картины на заказ Киров."
+    }
+  ]
+})
 </script>
 
 <style scoped lang="sass">

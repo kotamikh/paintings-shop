@@ -20,7 +20,17 @@ import PaintingCard from "../components/painting/PaintingCard.vue";
 import { paintingsMocks } from "@/mocks/paintings.js";
 import { ref } from "vue";
 import ScrollUpButton from "../components/common/ScrollUpButton.vue";
+import { useHead } from "@vueuse/head";
 
+useHead({
+  title: "Все картины | Картины маслом Киров",
+  meta: [
+    {
+      name: "description",
+      content: "Картины Киров. Купить картину маслом в Кирове. Каталог картин в наличии. Картины маслом на холсте."
+    }
+  ]
+})
 const paintings = ref(paintingsMocks);
 const isShown = ref(false);
 
