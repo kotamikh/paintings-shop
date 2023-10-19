@@ -1,8 +1,7 @@
 <template>
   <teleport to="body">
     <div v-if="props.show"
-         class="img-dialog"
-         @click.self="emit('close')">
+         class="img-dialog">
         <vue-easy-lightbox class="img-wrapper" :imgs="props.source" :visible="visibleRef" @hide="emit('close')"/>
     </div>
   </teleport>
