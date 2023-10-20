@@ -30,7 +30,11 @@ footer
 
   @media screen and (max-width: 767px)
     padding: 20px 0
-
+  @media screen and (max-width: 295px)
+    flex-direction: column
+    align-items: start
+    margin: 40px 0 10px 20px
+    padding: 0
   .messengers,
   .telephone
     gap: 15px

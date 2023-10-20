@@ -31,10 +31,10 @@ useHead({
 
 <style scoped lang="sass">
 .wrapper
-  min-width: 90%
   margin: auto
-
   display: flex
+  min-width: 90%
+  height: 75vh
   user-select: none
   align-items: center
   justify-content: center
@@ -47,7 +47,6 @@ useHead({
 
   .paint-in-frame
     display: flex
-    min-width: 50%
     justify-content: center
 
     img
@@ -78,6 +77,7 @@ useHead({
   .main-text
     display: flex
     margin: 0 20px
+    min-width: 40%
     align-self: center
     align-items: start
     flex-direction: column
