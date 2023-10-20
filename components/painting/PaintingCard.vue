@@ -2,8 +2,7 @@
   <div class="painting-card">
     <div class="painting-info">
       <div class="painting-title">
-        <h3>{{ painting.title }}</h3>
-        <span :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.stock === 1 ? 'В наличии' : 'Под заказ' }}</span>
+        <h3 :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.title }}</h3>
       </div>
       <div class="paint-description">
         <p>{{ painting.materials}}</p>
@@ -91,7 +90,7 @@ const enlarged = ref(false)
     padding: 20px 0
 
   @media screen and (max-width: 600px)
-    padding: 15px 0
+    padding: 20px 0
     flex-direction: column
 
     &:first-of-type
@@ -152,19 +151,24 @@ const enlarged = ref(false)
     max-width: fit-content
 
   .painting-title
-    gap: 10px
-    display: flex
-    align-items: center
+    h3
+      display: flex
+      align-items: center
+    .in-stock,
+    .on-order
+      &:after
+        color: white
+        padding: 0 8px
+        margin-left: 10px
+        border-radius: 5px
+        font-size: calc(12px + 2 * (100vw / 1280))
 
-    span
-      color: white
-      padding: 0 8px
-      border-radius: 5px
-      font-size: calc(12px + 2 * (100vw / 1280))
-      &.in-stock
-        background-color: rgba(108, 140, 121, 0.9)
-      &.on-order
-        background-color: rgba(119, 119, 119, 0.9)
+    .in-stock:after
+      content: "В наличии"
+      background-color: rgba(108, 140, 121, 0.9)
+    .on-order:after
+      content: "Под заказ"
+      background-color: rgba(119, 119, 119, 0.9)
 
   .price-and-year
     display: flex
@@ -207,7 +211,7 @@ const enlarged = ref(false)
 
 .painting-holder
   display: flex
-  width: 40%
+  max-width: 40%
   max-height: 85%
   overflow: hidden
   align-items: center
