@@ -207,7 +207,7 @@ const enlarged = ref(false)
 
 .painting-holder
   display: flex
-  max-width: 40%
+  width: 40%
   max-height: 85%
   overflow: hidden
   align-items: center
