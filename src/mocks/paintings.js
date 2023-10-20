@@ -1,9 +1,9 @@
-import Chasovnia from '@/assets/paintings/Часовня.jpg'
-import Dissident from '@/assets/paintings/Диссидент.jpg'
-import Roses from '@/assets/paintings/Крупные_розы.jpg'
-import Stones from '@/assets/paintings/Камни.jpg'
-import Ukok from '@/assets/paintings/Плато_Укок.jpg'
-import Ukok2 from '@/assets/paintings/Плато_Укок_2.jpg'
+import Chasovnia from '@/assets/paintings/Часовня.png'
+import Dissident from '@/assets/paintings/Диссидент.png'
+import Roses from '@/assets/paintings/Крупные_розы.png'
+import Stones from '@/assets/paintings/Камни.png'
+import Ukok from '@/assets/paintings/Плато_Укок.png'
+import Ukok2 from '@/assets/paintings/Плато_Укок_2.png'
 
 export const paintingsMocks = [
     {
