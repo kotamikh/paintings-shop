@@ -46,7 +46,7 @@ export const paintingsMocks = [
         year: '2023',
         stock: 1,
         source: Stones,
-        materials: 'Холст на картоне. Масло.',
+        materials: 'Холст, масло.',
         width: 50,
         height: 40
     },

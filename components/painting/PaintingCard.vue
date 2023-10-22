@@ -1,12 +1,14 @@
 <template>
   <div class="painting-card">
-    <div class="painting-info">
-      <div class="painting-title">
-        <h3 :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.title }}</h3>
-      </div>
-      <div class="paint-description">
-        <p>{{ painting.materials}}</p>
+    <div class="info-wrapper">
+      <div class="painting-info">
+        <div class="painting-title">
+          <h3 :class="`${painting.stock === 1 ? 'in-stock' : 'on-order'}`">{{ painting.title }}</h3>
+        </div>
+        <div class="paint-description">
+          <p>{{ painting.materials }}</p>
           <p>Размер картины: {{ painting.height }} / {{ painting.width }} см.</p>
+        </div>
       </div>
       <div class="price-and-year">
         <div class="price-year-text">
@@ -23,7 +25,7 @@
       <div class="enlarge-icon" @click="enlarged = true">
         <img src="../../src/assets/icons/enlarge.svg" alt="увеличить"/>
       </div>
-      <img  class="paint-img" :src="painting.source" :alt="painting.title"/>
+      <img class="paint-img" :src="painting.source" :alt="painting.title"/>
     </div>
     <enlarged-image v-model:show="enlarged"
                     :source="painting.source"
@@ -113,6 +115,7 @@ const enlarged = ref(false)
 
   &:last-of-type
     margin-bottom: 2%
+
     &::after
       content: ''
       width: 30%
@@ -142,18 +145,24 @@ const enlarged = ref(false)
       @media screen and (max-width: 800px)
         transform: rotate(0)
 
+  .info-wrapper
+    display: flex
+    flex-direction: column
+
+    @media screen and (max-width: 600px)
+      display: contents
+
 .painting-info
   display: flex
   width: fit-content
   flex-direction: column
 
   @media screen and (max-width: 600px)
-    max-width: fit-content
+    margin-bottom: 20px
+  @media screen and (max-width: 280px)
+    padding: 0 20px
 
   .painting-title
-    h3
-      display: flex
-      align-items: center
     .in-stock,
     .on-order
       &:after
@@ -165,49 +174,73 @@ const enlarged = ref(false)
 
     .in-stock:after
       content: "В наличии"
+      white-space: nowrap
       background-color: rgba(108, 140, 121, 0.9)
+
     .on-order:after
       content: "Под заказ"
       background-color: rgba(119, 119, 119, 0.9)
 
-  .price-and-year
-    display: flex
-    position: relative
-    max-width: fit-content
-    justify-content: center
+.price-and-year
+  display: flex
+  position: relative
+  width: fit-content
+  justify-content: center
 
-    margin: 30px
-    padding: 20px 30px
-    background: #ffffff
-    box-sizing: border-box
-    background: linear-gradient(135deg, transparent 15px, white 0), linear-gradient(-45deg, transparent 15px, white 0) bottom right
-    background-size: 50% 100%
-    background-repeat: no-repeat
-    box-shadow: 0 30px 10px -30px rgba(0, 0, 0, 0.5)
+  margin: 30px
+  padding: 20px 30px
+  background: #ffffff
+  box-sizing: border-box
+  background: linear-gradient(135deg, transparent 15px, white 0), linear-gradient(-45deg, transparent 15px, white 0) bottom right
+  background-size: 50% 100%
+  background-repeat: no-repeat
+  box-shadow: 0 30px 10px -30px rgba(0, 0, 0, 0.5)
 
-    &::before
+  @media screen and (max-width: 600px)
+    order: 3
+    margin: 0
+    width: 70%
+    padding: 0
+    box-shadow: none
+    background: transparent
+    justify-content: space-between
+
+  &::before
+    content: ''
+    width: 80px
+    height: 20px
+
+    top: -3px
+    left: -40px
+    position: absolute
+    transform: rotate(-45deg)
+    background-color: transparent
+    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
+
+    @media screen and (max-width: 600px)
+      display: none
+
+  .price-year-text
+    @media screen and (max-width: 600px)
+      width: 100%
+      display: flex
+      color: var(--header-grey)
+      justify-content: space-between
+
+    &::after
       content: ''
       width: 80px
       height: 20px
-
-      top: -3px
-      left: -40px
+      right: -38px
+      bottom: -5px
       position: absolute
-      transform: rotate(-45deg)
+      transform: rotate(135deg)
       background-color: transparent
       box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
 
-    .price-year-text
-      &::after
-        content: ''
-        width: 80px
-        height: 20px
-        right: -38px
-        bottom: -5px
-        position: absolute
-        transform: rotate(135deg)
-        background-color: transparent
-        box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.5)
+      @media screen and (max-width: 600px)
+        display: none
+
 
 .painting-holder
   display: flex
@@ -252,6 +285,7 @@ const enlarged = ref(false)
   justify-content: center
   transition: opacity 0.2s ease
   background-color: rgba(128, 128, 128, 0.5)
+
   img
     width: 18%
 </style>
