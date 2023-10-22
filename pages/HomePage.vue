@@ -93,7 +93,6 @@ useHead({
 
       border: 0
       margin: 20px 0
-      align-self: center
       padding: 10px 20px
       border-radius: 7px
 
@@ -104,4 +103,7 @@ useHead({
         background-color: rgb(103, 121, 108)
       &:active
         transform: translateY(3px)
+
+      @media screen and (max-width: 550px)
+        align-self: center
 </style>

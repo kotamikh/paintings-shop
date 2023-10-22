@@ -83,6 +83,9 @@ header
   position: relative
   justify-content: center
 
+  @media screen and (max-width: 550px)
+    margin-bottom: 30px
+
   button
     display: none
     visibility: hidden
