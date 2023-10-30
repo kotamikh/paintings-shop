@@ -7,7 +7,7 @@
         </div>
         <div class="paint-description">
           <p>{{ painting.materials }}</p>
-          <p>Размер картины: {{ painting.height }} / {{ painting.width }} см.</p>
+          <p>Размер картины: {{ painting.height }} / {{ painting.width }} см. <br>Картина в рамке.</p>
         </div>
       </div>
       <div class="price-and-year">
@@ -25,7 +25,7 @@
       <div class="enlarge-icon" @click="enlarged = true">
         <img src="../../src/assets/icons/enlarge.svg" alt="увеличить"/>
       </div>
-      <img class="paint-img" :src="painting.source" :alt="painting.title"/>
+      <img class="paint-img" :src="painting.source[0]" :alt="painting.title"/>
     </div>
     <enlarged-image v-model:show="enlarged"
                     :source="painting.source"

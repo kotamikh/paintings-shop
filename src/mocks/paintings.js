@@ -1,9 +1,15 @@
 import Chasovnia from '@/assets/paintings/Часовня.png'
+import ChasovniaFrame from '@/assets/paintings/Часовня-frame.png'
 import Dissident from '@/assets/paintings/Диссидент.png'
+import DissidentFrame from '@/assets/paintings/Диссидент-frame.png'
 import Roses from '@/assets/paintings/Крупные_розы.png'
+import RosesFrame from '@/assets/paintings/Крупные_розы-frame.png'
 import Stones from '@/assets/paintings/Камни.png'
+import StonesFrame from '@/assets/paintings/Камни-frame.png'
 import Ukok from '@/assets/paintings/Плато_Укок.png'
+import UkokFrame from '@/assets/paintings/Плато_Укок-frame.png'
 import Ukok2 from '@/assets/paintings/Плато_Укок_2.png'
+import Ukok2Frame from '@/assets/paintings/Плато_Укок_2-frame.png'
 
 export const paintingsMocks = [
     {
@@ -12,7 +18,7 @@ export const paintingsMocks = [
         price: '35.000',
         year: '2023',
         stock: 1,
-        source: Chasovnia,
+        source: [Chasovnia, ChasovniaFrame],
         materials: 'Холст на картоне. Масло.',
         width: 60,
         height: 40
@@ -23,7 +29,7 @@ export const paintingsMocks = [
         price: '18.000',
         year: '2023',
         stock: 1,
-        source: Dissident,
+        source: [Dissident, DissidentFrame],
         materials: 'Холст на картоне. Масло.',
         width: 40,
         height: 30
@@ -34,7 +40,7 @@ export const paintingsMocks = [
         price: '30.000',
         year: '2023',
         stock: 1,
-        source: Roses,
+        source: [Roses, RosesFrame],
         materials: 'Холст на картоне. Масло.',
         width: 50,
         height: 50
@@ -45,7 +51,7 @@ export const paintingsMocks = [
         price: '30.000',
         year: '2023',
         stock: 1,
-        source: Stones,
+        source: [Stones, StonesFrame],
         materials: 'Холст, масло.',
         width: 50,
         height: 40
@@ -56,7 +62,7 @@ export const paintingsMocks = [
         price: '25.000',
         year: '2023',
         stock: 1,
-        source: Ukok,
+        source: [Ukok, UkokFrame],
         materials: 'Холст на картоне. Масло.',
         width: 45,
         height: 35
@@ -67,7 +73,7 @@ export const paintingsMocks = [
         price: '25.000',
         year: '2023',
         stock: 1,
-        source: Ukok2,
+        source: [Ukok2, Ukok2Frame],
         materials: 'Холст на картоне. Масло.',
         width: 35,
         height: 45
