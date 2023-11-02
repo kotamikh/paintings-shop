@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /pages/Contacts.vue
+Disallow: /pages/contacts
