@@ -3,8 +3,14 @@
     <title>Все картины | Киров картины маслом</title>
     <meta name="description" content="Картины Киров. Купить картину маслом в Кирове. Каталог картин в наличии. Картины на холсте."/>
   </head>
-  <div class="paint-container">
+  <archive v-if="showArchive"
+  @back="showArchive = false"
+  ></archive>
+  <div class="paint-container" v-if="showArchive === false">
     <h1> Все картины </h1>
+    <a class="archive-link"
+    @click="openArchive"
+    >Смотреть архив</a>
     <painting-card
         v-for="(painting, index) in paintings"
         :key="index"
@@ -21,6 +27,8 @@ import { paintingsMocks } from "@/mocks/paintings.js";
 import { ref } from "vue";
 import ScrollUpButton from "../components/common/ScrollUpButton.vue";
 import { useHead } from "@vueuse/head";
+import router from "@/router/router.js";
+import Archive from "./Archive.vue";
 
 useHead({
   title: "Все картины | Картины маслом Киров",
@@ -31,7 +39,7 @@ useHead({
     }
   ]
 })
-const paintings = ref(paintingsMocks);
+const paintings = ref(paintingsMocks)
 const isShown = ref(false);
 
 window.addEventListener('scroll', function() {
@@ -45,6 +53,13 @@ window.addEventListener('scroll', function() {
 
 const showButton = () => {
   isShown.value = true
+}
+
+const showArchive = ref(false)
+const openArchive = () => {
+  showArchive.value = true
+  console.log(showArchive.value)
+  router.push('/paintings/archive')
 }
 </script>
 
@@ -60,7 +75,10 @@ const showButton = () => {
     padding-top: 20px
 
     @media screen and (max-width: 840px)
-      margin-bottom: 20px
+      margin-bottom: 10px
+
+    @media screen and (max-width: 549px)
+      padding-top: 0
 
     @media screen and (max-width: 400px)
       &::before,
@@ -73,4 +91,17 @@ const showButton = () => {
   .show
     opacity: 70%
     visibility: visible
+
+  .archive-link
+    margin: 0 12vw
+    text-align: end
+    cursor: pointer
+
+    &:hover
+      text-decoration: underline
+      text-underline-position: under
+      text-decoration-color: var(--seagreen)
+
+    @media screen and (max-width: 799px)
+      margin-bottom: 10px
 </style>

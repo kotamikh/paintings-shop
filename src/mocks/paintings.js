@@ -1,3 +1,5 @@
+import Boats from '@/assets/paintings/Лодки.jpg'
+import Boats2 from '@/assets/paintings/Лодки_2.jpg'
 import Chasovnia from '@/assets/paintings/Часовня.png'
 import ChasovniaFrame from '@/assets/paintings/Часовня-frame.png'
 import Dissident from '@/assets/paintings/Диссидент.png'
@@ -14,6 +16,17 @@ import Ukok2Frame from '@/assets/paintings/Плато_Укок_2-frame.png'
 export const paintingsMocks = [
     {
         id: 0,
+        title: 'Лодки на р. Сулак в Дагестане',
+        price: '35.000',
+        year: '2024',
+        stock: 1,
+        source: [Boats, Boats2],
+        materials: 'Холст на картоне. Масло.',
+        width: 60,
+        height: 40
+    },
+    {
+        id: 1,
         title: 'Часовня в Карелии',
         price: '35.000',
         year: '2023',
@@ -24,7 +37,7 @@ export const paintingsMocks = [
         height: 40
     },
     {
-        id: 1,
+        id: 2,
         title: 'Кин-Дза-Дза! Диссидент',
         price: '18.000',
         year: '2023',
@@ -35,7 +48,7 @@ export const paintingsMocks = [
         height: 30
     },
     {
-        id: 2,
+        id: 3,
         title: 'Крупные розы',
         price: '30.000',
         year: '2023',
@@ -46,7 +59,7 @@ export const paintingsMocks = [
         height: 50
     },
     {
-        id: 3,
+        id: 4,
         title: 'Камни',
         price: '30.000',
         year: '2023',

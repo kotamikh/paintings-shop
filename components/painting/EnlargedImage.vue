@@ -5,7 +5,6 @@
         <vue-easy-lightbox class="img-wrapper" :imgs="props.source" :visible="visibleRef" @hide="emit('close')"/>
     </div>
   </teleport>
-
 </template>
 
 <script setup>

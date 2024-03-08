@@ -4,6 +4,7 @@ import HomePage from "../../pages/HomePage.vue";
 import Catalog from "../../pages/Catalog.vue";
 import AboutArtist from "../../pages/AboutArtist.vue";
 import MainLayout from "../../layouts/MainLayout.vue";
+import Archive from "../../pages/Archive.vue";
 
 const routes = [
     {
@@ -29,8 +30,15 @@ const routes = [
             {
                 path: 'paintings',
                 name: 'Catalog',
-                component: Catalog
-            }
+                component: Catalog,
+                children: [
+                    {
+                        path: 'archive',
+                        name: 'Archive',
+                        component: Archive
+                    }
+                ]
+            },
         ]
     }
 ]

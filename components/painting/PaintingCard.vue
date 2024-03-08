@@ -92,7 +92,6 @@ const enlarged = ref(false)
     padding: 20px 0
 
   @media screen and (max-width: 600px)
-    padding: 20px 0
     flex-direction: column
 
     &:first-of-type
@@ -139,7 +138,7 @@ const enlarged = ref(false)
       flex-direction: column
 
     .painting-holder
-      transform: rotate(-4deg)
+      transform: rotate(-2deg)
       box-shadow: -4px -4px 10px 0 rgba(0, 0, 0, 0.3)
 
       @media screen and (max-width: 800px)
@@ -157,6 +156,8 @@ const enlarged = ref(false)
   width: fit-content
   flex-direction: column
 
+  @media screen and (max-width: 800px)
+    max-width: 80%
   @media screen and (max-width: 600px)
     margin-bottom: 20px
   @media screen and (max-width: 280px)
@@ -241,18 +242,18 @@ const enlarged = ref(false)
       @media screen and (max-width: 600px)
         display: none
 
-
 .painting-holder
   display: flex
   max-width: 40%
   max-height: 85%
   overflow: hidden
   align-items: center
-  transform: rotate(4deg)
+  transform: rotate(2deg)
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.3)
 
   @media screen and (max-width: 800px)
     width: 70%
+    margin: 0 15px
     transform: rotate(0)
   @media screen and (max-width: 600px)
     max-width: 100%
