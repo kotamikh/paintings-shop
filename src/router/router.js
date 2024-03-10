@@ -31,14 +31,12 @@ const routes = [
                 path: 'paintings',
                 name: 'Catalog',
                 component: Catalog,
-                children: [
-                    {
-                        path: 'archive',
-                        name: 'Archive',
-                        component: Archive
-                    }
-                ]
             },
+            {
+                path: 'paintings/archive',
+                name: 'Archive',
+                component: Archive
+            }
         ]
     }
 ]

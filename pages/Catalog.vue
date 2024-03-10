@@ -1,15 +1,16 @@
 <template>
   <head>
     <title>Все картины | Киров картины маслом</title>
-    <meta name="description" content="Картины Киров. Купить картину маслом в Кирове. Каталог картин в наличии. Картины на холсте."/>
+    <meta name="description"
+          content="Картины Киров. Купить картину маслом в Кирове. Каталог картин в наличии. Картины на холсте."/>
   </head>
   <archive v-if="showArchive"
-  @back="showArchive = false"
+           @back="showArchive = false"
   ></archive>
   <div class="paint-container" v-if="showArchive === false">
     <h1> Все картины </h1>
     <a class="archive-link"
-    @click="openArchive"
+       @click="openArchive"
     >Смотреть архив</a>
     <painting-card
         v-for="(painting, index) in paintings"
@@ -17,14 +18,14 @@
         :painting="painting"
     >
     </painting-card>
-    <ScrollUpButton :class="{ show : isShown }" />
+    <ScrollUpButton :class="{ show : isShown }"/>
   </div>
 </template>
 
 <script setup>
 import PaintingCard from "../components/painting/PaintingCard.vue";
 import { paintingsMocks } from "@/mocks/paintings.js";
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import ScrollUpButton from "../components/common/ScrollUpButton.vue";
 import { useHead } from "@vueuse/head";
 import router from "@/router/router.js";
@@ -41,26 +42,25 @@ useHead({
 })
 const paintings = ref(paintingsMocks)
 const isShown = ref(false);
-
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 300 ) {
-    showButton()
+function showScroll() {
+  if (window.scrollY > 300) {
+    isShown.value = true
   }
   if (window.scrollY < 300) {
     isShown.value = false
   }
-})
-
-const showButton = () => {
-  isShown.value = true
 }
+window.addEventListener('scroll', showScroll)
 
 const showArchive = ref(false)
 const openArchive = () => {
   showArchive.value = true
-  console.log(showArchive.value)
-  router.push('/paintings/archive')
+  router.push('paintings/archive')
 }
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', showScroll)
+})
 </script>
 
 <style scoped lang="sass">

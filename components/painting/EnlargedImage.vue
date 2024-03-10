@@ -18,16 +18,7 @@ const props = defineProps({
     type: Boolean
   },
   source: {
-    type: String
-  },
-  title: {
-    type: String
-  },
-  width: {
-    type: Number
-  },
-  height: {
-    type: Number
+    type: Array<String>[]
   }
 })
 

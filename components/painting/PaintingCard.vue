@@ -19,19 +19,14 @@
     </div>
     <div :class="[painting.width < painting.height ? 'vertical' : '']"
          class="painting-holder"
-         @mouseover="isHidden = false"
-         @mouseleave="isHidden = true"
     >
       <div class="enlarge-icon" @click="enlarged = true">
-        <img src="../../src/assets/icons/enlarge.svg" alt="увеличить"/>
+        <img src="@/assets/icons/enlarge.svg" alt="увеличить"/>
       </div>
       <img class="paint-img" :src="painting.source[0]" :alt="painting.title"/>
     </div>
     <enlarged-image v-model:show="enlarged"
                     :source="painting.source"
-                    :title="painting.title"
-                    :width="painting.width"
-                    :height="painting.height"
                     @close="enlarged = false"
     />
   </div>
@@ -73,7 +68,6 @@ const props = defineProps({
   }
 })
 
-const isHidden = ref(true)
 const enlarged = ref(false)
 </script>
 
